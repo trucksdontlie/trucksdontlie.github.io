@@ -18,8 +18,7 @@
 
 <body>
 	<div class="col-md-3 hundred" id="white">
-		<p>
-			SHIFT PROPOSES A SMALL LONGSHOREMAN IN YOUR MORNING BREAKFAST
+		<p>SHIFT PROPOSES A SMALL LONGSHOREMAN IN YOUR MORNING BREAKFAST
 		</p>
 		<p>INTRO
 		</p>
@@ -32,8 +31,13 @@
 	</div>
 
 	<div class="col-md-3 hundred">
+		<div class = "col-md-12 thirtythree" id="blue">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
 
-		<div class = "col-md-12 sixtysix" id="blue">
+		<div class = "col-md-12 thirtythree" id="blue">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -42,68 +46,14 @@
 		<div class = "col-md-12 thirtythree" id="black">
 			bla bla, wanna know more?
 		</div>
-		<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
 	</div>
 
-	<!--<div class="videobackgroud" style = "display:none">-->
-		<!--<div class="fullvideo"  style = "display:none" >
-			<video controls playsinline class="video-background" ad-outlet="video" style="min-height:200px;">	
-				<source src="video/full.mp4" type="video/mp4" controls webkit-playsinline ad-outlet="video">
-					Your browser does not support the video tag. I suggest you upgrade your browser. 
-				</video>
-		</div>-->
-	<!--</div>	-->
-
-
-	<div id="myModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				
-			</div>
-
-		</div>
-	</div>
 
 	<div class="col-md-6 hundred" id="white">
-			<div class="video-container">
-				<video class="poster" poster="/images/pem/unboxing/lapka_unboxing_poster_set.jpg" preload="preload" loop muted autoplay>
-					<source src="video/preview.mp4" type="video/mp4">
+				<video autoplay loop muted playsinline class="video-preview" ad-outlet="video" style="min-height:400px;">
+					<source src="video/preview.mp4"  type="video/mp4" controls webkit-playsinline ad-outlet="video">
+						Your browser does not support the video tag. I suggest you upgrade your browser.
 				</video>
-				<div class="play-button" onclick="playVideo('video/full.mp4')"></div>
-				</div>
-			</div>
-<!--
-			<video autoplay loop muted playsinline class="video-preview" ad-outlet="video" style="min-height:400px;" id = "myImg">
-				<source src="video/preview.mp4"  type="video/mp4" controls webkit-playsinline ad-outlet="video">
-					Your browser does not support the video tag. I suggest you upgrade your browser.
-			</video>
-			<div class="play-button" onclick="playVideo('video/full.mp4')"></div>-->
-
-		<script>
-			function playVideo(e) {
-				var t = event.target.parentNode.getElementsByTagName("video")[0];
-				t && t.pause();
-				var i = document.createElement("div");
-				i.id = "video-popup";
-				var n = document.createElement("div");
-				n.className = "centered-container";
-				var s = document.createElement("div");
-				s.className = "embed-container";
-				var a = document.createElement("iframe");
-				a.setAttribute("width", "853"), a.setAttribute("height", "480"), a.setAttribute("src", e), a.setAttribute("frameborder", "0"), a.setAttribute("allowfullscreen", "1"), s.appendChild(a), n.appendChild(s), i.appendChild(n), document.body.appendChild(i), i.onclick = function() {
-					if (i.removeChild(n), i.style.transition = "background 0.5s linear 0s", i.style.background = "rgba(0,0,0,0)", t) {
-						var e = window.getComputedStyle(t);
-						"none" != e.display && t.play()
-					}
-					setTimeout(function() {
-						document.body.removeChild(i)
-					}, 500)
-				}
-			}
-
-		</script>
 	</div>
 
 </body>
