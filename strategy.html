@@ -43,7 +43,7 @@
             font-weight: 200;
             text-decoration:none;
             margin-top:0;
-            display: block;    
+            display: inline-block;    
         }
       
         h2, .h2 {
@@ -97,7 +97,7 @@
         }  
   	
         .col-lg-8 {
-            max-width: 60vw;
+            width: 60vw;
             margin: 0 auto;
             /*position: static !important;*/
             margin-top: 3.2vh;
@@ -132,47 +132,81 @@
             margin-bottom: 4em;
 			font-size: 0.6em;
         }
-
+/*
+        body{
+            font-size: 2.5vmin;
+        }
+        
+        .col-lg-8 {
+            width: 90vw;
+        }  
+        
+        h1 {
+            position:static;
+        }
+        
+        .back {
+            position:static;
+            text-decoration: none;
+        }*/
+        .mobilehide{
+                display: none;
+            }
         @media (min-width:768px){  
             body{
                 font-size: 2.5vmin;
             }
-         
+            
             .col-lg-8 {
-                max-width: 60vw;
+                width: 90vw;
             }  
+            .source{
+                display: none;
+            }
         }
-         
-         
+            
         h1 {
             position:static;
         }
-         
+        
         .back {
             position:static;
             text-decoration: none;
         }
-      
+        /*.button_left {	
+            padding:5px 10px;
+            border: 1px solid #979797;
+            border-radius: 6px;
+            float:right;
+            float: bottom;
+            background-color:rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }*/
+        .button {
+            padding:5px 10px;
+            border: 1px solid #979797;
+            border-radius: 6px;
+            /*float: left;*/
+            z-index: 100;
+            background-color:rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+
+
+
         @media (min-width:992px){  
             body {font-size: 3.1vmin;}
-         
+            .mobilehide{
+                display: block;
+            }
             .superscript{ display: inline;}
           
             .col-lg-8 {
-                max-width: 60vw;
+                width: 60vw;
                 /*margin-top: 12.8vh;*/
                 /*margin-top: -4vh;*/
             } 
          
-            h1 {
-                /*position: absolute;*/
-                /*left: 2.2vw;*/
-                /*margin-top: 9.6vh;        */
-            }
-        
-            .posts{
-                /*margin-top:4em;*/
-            }
 
             a .back,  .back {
                 position:absolute;
@@ -194,7 +228,7 @@
             }
 
             #left-menu {
-                width: 7vw;
+                width: 15vw;
                 height: 100%;
                 position: fixed;
                 /*outline: 1px solid;*/
@@ -220,16 +254,6 @@
                 /*margin-top: 5px;*/
                 z-index: -5;
             }
-
-/*.img-sourceleft {
-	position: absolute;
-	left: 10vw;
-	width: 10vw;
-	height:auto;
-	margin-top: 5px;
-	z-index: -5;
-
-} */
 
             .references {display:none;}
         }
@@ -299,6 +323,21 @@
         color: inherit;
         }
 
+        .pdfversion {
+            padding:5px 10px;
+            border: 1px solid #979797;
+            border-radius: 6px;
+            position: absolute;
+            right:10px;
+            bottom: 10px;
+            z-index: 100;
+            background-color:rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+
+            position:static;
+            text-decoration: none;
+            float: right;
+         }
 
         .player {margin-top: 2em}
         /*p {margin-top: 2em;}*/
@@ -333,26 +372,37 @@ jQuery(document).bind('keyup', function(e) {
   
   
 
+<div class="container">
 
-    <!--<div class="col-lg-12"></div>-->
-    <div class="col-lg-2" id="left-menu">
-        
+    <div class="row">
         <h1>SHIFT</h1>
-        <p> Menu 1 </p>
-        <p> Menu 2 </p>
-        <p> Menu 3 </p>
-        <p> Menu 4 </p>
+        <a href="#"><span class="pdfversion">PDF version</span></a>
+
     </div>
 
-    <!--<div class="col-lg-2"></div>-->
-    <div class="col-lg-8">       
+
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <h2>UNION TO COME</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 mobilehide" id="left-menu">
+            <p> Menu 1 </p>
+            <p> Menu 2 </p>
+            <p> Menu 3 </p>
+            <p> Menu 4 </p>
+        </div>
+    
+        <div class="col-lg-8">       
         <!--<div class="back"><a a class="no" href="http://unionshift.com">&larr; back</a></div>
         <h1>TOWARDS REFLECTIVE DESIGN.*</h1>-->
-
+        
         <div class="content">
        
         <p>
-            <span class="sourceleft"><a href="towards.pdf">PDF version</a></span>
+            <!--<span class="sourceleft"><a href="towards.pdf">PDF version</a></span>-->
             <span class="source">* Orginally published on <a href="http://towardsreflectivedesign.com">towards reflective design</a></span>  
             In his book Relational Aesthetics (2002), Nicolas Bourriaud criticises the modern communication highways for turning its users into passive consumers.
             He proposes Relational Art, an art movement that invites users into the process of creation, and thus breaks up the perceived one-wayness of modern communication. Bourriaud defines Relational Art as “a set of artistic practices which take as their theoretical and practical point of departure the whole of human relations and their social context, rather than an independent and private space.”
@@ -474,15 +524,14 @@ If instead reflective design is to reintroduce user agency, it should function a
 </p></div>
 
 <div class="references">
-  <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)
 
-      </span>
-      <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
-
-      
-           <span class="superscript">3</span><span class="source">3 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
+    <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
+    <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>  
+    <span class="superscript">3</span><span class="source">3 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
 
 </div>
+    </div>
+
 
 
 
@@ -493,6 +542,6 @@ If instead reflective design is to reintroduce user agency, it should function a
       </footer>-->
 
     </div><!-- /.container -->
-
+</div>
   </body>
 </html>
