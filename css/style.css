@@ -21,7 +21,7 @@ a {
 p a:hover
 {
 	text-decoration: none;
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 }
 
 p { 
@@ -127,17 +127,18 @@ div {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	border-right: 1px solid rgba(0, 0, 0, 0.4);
 
-	-o-transition:.5s;
+	/*fade animation*/
+	/*-o-transition:.5s;
   	-ms-transition:.5s;
   	-moz-transition:.5s;
   	-webkit-transition:.5s;
-  /* ...and now for the proper property */
-  	transition:.5s;
+  	transition:.5s;*/
 
 }
 #white:hover{
-	color:red;
-	background-color: #ccc;
+	color:#23527c;
+	/*background-color: #ccc;*/
+	text-decoration: underline; 
 }
 
 #yellow {
@@ -222,8 +223,3 @@ div {
   }   
 }
 
-.thirtythree:hover{
-	opacity: 0.8;
-	color: #ff0000;
-	background-color: #00ff00;
-}
