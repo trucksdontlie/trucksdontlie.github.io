@@ -107,6 +107,7 @@ h1 {
     z-index: 100;
     background-color:rgba(255, 255, 255, 0.8);
     font-size: 14px;
+    display: none;
 }
 
 
@@ -123,9 +124,6 @@ h1 {
 	padding:5px 10px;
   	border: 1px solid #979797;
     border-radius: 6px;
-    position: absolute;
-    left:10px;
-    bottom: 10px;
     z-index: 100;
     background-color:rgba(255, 255, 255, 0.8);
     font-size: 14px;
@@ -145,7 +143,6 @@ body {
 div {
 	margin: 0;
 	border: 0;
-
 	display:inline-block;
 	/*float:left;*/
 	overflow: hidden;
@@ -170,7 +167,7 @@ div {
 ;
 
 }
-#white {
+.white {
 	color: black;
 	background-color: white;
 	border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -178,8 +175,7 @@ div {
 
 
 .sub_menu { 
-position: 
-bottom: 0;}
+}
 
 /*fade animation*/
 	/*-o-transition:.5s;
@@ -187,9 +183,14 @@ bottom: 0;}
   	-moz-transition:.5s;
   	-webkit-transition:.5s;
   	transition:.5s;*/
+.menu {
+	width:500px;
+top:10px;
+left:10px;
+	position: fixed;
+}
 
-
-#white:hover{
+.white:hover{
 	background-color: black;
 	color: white;
 	/*background-color: #ccc;*/
@@ -320,5 +321,5 @@ bottom: 0;}
 
 .logo {
   width: 15%;
-  opacity: 0.7;
+  opacity: 0.4;
 }
