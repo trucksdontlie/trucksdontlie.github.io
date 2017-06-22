@@ -20,6 +20,10 @@
 	<!--preview video, triggers full video modal-->
 	<a href="#VideoModal" data-toggle="modal" >
 		<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-6 col-lg-6 no-overflow center hundred" >
+					<div class="logo-container" id="top" >
+			        	<img class="logo" src="img/play.svg">
+					</div>
+
 					<video autoplay loop muted playsinline class="video-preview" ad-outlet="video" >
 						<source src="video/preview.mp4"  type="video/mp4" controls webkit-playsinline ad-outlet="video">
 							Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -39,7 +43,14 @@
 	<script type="text/javascript">
 				$('body').on('hidden.bs.modal', '.modal', function () {
 				$('.video-full').trigger('pause');
+				$('.logo-container').show();
 				});
+
+				$('body').on('show.bs.modal', '.modal', function () {
+				$('.video-full').trigger('play');
+				$('.logo-container').hide();
+				});
+
 	</script>
 
 	<!--left side content-->
