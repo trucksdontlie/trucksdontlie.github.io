@@ -33,24 +33,32 @@
 
     <!-- video modal -->
     <div class="modal fade" id="VideoModal" tabindex="-1">
-		<video  controls playsinline class="video-full" ad-outlet="video">
+		<iframe class="video-full" src="https://www.youtube.com/embed/tUCb_0zVfTM" frameborder="0" allowfullscreen></iframe>
+		<!--<video  controls playsinline class="video-full" ad-outlet="video">
 			<source src="video/preview.mp4"  type="video/mp4" controls webkit-playsinline ad-outlet="video">
 				Your browser does not support the video tag. I suggest you upgrade your browser.
-		</video>
+		</video>-->
 	</div>
 
 	<!--pause video on modal closed-->
 	<script type="text/javascript">
-				$('body').on('hidden.bs.modal', '.modal', function () {
-				$('.video-full').trigger('pause');
-				$('.logo-container').show();
-				});
+			$("#VideoModal").on('hidden.bs.modal', function (e) {
+					$("#VideoModal iframe").attr("src", $("#VideoModal iframe").attr("src"));
+					$('.logo-container').show();
+			});
 
-				$('body').on('show.bs.modal', '.modal', function () {
-				$('.video-full').trigger('play');
-				$('.logo-container').hide();
-				});
+			$("#VideoModal").on('show.bs.modal', function (e) {
+					$('.logo-container').hide();
+			});
+				// $('body').on('hidden.bs.modal', '.modal', function () {
+				// 	$('.video-full').trigger('pause');
+				// 	$('.logo-container').show();
+				// });
 
+				// $('body').on('show.bs.modal', '.modal', function () {
+				// 	$('.video-full').trigger('play');
+				// 	$('.logo-container').hide();
+				// });
 	</script>
 
 	<!--left side content-->

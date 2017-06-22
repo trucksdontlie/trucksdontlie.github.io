@@ -43,19 +43,20 @@ p {
 }
 
 .video-full {
-	min-height: 400px;
-	width: 80%;
-	/*height: 70%;*/
+	/*min-height: 400px;*/
+	width: 70%;
+	height: 70%;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
     outline: none;
-display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
+	display: inline-block;
+
+	text-align: left;
+	vertical-align: middle;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
 
 }
 
