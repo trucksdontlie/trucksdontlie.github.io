@@ -81,6 +81,7 @@ p {
 	   line-height: 1.2;
 
 
+
 }
 
 h1 {
@@ -162,16 +163,16 @@ div {
 #left-column{
 	color: black;
 	background-color: white;
-	border-bottom: 1px solid rgba(0, 0, 0, 1);
-	border-right: 1px solid rgba(0, 0, 0, 1);
+	border-bottom: 2px solid rgba(0, 0, 0, 1);
+	border-right: 2px solid rgba(0, 0, 0, 1);
 ;
 
 }
 .white {
 	color: black;
 	background-color: white;
-	border-bottom: 1px solid rgba(0, 0, 0, 1);
-	border-right: 1px solid rgba(0, 0, 0, 1);}
+	border-bottom: 2px solid rgba(0, 0, 0, 1);
+	border-right: 2px solid rgba(0, 0, 0, 1);}
 
 
 .sub_menu { 
@@ -320,6 +321,6 @@ left:10px;
 }
 
 .logo {
-  width: 15%;
+  width: 13%;
   opacity: 0.4;
 }
