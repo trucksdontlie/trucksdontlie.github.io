@@ -97,6 +97,10 @@ h1 {
 	justify-content: center;
 }
 
+.pdfversion {
+	float:right;
+	top:0;
+}
 
 .button {
 	padding:5px 10px;

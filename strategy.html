@@ -80,7 +80,7 @@
             font-weight: 400;
             display: block;
             margin-bottom: 1em;
-            font-family: "OCR", sans-serif;
+            font-family: monospace;
             font-size: 0.5em;
             text-indent: 0px;
         }
@@ -95,6 +95,7 @@
             margin-left: -1px;
             margin-right: 1em;
             display: none;
+            font-family: courier;
             /*font-family: */
         }  
 
@@ -123,6 +124,7 @@
             text-align: center;
             margin-top: 3em;
             margin-bottom: 3em;
+            font-family: 'garda'
         }
 
        .main {
@@ -286,9 +288,10 @@
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
             font-size: 14px;
-
-            position:absolute;
-            right: 5%;
+            float: right;
+            right:0;
+            top:0;
+            position: absolute;
             /*display: inline-table;*/
             text-decoration: none;
             /*float: right;*/
@@ -345,7 +348,28 @@
         .header-subsection > .h2{
             display: inline-block;
         }
+
+        h2
+        {
+            font-size: 150%;
+        }
         hr { border:1px solid #000; }
+
+        .header-subsection p {
+            font-size: 120%;
+            width:75%;
+            font-weight: 200;
+        }
+
+        .button:hover, .button_left:hover {
+    padding:5px 10px;
+    border: 1px solid black;
+    border-radius: 6;
+    z-index: 100;
+    background-color: black;
+    font-size: 14px;
+    color: white;
+}
     </style>
 </head>
 
@@ -393,10 +417,10 @@
         </div>
 
         <div class="row header-subsection">
-            <div class="col-lg-10 .offset-lg-1">
-                <h1> UNION TO COME 
+            <div class="col-lg-10  ">
+                <h2>THE UNION TO COME 
                     <a href="#"><span class="pdfversion">PDF version</span></a>
-                </h1>
+                </h2>
                 <p>
                     Proposed harnessing of network effects through technological means
                 </p>
