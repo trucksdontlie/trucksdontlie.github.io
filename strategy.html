@@ -9,18 +9,19 @@
     <title>Shift Strategy</title>
 
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
-	<script src="dist/js/bootstrap.min.js" rel="javascript"></script>    
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
+			<link href="css/bootstrap.css" rel="stylesheet">
+		<script src="js/bootstrap.js" type="text/javascript"></script>
     <style type="text/css"> 
  
         a.no {color: black}
 
         .content {
-        	/*top:5.1em !important;*/
+        	top:5.1em !important;
+            width: 80%;
 		}
 
         body {
-            
             color: #111;
             font-family: Helvetica, Arial,sans-serif;
             line-height: 1.35;
@@ -49,6 +50,7 @@
         h2, .h2 {
             font-size:100%;
             font-weight: 200;
+            /*display: inline-flex;*/
         }
     
         h3, .h3 {
@@ -149,20 +151,29 @@
             position:static;
             text-decoration: none;
         }*/
+        
         .mobilehide{
                 display: none;
-            }
+        }
+
         @media (min-width:768px){  
             body{
                 font-size: 2.5vmin;
             }
             
-            .col-lg-8 {
-                width: 90vw;
+            .col-lg-12 {
+                width: 80vw;
             }  
             .source{
                 display: none;
             }
+            .navbar{
+                display: none;
+            }
+            .container{
+                padding-left: 20px;
+            }
+                
         }
             
         h1 {
@@ -201,12 +212,14 @@
             }
             .superscript{ display: inline;}
           
-            .col-lg-8 {
-                width: 60vw;
+            .col-lg-12 {
+                width: 80vw;
                 /*margin-top: 12.8vh;*/
                 /*margin-top: -4vh;*/
             } 
-         
+            .navbar{
+                display: block;
+            }
 
             a .back,  .back {
                 position:absolute;
@@ -222,18 +235,24 @@
                 line-height: 11px;
                 position: absolute;
                 right: 1vw;
-                width: 15vw;
-                margin-top: 1vh;
-                display: inline;
+                width: 10vw;
+                margin-top: -1vh;
+                display: block;
+                position:absolute;
+                text-decoration: none;
             }
+            .container{
+                padding-left: 160px;
+            }
+                
 
-            #left-menu {
+            /*#left-menu {
                 width: 15vw;
                 height: 100%;
                 position: fixed;
-                /*outline: 1px solid;*/
+                outline: 1px solid;
                 background: #fefefe;
-            }
+            }*/
 /*.sourceleft {
 	font-family: "OCR", sans-serif;
 	font-size: 10px;
@@ -328,8 +347,6 @@
             border: 1px solid #979797;
             border-radius: 6px;
             position: absolute;
-            right:10px;
-            bottom: 10px;
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
             font-size: 14px;
@@ -340,62 +357,103 @@
          }
 
         .player {margin-top: 2em}
+
+        .navbar-fixed-left {
+            background-color: #fff;
+            width: 140px;
+            position: fixed;
+            border-radius: 0;
+            border-style: none;
+            height: 100%;
+        }
+
+        .navbar-fixed-left .navbar-nav > li {
+            float: none;  /* Cancel default li float: left */
+            width: 139px;
+        }
+
+        .navbar-fixed-left + .container {
+            padding-left: 160px;
+        }
+        /* On using dropdown menu (To right shift popuped) */
+        .navbar-inverse .navbar-brand{
+            color:black;
+        }
+        .navbar-inverse .navbar-brand:focus{
+            color:blue;
+        }
+        .navbar-inverse .navbar-brand:hover{
+            color:blue;
+        }
+        .navbar-inverse .navbar-nav > li > a:focus{
+            color:blue;
+        }
+        .navbar-inverse .navbar-nav > li > a:hover{
+            color:blue;
+        }
+
+        
         /*p {margin-top: 2em;}*/
     </style>
     
     
     <script type="text/javascript">
-
-jQuery(document).bind('keyup', function(e) {
-
-  if(e.keyCode==39){
-  jQuery('a.carousel-control.right').trigger('click');
-  }   
-
-  else if(e.keyCode==37){
-  jQuery('a.carousel-control.left').trigger('click');
-  }
-
-});
-
-</script>
+        // jQuery(document).bind('keyup', function(e) {
+        //     if(e.keyCode==39){
+        //         jQuery('a.carousel-control.right').trigger('click');
+        //     }   
+        //     else if(e.keyCode==37){
+        //         jQuery('a.carousel-control.left').trigger('click');
+        //     }
+        // });
+    </script>
 
 </head>
-<!-- NAVBAR
-================================================== -->
-<body>
-    
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  
-  
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-left mobilehide">
+  <a class="navbar-brand" href="#"><h1>SHIFT</h1></a>
+  <ul class="nav navbar-nav">
+   <li><a href="#">Link2</a></li>
+   <li><a href="#">Link3</a></li>
+   <li><a href="#">Link4</a></li>
+   <li><a href="#">Link5</a></li>
+  </ul>
+</div>
+    
+
 
 <div class="container">
 
-    <div class="row">
+    <!--<div class="row">
         <h1>SHIFT</h1>
-        <a href="#"><span class="pdfversion">PDF version</span></a>
+         <a href="#"><span class="pdfversion">PDF version</span></a></h2>
+    </div>-->
+        <div class="row">
 
+                 <a href="#"><span class="pdfversion">PDF version</span></a></h2>
     </div>
-
 
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-            <h2>UNION TO COME</h2>
+            <h2>OUR STRATEGIC ROADMAP
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-lg-2 mobilehide" id="left-menu">
+<img height="300px" width="100%"  src="img/grid.svg" style="padding:0%; width:100%;height:100%;position:relative; z-index:1;display:block">
+         <!--<div class="col-lg-2 mobilehide" id="left-menu">
             <p> Menu 1 </p>
             <p> Menu 2 </p>
             <p> Menu 3 </p>
             <p> Menu 4 </p>
-        </div>
+        </div>-->
     
-        <div class="col-lg-8">       
+    <!--<div class="row">-->
+        
+    <!--</div>-->
+
+    <div class="row">
+        <div class="col-lg-12">       
         <!--<div class="back"><a a class="no" href="http://unionshift.com">&larr; back</a></div>
         <h1>TOWARDS REFLECTIVE DESIGN.*</h1>-->
         
@@ -485,10 +543,9 @@ jQuery(document).bind('keyup', function(e) {
 
 <p>So what happens when personalization technologies turn contextual data into marketing currency by instrumentalizing it through relational design to persuade their users?</p>
 
-<div class="player">
-                        
-         <iframe src="//player.vimeo.com/video/90519150" width="700px" height="500px" frameborder="0"></iframe>
-         </div>
+<div class="player">                        
+<!--<iframe src="//player.vimeo.com/video/90519150" width="700px" height="500px" frameborder="0"></iframe>-->
+</div>
   
     <p>
 This scene of James Cameron's movie, The Abyss (1989), is of an interaction between the protagonist, diver Lindsey Brigman, and an alien lifeform. The alien, a reflective tentacle blob navigates through a submarine until it finds Lindsey and her fellow divers. Lindsey is worried about the safety of her crew and herself until the creature examines her and starts to mirror her and her facial expressions. ”It’s me,” she says with relief and smiles, by which her reflection smiles back at her. Interesting is the reassuring effect of such mirroring. Without further knowledge about the alien’s intentions—mirroring is perceived as positive communication.
