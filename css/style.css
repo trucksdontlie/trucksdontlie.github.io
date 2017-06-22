@@ -15,20 +15,22 @@ html {
 a {
     color: inherit;
     opacity: 1;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 p a:hover
 {
 	text-decoration: none;
+	color: black;
 	/*opacity: 0.9;*/
 }
 
 p { 
 	/*margin: 1em;*/
-	padding: 0;
 	z-index: -100;
-	margin:1.6vh;
+			padding: 1.6vh;
+
+
 }
 
 
@@ -64,12 +66,28 @@ p {
 
 .left_big {
 	font-family: garda;
+			   line-height: 1.2;
+			       display: inline;
+			       padding: 0;
+
+
+
+
+}
+
+.big {
+	font-size: 215%;
+	font-weight: 200;
+	   line-height: 1.2;
+
+
 }
 
 h1 {
-	display: inline;
 	margin:0;
-	padding:0;
+	padding: 1.6vh 0 1.6vh 1.6vh;
+	font-size: 150%;
+
 }
 
 .center {
@@ -81,7 +99,7 @@ h1 {
 
 .button {
 	padding:5px 10px;
-  	border: 1px solid #979797;
+  	border: 1px solid black;
     border-radius: 6px;
     position: absolute;
     right:10px;
@@ -91,6 +109,16 @@ h1 {
     font-size: 14px;
 }
 
+
+.button:hover, .button_left:hover {
+	padding:5px 10px;
+  	border: 1px solid black;
+    border-radius: 6;
+    z-index: 100;
+    background-color: black;
+    font-size: 14px;
+    color: white;
+}
 .button_left {	
 	padding:5px 10px;
   	border: 1px solid #979797;
@@ -136,16 +164,22 @@ div {
 
 #left-column{
 	color: black;
-	background-color: #f9f9f9;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-	border-right: 1px solid rgba(0, 0, 0, 0.4);
+	background-color: white;
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
+	border-right: 1px solid rgba(0, 0, 0, 1);
+;
 
 }
 #white {
 	color: black;
-	background-color: #f9f9f9;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-	border-right: 1px solid rgba(0, 0, 0, 0.4);
+	background-color: white;
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
+	border-right: 1px solid rgba(0, 0, 0, 1);}
+
+
+.sub_menu { 
+position: 
+bottom: 0;}
 
 /*fade animation*/
 	/*-o-transition:.5s;
@@ -154,11 +188,12 @@ div {
   	-webkit-transition:.5s;
   	transition:.5s;*/
 
-}
+
 #white:hover{
-	color:#23527c;
+	background-color: black;
+	color: white;
 	/*background-color: #ccc;*/
-	text-decoration: underline; 
+	text-decoration: none;
 }
 
 #yellow {
