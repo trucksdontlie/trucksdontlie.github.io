@@ -44,14 +44,14 @@
             text-decoration:none;
             margin-top:0;
             display: inline-block;    
-
         }
       
         h2, .h2 {
             font-size:100%;
             font-weight: 200;
-            /*display: inline-flex;*/
+            display: inline-block;
         }
+
     
         h3, .h3 {
             font-size:100%;
@@ -97,13 +97,13 @@
             display: none;
             /*font-family: */
         }  
-  	
+
+        /*
         .col-lg-8 {
             width: 60vw;
             margin: 0 auto;
-            /*position: static !important;*/
             margin-top: 3.2vh;
-        }
+        }*/
 
         .pull-right { margin-bottom: 2em;}	
         .myCarousel { max-width: 120%;}
@@ -188,9 +188,10 @@
                 font-size: 2.5vmin;
             }
             
-            .col-lg-12 {
+            /*.col-lg-12 {
                 width: 100vw;
-            }  
+            }  */
+
             .source{
                 display: none;
             }
@@ -219,11 +220,9 @@
             }
             .superscript{ display: inline;}
           
-            .col-lg-12 {
+            /*.col-lg-12 {
                 width: 80vw;
-                /*margin-top: 12.8vh;*/
-                /*margin-top: -4vh;*/
-            } 
+            } */
 
             a .back,  .back {
                 position:absolute;
@@ -286,14 +285,16 @@
             padding:5px 10px;
             border: 1px solid #979797;
             border-radius: 6px;
-            position: absolute;
+            /*position: absolute;*/
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
             font-size: 14px;
 
-            position:static;
+            position:absolute;
+            right: 5%;
+            /*display: inline-table;*/
             text-decoration: none;
-            float: right;
+            /*float: right;*/
          }
 
         .player {margin-top: 2em}
@@ -329,35 +330,42 @@
             margin-top: -50px;
             margin-left: 140px;
         }
+
+        #navbar.fixed{
+            background-color: #FFFFFF;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            -webkit-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+            color: #000;
+        }
+        .header-subsection{
+            width: 80%;
+            margin: auto;
+        }
+        .header-subsection > .h2{
+            display: inline-block;
+        }
+        hr { border:1px solid #000; }
     </style>
 </head>
 
 
 <body>
+<script type="text/javasript">
+    var stickyNavTop = $('#header').offset().top;
 
-<nav class="navbar navbar-fixed-left" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a href="#" id="welcome">SHIFT</a> 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable-menu">
-                <!--<span class="sr-only">Toggle navigation</span>-->
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>  
-
-        <div class="collapse navbar-collapse" id="collapsable-menu">
-            <ul class="nav navbar-nav">
-                <input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />                               
-                <li><a href="#" id="kitchen">Link1</a></li>
-                <li><a href="#" id="programma">Link2</a></li>
-                <li><a href="#" id="foodart" >Link3</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
+    $(window).scroll(function() {  
+        if ($(window).scrollTop() > stickyNavTop) {
+            $('#header').addClass('fixed');
+        }
+        else {
+            $('#header').removeClass('fixed');
+        }  
+    });
+</script>
 <!--<div class="navbar navbar-inverse navbar-fixed-left mobilehide">
   <a class="navbar-brand" href="#"><h1>SHIFT</h1></a>
   <ul class="nav navbar-nav">
@@ -368,25 +376,55 @@
   </ul>
 </div>-->
     
+    <div id="header">
+        <a href="#"><h1>SHIFT</h1></a> 
 
+        <div class="row">
+        </div>
 
-<div class="container">
-
-    <div class="row">
-        <a href="#"><span class="pdfversion">PDF version</span></a></h2>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>OUR STRATEGIC ROADMAP</h2>
+        <div class="row header-subsection">
+            <div class="col-lg-10 .offset-lg-1">
+                <h1> UNION TO COME 
+                    <a href="#"><span class="pdfversion">PDF version</span></a>
+                </h1>
+                <p>
+                    Proposed harnessing of network effects through technological means
+                </p>
+            </div>
         </div>
     </div>
+<!--temporary separator-->
+<hr/>
+    <nav class="navbar navbar-fixed-left" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable-menu">
+                    <!--<span class="sr-only">Toggle navigation</span>-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>  
 
-    <img   src="img/grid.svg" style="padding:0%; width:50%;height:100%;position:relative; z-index:1;display:block">
+            <div class="collapse navbar-collapse" id="collapsable-menu">
+                <ul class="nav navbar-nav">
+                    <input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />                               
+                    <li><a href="#" id="kitchen">Link1</a></li>
+                    <li><a href="#" id="programma">Link2</a></li>
+                    <li><a href="#" id="foodart" >Link3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<div class="container">                
+
+
 
     <div class="row">
-        
     <div class="col-lg-12">       
+            <img   src="img/grid.svg" style="padding:0%; width:50%;height:100%;position:relative; z-index:1;display:block">
 
         
         <div class="content">
