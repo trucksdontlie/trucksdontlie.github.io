@@ -138,9 +138,51 @@
                 display: none;
         }
         
+        h1 {
+            position:static;
+        }
+        
+        .back {
+            position:static;
+            text-decoration: none;
+        }
 
+        .navbar-header{
+            position: fixed;
+            /*height: 20%;*/
+            /*bottom:0px;*/
+        }
+        .navbar-toggle{
+            background-color: black;
+            position:fixed;
+            bottom:10px;
+            left:10px;
+        }
+
+        .container-fluid{
+            height: 30%;
+            display: block;
+            position: relative;
+
+        }
+        .collapse{
+            /*height: 100%;*/
+            bottom:0;
+        }
+
+        #collapsable-menu{
+            position:fixed;
+            bottom:10%;
+            left:10px;
+        }
 
         @media (min-width:768px){  
+            #collapsable-menu{
+                /*position:static;*/
+                top:5%;
+                float:left;
+                left:10px;
+            }
 
             body{
                 font-size: 2.5vmin;
@@ -152,34 +194,20 @@
             .source{
                 display: none;
             }
-            .navbar{
-                display: none;
-            }
-            .navbar-fixed-left + .container {
-                padding-left: 0px;
-            }
+            
             .container{
                 width:90%;
             }
             .content{
                 width: 90%;
             }
-        }
-            
-        h1 {
-            position:static;
-        }
-        
-        .back {
-            position:static;
-            text-decoration: none;
-        }
 
+            /*NAVBAR TOGGLE*/
+           
+        }
 
         @media (min-width:992px){  
-            .navbar-fixed-left + .container {
-                padding-left: 160px;
-            }
+
             .content{
                 width: 80%;
             }
@@ -196,9 +224,6 @@
                 /*margin-top: 12.8vh;*/
                 /*margin-top: -4vh;*/
             } 
-            .navbar{
-                display: block;
-            }
 
             a .back,  .back {
                 position:absolute;
@@ -252,8 +277,9 @@
             height: 100%;
         }
 
-        a {text-decoration: none;
-        color: inherit;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         .pdfversion {
@@ -281,37 +307,58 @@
             height: 100%;
         }
 
+
+        .navbar-fixed-left {
+            width: 140px;
+            position: fixed;
+            border-radius: 0;
+            height: 100%;
+        }
+
         .navbar-fixed-left .navbar-nav > li {
             float: none;  /* Cancel default li float: left */
             width: 139px;
         }
 
-        
-        /* On using dropdown menu (To right shift popuped) */
-        .navbar-inverse .navbar-brand{
-            color:black;
-        }
-        .navbar-inverse .navbar-brand:focus{
-            color:blue;
-        }
-        .navbar-inverse .navbar-brand:hover{
-            color:blue;
-        }
-        .navbar-inverse .navbar-nav > li > a:focus{
-            color:blue;
-        }
-        .navbar-inverse .navbar-nav > li > a:hover{
-            color:blue;
+        .navbar-fixed-left + .container {
+            padding-left: 160px;
         }
 
+        /* On using dropdown menu (To right shift popuped) */
+        .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+            margin-top: -50px;
+            margin-left: 140px;
+        }
     </style>
-    
-    
 </head>
 
 
 <body>
-<div class="navbar navbar-inverse navbar-fixed-left mobilehide">
+
+<nav class="navbar navbar-fixed-left" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" id="welcome">SHIFT</a> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable-menu">
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>  
+
+        <div class="collapse navbar-collapse" id="collapsable-menu">
+            <ul class="nav navbar-nav">
+                <input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />                               
+                <li><a href="#" id="kitchen">Link1</a></li>
+                <li><a href="#" id="programma">Link2</a></li>
+                <li><a href="#" id="foodart" >Link3</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--<div class="navbar navbar-inverse navbar-fixed-left mobilehide">
   <a class="navbar-brand" href="#"><h1>SHIFT</h1></a>
   <ul class="nav navbar-nav">
    <li><a href="#">Link2</a></li>
@@ -319,7 +366,7 @@
    <li><a href="#">Link4</a></li>
    <li><a href="#">Link5</a></li>
   </ul>
-</div>
+</div>-->
     
 
 
@@ -331,17 +378,19 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2>OUR STRATEGIC ROADMAP
+            <h2>OUR STRATEGIC ROADMAP</h2>
         </div>
     </div>
 
     <img   src="img/grid.svg" style="padding:0%; width:50%;height:100%;position:relative; z-index:1;display:block">
 
     <div class="row">
+        
     <div class="col-lg-12">       
+
         
         <div class="content">
-       
+
         <p>
             <!--<span class="sourceleft"><a href="towards.pdf">PDF version</a></span>-->
             <span class="source">* Orginally published on <a href="http://towardsreflectivedesign.com">towards reflective design</a></span>  
