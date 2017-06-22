@@ -146,10 +146,10 @@
         }
 
         .navbar-header{
+       
             /*height: 20%;*/
             /*bottom:0px;*/
         }
-
         .navbar-toggle{
             background-color: black;
             position:fixed;
@@ -169,17 +169,18 @@
         }
 
         #collapsable-menu{
-            position:static;
+            position:fixed;
             bottom:10%;
             left:10px;
         }
 
         @media (min-width:768px){  
-            /*#collapsable-menu{
+            #collapsable-menu{
+                /*position:static;*/
                 top:5%;
                 float:left;
                 left:10px;
-            }*/
+            }
 
             body{
                 font-size: 2.5vmin;
@@ -194,7 +195,7 @@
             }
             
             .container{
-                width:100%;
+                width:90%;
             }
             .content{
                 width: 90%;
@@ -242,9 +243,9 @@
                 text-decoration: none;
             }
 
-            /*.container{
+            .container{
                 padding-left: 160px;
-            }*/
+            }
 
             .references {display:none;}
         }
@@ -279,20 +280,25 @@
             padding:5px 10px;
             border: 1px solid #979797;
             border-radius: 6px;
+            /*position: absolute;*/
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
             font-size: 14px;
-
-            position:absolute;
-            right: 5%;
+            float: right;
+            right:0;
+            top:0;
+            position: absolute;
+            font-family: 'helvetica', sans-serif;
+            /*display: inline-table;*/
             text-decoration: none;
+            /*float: right;*/
          }
 
         .player {margin-top: 2em}
 
         .navbar-fixed-left {
             background-color: #fff;
-            /*width: 140px;*/
+            width: 140px;
             position: fixed;
             border-radius: 0;
             border-style: none;
@@ -302,25 +308,24 @@
 
         .navbar-fixed-left {
             width: 140px;
-            /*position: fixed;*/
-            position: relative;
+            position: fixed;
             border-radius: 0;
             height: 100%;
         }
 
         .navbar-fixed-left .navbar-nav > li {
             float: none;  /* Cancel default li float: left */
-            /*width: 139px;*/
+            width: 139px;
         }
 
-        /*.navbar-fixed-left + .container {
+        .navbar-fixed-left + .container {
             padding-left: 160px;
-        }*/
+        }
 
         /* On using dropdown menu (To right shift popuped) */
         .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
             margin-top: -50px;
-            /*margin-left: 140px;*/
+            margin-left: 140px;
         }
 
         #navbar.fixed{
@@ -367,6 +372,30 @@
 
 
 <body>
+<!--
+<nav class="navbar navbar-fixed-left" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+                <span class="header"><h1>Shift</h1></span>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>  
+
+        <div class="collapse navbar-collapse" id="collapsable-menu">
+            <ul class="nav navbar-nav">
+                <input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />                               
+                <li><a href="#" id="kitchen">Link1</a></li>
+                <li><a href="#" id="programma">Link2</a></li>
+                <li><a href="#" id="foodart" >Link3</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
 
 <!--<div class="navbar navbar-inverse navbar-fixed-left mobilehide">
   <a class="navbar-brand" href="#"><h1>SHIFT</h1></a>
@@ -381,6 +410,9 @@
     <div id="header">
         <a href="#"><h1>Shift</h1></a> 
 
+        <div class="row">
+        </div>
+
         <div class="row header-subsection">
             <div class="col-lg-10  ">
                 <h2>THE UNION TO COME 
@@ -391,177 +423,182 @@
                 </p>
             </div>
         </div>
-
     </div>
 <!--temporary separator-->
 <hr/>
+    <!--<nav class="navbar navbar-fixed-left" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>  
+
+            <div class="collapse navbar-collapse" id="collapsable-menu">
+                <ul class="nav navbar-nav">
+                    <input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />                               
+                    <li><a href="#" id="kitchen">Link1</a></li>
+                    <li><a href="#" id="programma">Link2</a></li>
+                    <li><a href="#" id="foodart" >Link3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
 
 
 <div class="container">                
 
+
+
     <div class="row">
-        <div class="col-lg-1">
-
-            <nav class="navbar navbar-fixed-left" role="navigation">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable-menu">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>  
-
-                    <div class="collapse navbar-collapse" id="collapsable-menu">
-                        <ul class="nav navbar-nav">
-                            <input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />                               
-                            <li><a href="#" id="kitchen">Link1</a></li>
-                            <li><a href="#" id="programma">Link2</a></li>
-                            <li><a href="#" id="foodart" >Link3</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-            <!--<p>something on the left</p>
-            <p>something on the left</p>
-            <p>something on the left</p>-->
-        </div> <!-- col-lg-1 -->
-
-        <div class="col-lg-10 content"> 
-
-            <!--<div class="content">-->
+    <div class="col-lg-12">       
             <img   src="img/grid.svg" style="padding:0%; width:50%;height:100%;position:relative; z-index:1;display:block">
-            <p>
-                <!--<span class="sourceleft"><a href="towards.pdf">PDF version</a></span>-->
-                <span class="source">* Orginally published on <a href="http://towardsreflectivedesign.com">towards reflective design</a></span>  
-                In his book Relational Aesthetics (2002), Nicolas Bourriaud criticises the modern communication highways for turning its users into passive consumers.
-                He proposes Relational Art, an art movement that invites users into the process of creation, and thus breaks up the perceived one-wayness of modern communication. Bourriaud defines Relational Art as “a set of artistic practices which take as their theoretical and practical point of departure the whole of human relations and their social context, rather than an independent and private space.”
-                <span class="superscript">1</span>
-                <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
-                Relational art transfers the place of production to the place of consumption, where the artwork is directly influenced by the context of its consumption—the art gallery or museum. The intention of this new art and resulting communities of viewers is to create intersubjective encounters where the relationship between work and viewer is in focus.
-            </p>
 
-            <p>
-                In keeping with Bourriaud's writing, Andrew Blauvelt’s Towards Relational Design (2008) puts the concept of Relational Art into the vocabulary of the modern designer. He proposes that we are entering the third major phase of design; “an era of relationally based, contextually specific design.”
-                <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt, <br/><a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
-                Blauvelt’s third phase begins in the mid-1990s with the emergence of digital media and is inspired by its buzzwords like social networking, open source collaboration and interactivity. His idea of a designer is informed by the programmatic logic of “the Internet” rather than the content-based logic of the engineer. Relational design is built on variable content, memetic “designs for making designs” that adapt to contextual circumstances. Relational design moves away from the idealized concept of use and towards the complex reality of behavior. While Blauvelt focuses on the social individual, he also writes about the commercial embrace of this new reality:
-            </p>
         
-            <p class="quote">
-                Today, the audience is thought of as a social being, one who is exhaustively data-mined and geo-demographically profiled—taking us from the idea of an average or composite consumer to an individual purchaser among others living a similar social lifestyle community.
+        <div class="content">
 
-                <span class="superscript">3</span><span class="source">3 Andrew Blauvelt, <br /><a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
-            </p>
+        <p>
+            <!--<span class="sourceleft"><a href="towards.pdf">PDF version</a></span>-->
+            <span class="source">* Orginally published on <a href="http://towardsreflectivedesign.com">towards reflective design</a></span>  
+            In his book Relational Aesthetics (2002), Nicolas Bourriaud criticises the modern communication highways for turning its users into passive consumers.
+            He proposes Relational Art, an art movement that invites users into the process of creation, and thus breaks up the perceived one-wayness of modern communication. Bourriaud defines Relational Art as “a set of artistic practices which take as their theoretical and practical point of departure the whole of human relations and their social context, rather than an independent and private space.”
+            <span class="superscript">1</span>
+            <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
+            Relational art transfers the place of production to the place of consumption, where the artwork is directly influenced by the context of its consumption—the art gallery or museum. The intention of this new art and resulting communities of viewers is to create intersubjective encounters where the relationship between work and viewer is in focus.
+        </p>
 
-            <p>
-                But as media theorist Rick Poynor notes in Strained Relations (2008)<span class="superscript">4</span><span class="sourceleft">4 Rick Poynor, <br /><a href="http://www.printmag.com/article/observer_strained_relations">“Strained Relations”</a> (2008)</span>—Blauvelt’s “relational” now starts to sound like an euphemism for more subtle forms of social monitoring and control. It is relevant again to ask the questions that Claire Bishop asked in her original critique of Relational Aesthetics, Antagonism and Relational Aesthetics (2004): “What types of relations are being produced, for whom, and why?”
-            
-                <span class="superscript">5</span>
-                <span class="source">5 Claire Bishop, “Antagonism and Relational Aesthetics” October Magazine 110, (2004) pp. 51–79</span>
-            </p>
+        <p>
+            In keeping with Bourriaud's writing, Andrew Blauvelt’s Towards Relational Design (2008) puts the concept of Relational Art into the vocabulary of the modern designer. He proposes that we are entering the third major phase of design; “an era of relationally based, contextually specific design.”
+            <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt, <br/><a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
+            Blauvelt’s third phase begins in the mid-1990s with the emergence of digital media and is inspired by its buzzwords like social networking, open source collaboration and interactivity. His idea of a designer is informed by the programmatic logic of “the Internet” rather than the content-based logic of the engineer. Relational design is built on variable content, memetic “designs for making designs” that adapt to contextual circumstances. Relational design moves away from the idealized concept of use and towards the complex reality of behavior. While Blauvelt focuses on the social individual, he also writes about the commercial embrace of this new reality:
+        </p>
+      
+        <p class="quote">
+            Today, the audience is thought of as a social being, one who is exhaustively data-mined and geo-demographically profiled—taking us from the idea of an average or composite consumer to an individual purchaser among others living a similar social lifestyle community.
 
-            <h2><span>Personalized persuasion</span></h2>
+            <span class="superscript">3</span><span class="source">3 Andrew Blauvelt, <br /><a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
+        </p>
 
-            <p>
-                Edward Bernays, a pioneer of propaganda and often called “the father of PR”, invented mass persuasion by combining the psychoanalytical ideas of his uncle, Sigmund Freud with theories of mass control. His work on mass persuasion were critical in transforming the United States from a needs- to a desires-culture and creating modern consumerism.<span class="superscript">6</span><span class="sourceleft">6 The Century of the Self, directed by Adam Curtis, (2002) DVD</span>
+        <p>
+            But as media theorist Rick Poynor notes in Strained Relations (2008)<span class="superscript">4</span><span class="sourceleft">4 Rick Poynor, <br /><a href="http://www.printmag.com/article/observer_strained_relations">“Strained Relations”</a> (2008)</span>—Blauvelt’s “relational” now starts to sound like an euphemism for more subtle forms of social monitoring and control. It is relevant again to ask the questions that Claire Bishop asked in her original critique of Relational Aesthetics, Antagonism and Relational Aesthetics (2004): “What types of relations are being produced, for whom, and why?”
+          
+            <span class="superscript">5</span>
+            <span class="source">5 Claire Bishop, “Antagonism and Relational Aesthetics” October Magazine 110, (2004) pp. 51–79</span>
+        </p>
 
-                To demonstrate the effectivity of persuasion, the Milgram experiment is often quoted. This experiment conducted by social psychologist Stanley Milgram in 1963, proves the persuasive power of authority. In the experiment, 65% of the test subjects follow orders to afflict what they are told be real and possibly lethal electric shocks to another person by following the instructions of an authoritative figure portrayed by Milgram in a white lab coat.<span class="superscript">7</span><span class="source">7 Stanley Milgram, “Behavioral study of obedience” The Journal of Abnormal and Social Psychology Vol. 67, No. 4 (1963)</span>
+        <h2><span>Personalized persuasion</span></h2>
 
-                To further advance the field of persuasion, Fogg (1997) shows that computers can work as persuasive agents and creates a new field of study for the overlapping of technology and persuasion: Captology.<span class="superscript">8</span><span class="sourceleft">8 B.J. Fogg, “Captology: the study of computers as persuasive technologies” CHI 97 Electronic Publications: Special Interest Groups, (1997) </span>
+        <p>
+            Edward Bernays, a pioneer of propaganda and often called “the father of PR”, invented mass persuasion by combining the psychoanalytical ideas of his uncle, Sigmund Freud with theories of mass control. His work on mass persuasion were critical in transforming the United States from a needs- to a desires-culture and creating modern consumerism.<span class="superscript">6</span><span class="sourceleft">6 The Century of the Self, directed by Adam Curtis, (2002) DVD</span>
 
-            </p>
-    
-            <p>
-                But research by Maurits Kaptein (2012),<span class="superscript">9</span><span class="source">9 Maurits Kaptein, “Personalized Persuasion in Ambient Intelligence” (PhD diss., Eindhoven University of Technology 2012) </span> Schlomo Berkovsky, Jill Freyne, and Harri Oinas-kukkonen (2012),<span class="superscript">10</span><span class="sourceleft">10 Shlomo Berkovsky, Nicta Jill Freyne, Csiro and Harri Oinas­Kukkonen,  “Influencing Individually: Fusing Personalization and Persuasion” ACM Transactions on Interactive Intelligent Systems, Vol. 2, No. 2, Article 9 (2012) </span> shows that a new form of persuasion is emerging, persuasion that uses a relational model to tailor its methods to the context of the individual—personalized persuasion.
-            </p>
+            To demonstrate the effectivity of persuasion, the Milgram experiment is often quoted. This experiment conducted by social psychologist Stanley Milgram in 1963, proves the persuasive power of authority. In the experiment, 65% of the test subjects follow orders to afflict what they are told be real and possibly lethal electric shocks to another person by following the instructions of an authoritative figure portrayed by Milgram in a white lab coat.<span class="superscript">7</span><span class="source">7 Stanley Milgram, “Behavioral study of obedience” The Journal of Abnormal and Social Psychology Vol. 67, No. 4 (1963)</span>
 
-            <p class="quote">
-                “Persuasive technologies can be more efficient than their human counterparts by being more persistent, by being always on, and by tailoring their persuasive attempts to responses by their users.”<span class="superscript">11</span><span class="source">11 Maurits Kaptein, “Personalized Persuasion in Ambient Intelligence” (PhD diss., Eindhoven University of Technology 2012) </span>
-            </p>
+            To further advance the field of persuasion, Fogg (1997) shows that computers can work as persuasive agents and creates a new field of study for the overlapping of technology and persuasion: Captology.<span class="superscript">8</span><span class="sourceleft">8 B.J. Fogg, “Captology: the study of computers as persuasive technologies” CHI 97 Electronic Publications: Special Interest Groups, (1997) </span>
 
-            <p>
-                In his research Kaptein aims to advance the design of successful persuasive technologies by personalizing the means by which persuasive messages are presented to users. This is done by creating individual profiles for each user, and then adapt the content to the users psychological profile to be as persuasive as possible. When designing a persuasive system, he also shows that it is beneficial to be secretive and not disclose the use of persuasive systems to the user—creating a context-aware system that operates in the background and strategically targets psychological exploits.
-            </p>
+        </p>
+ 
+        <p>
+            But research by Maurits Kaptein (2012),<span class="superscript">9</span><span class="source">9 Maurits Kaptein, “Personalized Persuasion in Ambient Intelligence” (PhD diss., Eindhoven University of Technology 2012) </span> Schlomo Berkovsky, Jill Freyne, and Harri Oinas-kukkonen (2012),<span class="superscript">10</span><span class="sourceleft">10 Shlomo Berkovsky, Nicta Jill Freyne, Csiro and Harri Oinas­Kukkonen,  “Influencing Individually: Fusing Personalization and Persuasion” ACM Transactions on Interactive Intelligent Systems, Vol. 2, No. 2, Article 9 (2012) </span> shows that a new form of persuasion is emerging, persuasion that uses a relational model to tailor its methods to the context of the individual—personalized persuasion.
+        </p>
 
-            <p>
-                Researchers at MIT, John R. Hauser, Glen L. Urban, Guilherme Liberali, and Michael Braun have developed a similar form of personalization: Website morphing. Through click-analyzation their HULB algorithm predicts the users “cognitive style” and changes the design of a website accordingly. The design and website’s tone of voice “morph” instantly and adapt to match perceived user preferences.<span class="superscript">12</span><span class="sourceleft">12 John R. Hauser Glen L. Urban Guilherme Liberali and Michael Braun “Website Morphing” Marketing Science, (May 2008) </span>In a 2013 banner experiment for Chevrolet, the HULB algorithm was implemented to rotate 1 of 8 banners based on user cognitive profiles, by which a 30% lift in Chevrolet brand consideration was observed when compared to similar non-personalized banners.<span class="superscript">13</span><span class="source">13 Glen L. Urban, Guilherme (Gui) Liberali, Erin MacDonald, Robert Bordley, John R. Hauser,<br /><a href="http://dx.doi.org/10.1287/mksc.2013.0803">“Morphing Banner Advertising”</a>(2013)</span>Two other examples, for Japanese bank card-loans and CNET in 2014 show similarly effective results.<span class="superscript">14</span><span class="sourceleft">14 John R. Hauser Guilherme Liberali, Glen L. Urban, “Website Morphing 2.0: Switching Costs, Partial Exposure, Random Exit, and When to Morph” (2014)</span>
-            </p>
+        <p class="quote">
+            “Persuasive technologies can be more efficient than their human counterparts by being more persistent, by being always on, and by tailoring their persuasive attempts to responses by their users.”<span class="superscript">11</span><span class="source">11 Maurits Kaptein, “Personalized Persuasion in Ambient Intelligence” (PhD diss., Eindhoven University of Technology 2012) </span>
+        </p>
 
-            <p>
-                Science Rockstars is an Amsterdam based startup developing commercial persuasion profiling solutions. Disclosed clients include booking.com, UPB and Rovio (Creators of Angry birds). In a post from their official website, responding to an interview with Prof. Hauser on Morphing websites,<span class="superscript">15</span><span class="source">15 Arjan Haring,<br /> <a href="http://www.sciencerockstars.com/pttrns/website-morphing-revolutions-marketing/">“Website morphing and more revolutions in marketing”</a>(2014)</span> co-founder Kaptein writes that both “Persuasion Profiling” and the concept of “Morphing Websites” are proxies for what is coming next:</p>
+        <p>
+            In his research Kaptein aims to advance the design of successful persuasive technologies by personalizing the means by which persuasive messages are presented to users. This is done by creating individual profiles for each user, and then adapt the content to the users psychological profile to be as persuasive as possible. When designing a persuasive system, he also shows that it is beneficial to be secretive and not disclose the use of persuasive systems to the user—creating a context-aware system that operates in the background and strategically targets psychological exploits.
+        </p>
 
-            <p class="quote">
-                We are done looking at ‘rounded corners of buy now buttons’. Move over to real drivers of customer behavior: cognitive styles, persuasive strategies, heuristics and biases. This is where good online marketing starts. And the only way we can use these findings from psychology is by creating content: the content should really implement the psychological mechanisms that we are looking at.<span class="superscript">16</span><span class="sourceleft">16 Maurits Kaptein,<br /> <a href="hhttp://www.sciencerockstars.com/pttrns/going­meta­w­mauritskate­responses­john­hauser­interview"> “Going Meta w/ @Mauritskate: Responses to John Hauser interview”</a>(2013)</span></p>
-            <p>
+        <p>
+            Researchers at MIT, John R. Hauser, Glen L. Urban, Guilherme Liberali, and Michael Braun have developed a similar form of personalization: Website morphing. Through click-analyzation their HULB algorithm predicts the users “cognitive style” and changes the design of a website accordingly. The design and website’s tone of voice “morph” instantly and adapt to match perceived user preferences.<span class="superscript">12</span><span class="sourceleft">12 John R. Hauser Glen L. Urban Guilherme Liberali and Michael Braun “Website Morphing” Marketing Science, (May 2008) </span>In a 2013 banner experiment for Chevrolet, the HULB algorithm was implemented to rotate 1 of 8 banners based on user cognitive profiles, by which a 30% lift in Chevrolet brand consideration was observed when compared to similar non-personalized banners.<span class="superscript">13</span><span class="source">13 Glen L. Urban, Guilherme (Gui) Liberali, Erin MacDonald, Robert Bordley, John R. Hauser,<br /><a href="http://dx.doi.org/10.1287/mksc.2013.0803">“Morphing Banner Advertising”</a>(2013)</span>Two other examples, for Japanese bank card-loans and CNET in 2014 show similarly effective results.<span class="superscript">14</span><span class="sourceleft">14 John R. Hauser Guilherme Liberali, Glen L. Urban, “Website Morphing 2.0: Switching Costs, Partial Exposure, Random Exit, and When to Morph” (2014)</span>
+        </p>
 
-            <h2><span>Social computing as a tool for personalization</span></h2></p>
+        <p>
+            Science Rockstars is an Amsterdam based startup developing commercial persuasion profiling solutions. Disclosed clients include booking.com, UPB and Rovio (Creators of Angry birds). In a post from their official website, responding to an interview with Prof. Hauser on Morphing websites,<span class="superscript">15</span><span class="source">15 Arjan Haring,<br /> <a href="http://www.sciencerockstars.com/pttrns/website-morphing-revolutions-marketing/">“Website morphing and more revolutions in marketing”</a>(2014)</span> co-founder Kaptein writes that both “Persuasion Profiling” and the concept of “Morphing Websites” are proxies for what is coming next:</p>
 
-            <p>
-                In further considering these technologies impact on contemporary life, Neal Thomas (2013) defines social computing as “the digital platforms that enroll the social participation of users into computational processes that support the goals of a platform.”<span class="superscript">17</span><span class="source">17 Neal Thomas, “Social computing as a platform for memory” Culture Machine vol 14 (2013)</span> Examples would be how Amazon shows you related products, Netflix recommends other movies you might be into, Google personalizes your search results<span class="superscript">18</span><span class="sourceleft">18 Eli Pariser, The Filter Bubble (Penguin Books, 2012) </span> and Facebook customizes your news feed through its Edgerank algorithm.<span class="superscript">19</span><span class="source">19 Jason Kincaid <a href="http://techcrunch.com/2010/04/22/facebook-edgerank/">“EdgeRank: The Secret Sauce That Makes Facebook's News Feed Tick”</a>(2010)
-                </span> Personalization has also become a tool for advertising, creating ads that are contextually aware. Examples are Google ads adapting to the company’s searches and content of personal emails, and Facebook advertising incorporating your friends faces—both instrumentalizing your social relations to create new content.<img class="img-source" src="img/bubble1.png" alt="Miguel" />
-            </p>
+        <p class="quote">
+            We are done looking at ‘rounded corners of buy now buttons’. Move over to real drivers of customer behavior: cognitive styles, persuasive strategies, heuristics and biases. This is where good online marketing starts. And the only way we can use these findings from psychology is by creating content: the content should really implement the psychological mechanisms that we are looking at.<span class="superscript">16</span><span class="sourceleft">16 Maurits Kaptein,<br /> <a href="hhttp://www.sciencerockstars.com/pttrns/going­meta­w­mauritskate­responses­john­hauser­interview"> “Going Meta w/ @Mauritskate: Responses to John Hauser interview”</a>(2013)</span></p>
+        <p>
 
+        <h2><span>Social computing as a tool for personalization</span></h2></p>
 
-            <p>Critical of the growing personalization of content and advertising, on digital platforms, Eli Pariser shows that this could lead to individual isolation in what he defines as the Filter Bubble.<span class="superscript">20</span><span class="sourceleft">20 Eli Pariser, The Filter Bubble (Penguin Books, 2012) 
-            </span>The same goes for targeted advertising. Through the commercialization of digital media, the technologies of content and advertising are merging— utilizing personalization to adapt to the user. As the content around us becomes more and more tailored to our own preferences—in line with our persuasion profiles—we become “alone with it.” “The internet” could become more of a hermetic hut than Marshall McLuhan’s envisioned global village. Here design is both a vehicle for self-expression as well as a means through which we access information. Only in this combined state, the kind of information brought to you is always based on a validation of an idealized image of the self. 
-            </p>
-
-            <p>On the corporate side of things, Google CEO Eric Schmidt is a proponent of personalized content because according to him it is the very future of content:  "The power of individual targeting—the technology will be so good it will be very hard for people to watch or consume something that has not in some sense been tailored for them.“<span class="superscript">21</span><span class="source">21 Holman W. Jenkins jr., <a href="http://online.wsj.com/news/articles/SB10001424052748704901104575423294099527212
-            ">“Google and the Search for the Future”</a> (2010)</span></p>
-
-            <p>The future of tailored content seems to be in predictive systems that leverage big data through the shape of contextual information and predictive analytics to anticipate what the user wants. Predictive systems strive to provide the right functionality and content on the right device at the right time for the right person by continuously learning about them. Following Google’s GoogleNow, Apple is currently working on predictive functions for Siri, while a whole number of startups are all developing apps implementing predictive technology.<span class="superscript">22</span><span class="sourceleft">22 Tom Simonite, <a href="http://www.technologyreview.com/news/514366/with­personal­data­predictive­apps­stay­a­step­ahead">“With Personal Data, Predictive Apps Stay a Step Ahead"</a> (2013)</span> But to deeper understand their users and the world they live in, predictive systems have to go beyond simply repackaging contextual information. As Justine Cassel, from Yahoo funded predictive project InMind, puts it: “In order to really personalize in an interesting way, you need to infer psychological states and beliefs.”<span class="superscript">23</span><span class="source">23 Tom Simonite, <a href="http://www.technologyreview.com/news/524401/yahoo­launches­10­million­research­effort­to­invent­a­smarter­siri/">“Yahoo Launches $10 Million Research Effort to Invent a Smarter Siri”</a> (2013)</span></p>
-
-            <p>Kaptein (2012) notes that the efficiency of personalized persuasion can be elevated by combining it with other types of personalization. Using already existing social profiles to quicker and with greater accuracy pinpoint user profiles would increase efficiency, as several studies have already shown the correlation between psychological traits and contextual data generated by social networks.<span class="superscript">24</span><span class="sourceleft">24 Maurits Kaptein, “Personalized Persuasion in Ambient Intelligence” (PhD diss., Eindhoven University of Technology 2012) </span> Cross-pollinating psychology and contextual data is a development surely welcomed by the behemoths of social computing who are trying to monetize their aggregated social information.</p>
-
-            <p>So what happens when personalization technologies turn contextual data into marketing currency by instrumentalizing it through relational design to persuade their users?</p>
-
-            <div class="player">                        
-            <!--<iframe src="//player.vimeo.com/video/90519150" width="700px" height="500px" frameborder="0"></iframe>-->
-            </div>
-            
-                <p>
-            This scene of James Cameron's movie, The Abyss (1989), is of an interaction between the protagonist, diver Lindsey Brigman, and an alien lifeform. The alien, a reflective tentacle blob navigates through a submarine until it finds Lindsey and her fellow divers. Lindsey is worried about the safety of her crew and herself until the creature examines her and starts to mirror her and her facial expressions. ”It’s me,” she says with relief and smiles, by which her reflection smiles back at her. Interesting is the reassuring effect of such mirroring. Without further knowledge about the alien’s intentions—mirroring is perceived as positive communication.
-            The cycle of reflective design starts by identifying the user. This is done by building a profile from user input or “borrowing” contextual data from another social platform. The predictive system then makes a representation through a relational design, mirroring the users psychological and personal profile, choosing the most persuasive strategy. Instead of delivering a solution for an average user, the system now speaks your language. Instead of being defined at the moment of creation, the new digital product is defined at the moment of consumption by the user to become one of 7 billion possible outcomes. The result is measured to improve every user profile, including yours—creating surplus value while you consume.</p>
-
-            <p>Our contextual reflection projected onto our designed surroundings—adapting to us; becoming us—functioning as a mirror. The new paradigm of design takes digital disruption to its extreme: “a world of hyper-individual experience”<span class="superscript">25</span><span class="sourceleft">25 Mike Gualtieri, <a href="http://www.forrester.com/go?objectid=RES95261"> “Predictive Apps Are The Next Big Thing In Customer Engagement”</a> (2014)</span> “It’s me” says everyone. Personal information injected into pre-designed templates—“keep calm and insert name.” Instead of creating intersubjective encounters, this reflective design establishes personalized information monologues. Through reflective design, “relational” is used to further advance the intense commercialization of digital media, reinforcing the isolating modern communication highways that turn us into passive consumers rather than, as Bourriaud intended, breaking them up.</p>
-
-            <p>Where the old giants use ambiguity and general values to define their tone of voice and thus becoming all encompassing, the companies of the new digital age do the exact opposite. They achieve total non-exclusion by extreme specification. Why talk in broad terms to a group, when you can talk to everybody individually. This of course also changes design. Where before the creation of common symbols was key for communication, it is now replaced with an automated toolbox for individual communication. As it becomes possible to create design with built-in variables that are open-ended, automatized, and personalized to individual context, design goes from shared to individual experience. Company focus changes from common denominator to personal identifier, playing into our need for self-validation and self-expression through design. The smiley is replaced by the reflective tentacle blob.
-            </p>
-            <img class="img-sourceleft" src="img/bubble2.png" alt="Frank" />
-
-            <p>Altmann (2012) describes soft branding, a new form of branding that has spawned from the need for global corporations to adapt to new contexts and smaller markets:</p>
-
-            <p class="quote">We can imagine soft branding as a mobile, liquid camouflage that continually morphs into different enticing forms leading to the same end scenario, or as a type of slippery language—a meme that attaches to the contexts and visual surfaces around us.<span class="superscript">26</span><span class="source">26 Kari Altmann, <a href="http://karialtmann.com/texts/platform/">“Soft Brand Abstracts: Closer Than Ever Before”</a>(2013)</span></p>
+        <p>
+            In further considering these technologies impact on contemporary life, Neal Thomas (2013) defines social computing as “the digital platforms that enroll the social participation of users into computational processes that support the goals of a platform.”<span class="superscript">17</span><span class="source">17 Neal Thomas, “Social computing as a platform for memory” Culture Machine vol 14 (2013)</span> Examples would be how Amazon shows you related products, Netflix recommends other movies you might be into, Google personalizes your search results<span class="superscript">18</span><span class="sourceleft">18 Eli Pariser, The Filter Bubble (Penguin Books, 2012) </span> and Facebook customizes your news feed through its Edgerank algorithm.<span class="superscript">19</span><span class="source">19 Jason Kincaid <a href="http://techcrunch.com/2010/04/22/facebook-edgerank/">“EdgeRank: The Secret Sauce That Makes Facebook's News Feed Tick”</a>(2010)
+            </span> Personalization has also become a tool for advertising, creating ads that are contextually aware. Examples are Google ads adapting to the company’s searches and content of personal emails, and Facebook advertising incorporating your friends faces—both instrumentalizing your social relations to create new content.<img class="img-source" src="img/bubble1.png" alt="Miguel" />
+        </p>
 
 
-            <p>As a structure, Reflective Design combines Altmanns vision of soft branding with personalization technology to achieve the market of one. To again quote Altmann (2012): “The big fish replicates itself into smaller, varying fish which mimic the naturally diversified pool”<span class="superscript">27</span><span class="sourceleft">27 Kari Altmann, <a href="http://karialtmann.com/texts/platform/">“Soft Brand Abstracts: Closer Than Ever Before”</a>(2013)</span>—the brand softened into an array of moldable entities, each with the possibility to become whatever the user needs them to be. These entities are all embedded within the same algorithmic DNA, a given set of variables that accommodate psychological exploits and perceived needs. In a new digital age where products, services, and their branding increasingly free themselves from their physical constraints, the part not defined by this DNA is constantly shrinking.</p>
+<p>Critical of the growing personalization of content and advertising, on digital platforms, Eli Pariser shows that this could lead to individual isolation in what he defines as the Filter Bubble.<span class="superscript">20</span><span class="sourceleft">20 Eli Pariser, The Filter Bubble (Penguin Books, 2012) 
+</span>The same goes for targeted advertising. Through the commercialization of digital media, the technologies of content and advertising are merging— utilizing personalization to adapt to the user. As the content around us becomes more and more tailored to our own preferences—in line with our persuasion profiles—we become “alone with it.” “The internet” could become more of a hermetic hut than Marshall McLuhan’s envisioned global village. Here design is both a vehicle for self-expression as well as a means through which we access information. Only in this combined state, the kind of information brought to you is always based on a validation of an idealized image of the self. 
+</p>
 
-            <p>Recently, Jaron Lanier (2013) notices a development of digital companies toward extreme conceptual simplification. Especially the companies working with immaterial goods and services tend to be more and more based on simple rules, a philosophy on how to handle information.<span class="superscript">28</span><span class="source">28 Jaron Lanier, <i>Who Owns the Future?</i> (Simon & Schuster, 2013) </span>The algorithm follows this philosophy, increasing efficiency and accuracy through the aggregation of contextual data, continuously updating and refining itself. A system for aggregating data through free products, then sell back data as personalized products and services. If you are a hammer, the algorithm turns everything into a nail. To the user this world becomes a homogeneous environment of self-validation and user-centered stimuli. </p>
+<p>On the corporate side of things, Google CEO Eric Schmidt is a proponent of personalized content because according to him it is the very future of content:  "The power of individual targeting—the technology will be so good it will be very hard for people to watch or consume something that has not in some sense been tailored for them.“<span class="superscript">21</span><span class="source">21 Holman W. Jenkins jr., <a href="http://online.wsj.com/news/articles/SB10001424052748704901104575423294099527212
+">“Google and the Search for the Future”</a> (2010)</span></p>
 
-            <p class="quote">There has today occurred a veritable inversion in the relation between life and media: the media now relates life each day with such force that this ‘relation’ seems not only to anticipate but ineluctably to precede, that is, to determine life itself.<span class="superscript">29</span><span class="sourceleft">29 Bernhard Stiegler, <i>Technics and Time: 2</i> (Stanford University Press, 2009) </span>
+<p>The future of tailored content seems to be in predictive systems that leverage big data through the shape of contextual information and predictive analytics to anticipate what the user wants. Predictive systems strive to provide the right functionality and content on the right device at the right time for the right person by continuously learning about them. Following Google’s GoogleNow, Apple is currently working on predictive functions for Siri, while a whole number of startups are all developing apps implementing predictive technology.<span class="superscript">22</span><span class="sourceleft">22 Tom Simonite, <a href="http://www.technologyreview.com/news/514366/with­personal­data­predictive­apps­stay­a­step­ahead">“With Personal Data, Predictive Apps Stay a Step Ahead"</a> (2013)</span> But to deeper understand their users and the world they live in, predictive systems have to go beyond simply repackaging contextual information. As Justine Cassel, from Yahoo funded predictive project InMind, puts it: “In order to really personalize in an interesting way, you need to infer psychological states and beliefs.”<span class="superscript">23</span><span class="source">23 Tom Simonite, <a href="http://www.technologyreview.com/news/524401/yahoo­launches­10­million­research­effort­to­invent­a­smarter­siri/">“Yahoo Launches $10 Million Research Effort to Invent a Smarter Siri”</a> (2013)</span></p>
 
-            </p>
+<p>Kaptein (2012) notes that the efficiency of personalized persuasion can be elevated by combining it with other types of personalization. Using already existing social profiles to quicker and with greater accuracy pinpoint user profiles would increase efficiency, as several studies have already shown the correlation between psychological traits and contextual data generated by social networks.<span class="superscript">24</span><span class="sourceleft">24 Maurits Kaptein, “Personalized Persuasion in Ambient Intelligence” (PhD diss., Eindhoven University of Technology 2012) </span> Cross-pollinating psychology and contextual data is a development surely welcomed by the behemoths of social computing who are trying to monetize their aggregated social information.</p>
 
-            <p>When media is based on a continuous cycle of reflective design, we do not only automatically influence our media through personalization—they start influencing us by becoming part of our context. We engage in a feedback loop with our reflective media, constructing an echo chamber of ourselves around us. When through a process of context-awareness, relational design objects replicate our contextual circumstances rather than helping us breach our contextual limitations, they turn into reflections instead of windows. Without noticing it,  instead of exploring others, we end up consuming confirming versions of ourselves. The self-fulfilling prophecy of predictive systems then makes us turn into our commercially envisioned futures.</p>
+<p>So what happens when personalization technologies turn contextual data into marketing currency by instrumentalizing it through relational design to persuade their users?</p>
 
-            <p>
-            If instead reflective design is to reintroduce user agency, it should function as a decoder, making us aware of—rather than reinforcing our contextual limitations. Privacy regulations restricting commercial access to our contextual data & new algorithms with the objective to help us breach our filter bubble<span class="superscript">30</span><span class="source">30 Eduardo Graells­Garrido, Mounia Lalmas, Daniele Quercia, <a href="http://arxiv.org/abs/1311.4658">“Data Portraits: <i>Connecting People of Opposing Views”</i></a> (2013) </span>
+<div class="player">                        
+<!--<iframe src="//player.vimeo.com/video/90519150" width="700px" height="500px" frameborder="0"></iframe>-->
+</div>
+  
+    <p>
+This scene of James Cameron's movie, The Abyss (1989), is of an interaction between the protagonist, diver Lindsey Brigman, and an alien lifeform. The alien, a reflective tentacle blob navigates through a submarine until it finds Lindsey and her fellow divers. Lindsey is worried about the safety of her crew and herself until the creature examines her and starts to mirror her and her facial expressions. ”It’s me,” she says with relief and smiles, by which her reflection smiles back at her. Interesting is the reassuring effect of such mirroring. Without further knowledge about the alien’s intentions—mirroring is perceived as positive communication.
+The cycle of reflective design starts by identifying the user. This is done by building a profile from user input or “borrowing” contextual data from another social platform. The predictive system then makes a representation through a relational design, mirroring the users psychological and personal profile, choosing the most persuasive strategy. Instead of delivering a solution for an average user, the system now speaks your language. Instead of being defined at the moment of creation, the new digital product is defined at the moment of consumption by the user to become one of 7 billion possible outcomes. The result is measured to improve every user profile, including yours—creating surplus value while you consume.</p>
 
-            could be examples of various counter-movements to this new commercial design paradigm. But even if the possibilities for reflective design breaching contextual limitations exists in theory, how can we surpass the commercial and increasingly centralized monopoly on contextual information? In our capitalist society, instrumentalized design will strive for the maximization of profit, and when targeting individuals by adapting to their psychological exploits by mirroring them is not restricted—we will end up with reflective design that instead of just foreseeing our actions—ends up defining them.  </p>
+<p>Our contextual reflection projected onto our designed surroundings—adapting to us; becoming us—functioning as a mirror. The new paradigm of design takes digital disruption to its extreme: “a world of hyper-individual experience”<span class="superscript">25</span><span class="sourceleft">25 Mike Gualtieri, <a href="http://www.forrester.com/go?objectid=RES95261"> “Predictive Apps Are The Next Big Thing In Customer Engagement”</a> (2014)</span> “It’s me” says everyone. Personal information injected into pre-designed templates—“keep calm and insert name.” Instead of creating intersubjective encounters, this reflective design establishes personalized information monologues. Through reflective design, “relational” is used to further advance the intense commercialization of digital media, reinforcing the isolating modern communication highways that turn us into passive consumers rather than, as Bourriaud intended, breaking them up.</p>
+
+<p>Where the old giants use ambiguity and general values to define their tone of voice and thus becoming all encompassing, the companies of the new digital age do the exact opposite. They achieve total non-exclusion by extreme specification. Why talk in broad terms to a group, when you can talk to everybody individually. This of course also changes design. Where before the creation of common symbols was key for communication, it is now replaced with an automated toolbox for individual communication. As it becomes possible to create design with built-in variables that are open-ended, automatized, and personalized to individual context, design goes from shared to individual experience. Company focus changes from common denominator to personal identifier, playing into our need for self-validation and self-expression through design. The smiley is replaced by the reflective tentacle blob.
+</p>
+<img class="img-sourceleft" src="img/bubble2.png" alt="Frank" />
+
+<p>Altmann (2012) describes soft branding, a new form of branding that has spawned from the need for global corporations to adapt to new contexts and smaller markets:</p>
+
+<p class="quote">We can imagine soft branding as a mobile, liquid camouflage that continually morphs into different enticing forms leading to the same end scenario, or as a type of slippery language—a meme that attaches to the contexts and visual surfaces around us.<span class="superscript">26</span><span class="source">26 Kari Altmann, <a href="http://karialtmann.com/texts/platform/">“Soft Brand Abstracts: Closer Than Ever Before”</a>(2013)</span></p>
 
 
-            </p>
-            </div>
+<p>As a structure, Reflective Design combines Altmanns vision of soft branding with personalization technology to achieve the market of one. To again quote Altmann (2012): “The big fish replicates itself into smaller, varying fish which mimic the naturally diversified pool”<span class="superscript">27</span><span class="sourceleft">27 Kari Altmann, <a href="http://karialtmann.com/texts/platform/">“Soft Brand Abstracts: Closer Than Ever Before”</a>(2013)</span>—the brand softened into an array of moldable entities, each with the possibility to become whatever the user needs them to be. These entities are all embedded within the same algorithmic DNA, a given set of variables that accommodate psychological exploits and perceived needs. In a new digital age where products, services, and their branding increasingly free themselves from their physical constraints, the part not defined by this DNA is constantly shrinking.</p>
 
-            <div class="references">
-                <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
-                <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>  
-                <span class="superscript">3</span><span class="source">3 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
-            </div>
+<p>Recently, Jaron Lanier (2013) notices a development of digital companies toward extreme conceptual simplification. Especially the companies working with immaterial goods and services tend to be more and more based on simple rules, a philosophy on how to handle information.<span class="superscript">28</span><span class="source">28 Jaron Lanier, <i>Who Owns the Future?</i> (Simon & Schuster, 2013) </span>The algorithm follows this philosophy, increasing efficiency and accuracy through the aggregation of contextual data, continuously updating and refining itself. A system for aggregating data through free products, then sell back data as personalized products and services. If you are a hammer, the algorithm turns everything into a nail. To the user this world becomes a homogeneous environment of self-validation and user-centered stimuli. </p>
 
-        </div> <!--content col-lg-10 -->
-    </div><!--row -->
-</div> <!--container-->
-</body>
+<p class="quote">There has today occurred a veritable inversion in the relation between life and media: the media now relates life each day with such force that this ‘relation’ seems not only to anticipate but ineluctably to precede, that is, to determine life itself.<span class="superscript">29</span><span class="sourceleft">29 Bernhard Stiegler, <i>Technics and Time: 2</i> (Stanford University Press, 2009) </span>
+
+</p>
+
+<p>When media is based on a continuous cycle of reflective design, we do not only automatically influence our media through personalization—they start influencing us by becoming part of our context. We engage in a feedback loop with our reflective media, constructing an echo chamber of ourselves around us. When through a process of context-awareness, relational design objects replicate our contextual circumstances rather than helping us breach our contextual limitations, they turn into reflections instead of windows. Without noticing it,  instead of exploring others, we end up consuming confirming versions of ourselves. The self-fulfilling prophecy of predictive systems then makes us turn into our commercially envisioned futures.</p>
+
+<p>
+If instead reflective design is to reintroduce user agency, it should function as a decoder, making us aware of—rather than reinforcing our contextual limitations. Privacy regulations restricting commercial access to our contextual data & new algorithms with the objective to help us breach our filter bubble<span class="superscript">30</span><span class="source">30 Eduardo Graells­Garrido, Mounia Lalmas, Daniele Quercia, <a href="http://arxiv.org/abs/1311.4658">“Data Portraits: <i>Connecting People of Opposing Views”</i></a> (2013) </span>
+
+ could be examples of various counter-movements to this new commercial design paradigm. But even if the possibilities for reflective design breaching contextual limitations exists in theory, how can we surpass the commercial and increasingly centralized monopoly on contextual information? In our capitalist society, instrumentalized design will strive for the maximization of profit, and when targeting individuals by adapting to their psychological exploits by mirroring them is not restricted—we will end up with reflective design that instead of just foreseeing our actions—ends up defining them.  </p>
+
+
+</p></div>
+
+<div class="references">
+
+    <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
+    <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>  
+    <span class="superscript">3</span><span class="source">3 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
+
+</div>
+    </div>
+
+
+
+
+      <!-- FOOTER -->
+      <!--<footer>
+        <p> 
+<span class="footer-left">Text last updated April 1st, 2014.The concept of reflective design was first presented at the bachelor exhibition at Beckmans College of Design (2013).</span></p> <span class="pull-right"><a  href="#" class="no">&uarr; top</a></span><span class="pull-left"><a  href="http://unionshift.com" class="no">&larr; back</a></span>
+      </footer>-->
+
+    </div><!-- /.container -->
+</div>
+  </body>
 </html>
