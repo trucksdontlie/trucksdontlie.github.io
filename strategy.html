@@ -40,6 +40,8 @@
             float: right;
         }
      
+
+
     h1 {
     margin:0;
     padding: 1.6vh 0 1.6vh 1.6vh;
@@ -174,11 +176,12 @@
         }*/
 
         @media (min-width:768px){  
-            /*#collapsable-menu{
-                top:5%;
-                float:left;
-                left:10px;
-            }*/
+
+            .pdfversion  {
+                position: absolute;
+                top:0;
+                right:0;
+            }
 
             body{
                 font-size: 2.5vmin;
@@ -186,25 +189,11 @@
             
             .source{
                 display: none;
-            }
-            
-            /*.container{
-                width:90%;
-            }*/
-            /*.content{
-                width: 90%;
-            }*/
-
-            /*NAVBAR TOGGLE*/
-           
+            }           
         }
 
         @media (min-width:992px){  
 
-            /*.content{
-                width: 80%;
-            }
-*/
             body {font-size: 3.1vmin;}
 
             .mobilehide{
@@ -259,13 +248,14 @@
             font-size: 14px;
             float: right;
             right:0;
-            top:0;
+            top:33.33%;
             position: absolute;
             font-family: 'helvetica', sans-serif;
             /*display: inline-table;*/
             text-decoration: none;
             /*float: right;*/
          }
+
 
         .player {margin-top: 2em}
 
@@ -329,53 +319,11 @@
             color: white;
         }
 /*------------------------------------------------------------*/
-        /*html, body {
-            height: 4000px;
-        }*/
-
         .navbar-fixed {
             top: 0;
             z-index: 100;
             position: fixed;
-            /*width: 100%;*/
         }
-
-        /*#body_div {
-            top: 0;
-            position: relative;
-            height: 200px;
-            background-color: green;
-        }*/
-
-        /*#banner {
-            width: 100%;
-            height: 273px;
-            background-color: gray;
-            overflow: hidden;
-        }*/
-/*
-        #nav_bar {
-            border: 0;
-            background-color: #202020;
-            border-radius: 0px;
-            margin-bottom: 0;
-            height: 30px;
-        }*/
-
-        /*.nav_links {
-            margin: 0;
-        }
-
-        .nav_links li {
-            display: inline-block;
-            margin-top: 4px;
-        }
-        .nav_links li a {
-            padding: 0 15.5px;
-            color: #3498db;
-            text-decoration: none;
-        }*/
-
 
     </style>
 		<script type="text/javascript">
@@ -383,27 +331,15 @@
         $(document).ready(function() {
             var stickyNavTop = $('#nav_bar').offset().top;
             $(window).scroll(function () {
-                //if you hard code, then use console
-                //.log to determine when you want the 
-                //nav bar to stick.  
-                console.log($(window).scrollTop())
                 if ($(window).scrollTop() > stickyNavTop) {
-                $('#nav_bar').addClass('navbar-fixed');
+                    $('#nav_bar').addClass('navbar-fixed');
                 }
                 if ($(window).scrollTop() < stickyNavTop) {
-                $('#nav_bar').removeClass('navbar-fixed');
+                    $('#nav_bar').removeClass('navbar-fixed');
                 }
             });
         });
             
-            // $(window).scroll(function() {  
-            //     if ($(window).scrollTop() > stickyNavTop) {
-            //         $('#nav_bar').addClass('navbar-fixed');
-            //     }
-            //     else {
-            //         $('#nav_bar').removeClass('navbar-fixed');
-            //     }  
-            // });
 
         </script>
 
