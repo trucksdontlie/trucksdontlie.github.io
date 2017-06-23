@@ -318,14 +318,28 @@
             font-size: 14px;
             color: white;
         }
-/*------------------------------------------------------------*/
+/*-------------------------sliding div--------------------------*/
         .navbar-fixed {
             top: 0;
             z-index: 100;
             position: fixed;
         }
+/*-------------------------collapsable----------------------------*/
+        .collapse-non-md {
+            height: 0;
+            display: none;
+        }
+        .collapse-non-md.collapsing {
+            display: block;
+        }
 
-    </style>
+        @media (min-width: 992px) {
+            .collapse-non-md {
+                height: auto;
+                display: block;
+            }
+        }        
+</style>
 		<script type="text/javascript">
 
         $(document).ready(function() {
@@ -371,7 +385,7 @@
 <div class="container">                
     <div class="row">
 
-        <div class="col-lg-2">
+        <div class="col-lg-2 collapse-non-md">
             <nav  id="nav_bar">
                 <ul class='nav_links'>
                     <li><a href="url">Step 1</a></li>
@@ -514,7 +528,7 @@
         </div>-->
     </div>
 
-    <div class="col-lg-2 ">
+    <div class="col-lg-2 collapse-non-md">
         <p>THIS DIV SHOULD BE EMPTY</p>
     </div>
 </div><!-- /.container -->
