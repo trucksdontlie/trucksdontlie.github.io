@@ -46,6 +46,8 @@
     margin:0;
     padding: 1.6vh 0 1.6vh 1.6vh;
     font-size: 150%;
+    position: fixed;
+    z-index: -100;
 
     }
       
@@ -68,6 +70,14 @@
         margin:0;
         padding: 0;}
 
+        ul a {
+            text-decoration: underline;
+        }
+
+          ul a:hover {
+            text-decoration: none;
+            color: black;
+        }
 
         small, .small {
             font-size:100%;
@@ -131,7 +141,7 @@
             text-align: center;
             margin-top: 1.5em;
             margin-bottom: 1.5em;
-            font-family: 'garda'
+            font-family: 'helvetica', helvetica, sans-serif;
         }
 
        .main {
@@ -387,6 +397,7 @@
         @media (min-width: 768px) {
             #nav_bar_desktop{
                 display: initial;
+                margin-top:3em;
             }
             #nav_bar_mobile{
                 display: none;
@@ -426,7 +437,7 @@
 
 <body>    
     <div id="header">
-        <h1><a href="#">Shift</a> </h1>
+        <h1><a href="index.html">Shift</a> </h1>
 
         <div class="row">
         </div>
@@ -467,11 +478,11 @@ Our Strategic Roadmap
 <li><a href="url">Decentralized Automation</a></li>
 
 <hr />
-Next article:
-<a href="url">&rarr; The Union to Come</a>
+Next article:<br />
+<a href="url">&rarr; The Union to Come</a><br />
 
-Previous article:
-<a href="url">&rarr; Logistics and Automation</a>
+Previous article:<br />
+<a href="url">&rarr; Logistics and Automation</a><br />
 
 <a href="url">About</a>
 <a href="url">Contact</a>
@@ -491,12 +502,12 @@ Our Strategic Roadmap
 <li><a href="url">Decentralized Automation</a></li>
 
 <hr />
-Next article:
-<a href="url">&rarr; The Union to Come</a>
+Next article:<br />
+<a href="url">&rarr; The Union to Come</a><br /><br />
 
-Previous article:
-<a href="url">&rarr; Logistics and Automation</a>
-
+Previous article:<br />
+<a href="url">&rarr; Logistics and Automation</a><br />
+<br /><br />
 <a href="url">About</a>
 <a href="url">Contact</a>
             </nav>
