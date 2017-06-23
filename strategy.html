@@ -423,29 +423,31 @@
 
         .sourceleft, .source {
             display:none;
-            
         }
 
-            .img-source, .img-sourceleft {
+        .img-source, .img-sourceleft {
             display: none;
-
         } 
 
         .references .sourceleft, .references .source {
-            
             font-size: 0.5em;
-            vertical-align: top;
-                font-weight: 400;
-                display: block;
-                margin-bottom: 1em;
-                font-family: "OCR", sans-serif;
+            /*vertical-align: top;*/
+            font-weight: 400;
+            display: block;
+            margin-bottom: 1em;
+            font-family: "OCR", sans-serif;
             font-size: 0.5em;
             text-indent: 0px;
         }
 
         .references { margin-top: 2em;}	
-        
+        .content{
+            width: 100%;
+        }
         @media(min-width: 768px){
+            .content{
+               width: 70%;
+            }
             .source {
                 font-family: "OCR", sans-serif;
                 font-size: 10px;
@@ -456,8 +458,6 @@
                 width: 15vw;
                 margin-top: 1vh;
                 display: inline;
-
-
             }
 
             .sourceleft {
@@ -604,7 +604,7 @@ Previous article:<br />
 
         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-10">
             <div class="content">
 
                 <p>
@@ -735,9 +735,9 @@ Previous article:<br />
         </div>-->
     </div>
 
-    <div class="col-sm-2">
+    <!--<div class="col-sm-2">
         <p>THIS DIV SHOULD BE EMPTY</p>
-    </div>
+    </div>-->
 </div><!-- /.container -->
 </div>
 </body>
