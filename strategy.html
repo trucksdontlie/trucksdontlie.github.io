@@ -318,30 +318,60 @@
             font-size: 14px;
             color: white;
         }
-/*-------------------------sliding div--------------------------*/
-        .navbar-fixed {
-            top: 0;
-            z-index: 100;
-            position: fixed;
-        }
-/*-------------------------collapsable----------------------------*/
-        .collapse-non-md {
-            height: 0;
-            display: none;
-        }
-        .collapse-non-md.collapsing {
-            display: block;
-        }
+/*---------------------------hide non sm---------------------------*/
+.collapse-non-sm {
+    /*height: 0;*/
+    display: none;
+}
+.collapse-non-sm.collapsing {
+    display: block;
+}
 
-        @media (min-width: 992px) {
-            .collapse-non-md {
-                height: auto;
-                display: block;
+@media (min-width: 768px) {
+    .collapse-non-sm {
+        height: auto;
+        display: block;
+    }
+}
+/*-------------------------collapsable----------------------------*/
+        .navbar-fixed{
+            /*background-color: black;*/
+            position:fixed;
+            bottom:10px;
+            left:10px
+        }
+        .navbar-toggle{
+            background-color:red;
+        }
+        #nav_bar{
+            color:blueviolet;
+        }
+        /*
+        #collapse{
+            background-color: red;
+            position:fixed;
+            bottom:10px;
+            left:10px
+        }*/
+/*-------------------------sliding div--------------------------*/
+
+        .navbar-fixed {
+                bottom:10vh;
+                z-index: 10000;
+                position: fixed;
+        }
+        @media (min-width: 768px) {
+            .navbar-fixed {
+                top: 0;
+                z-index: 10000;
+                position: fixed;
             }
         }        
+
+
 </style>
 		<script type="text/javascript">
-
+        
         $(document).ready(function() {
             var stickyNavTop = $('#nav_bar').offset().top;
             $(window).scroll(function () {
@@ -368,7 +398,7 @@
         </div>
 
         <div class="row header-subsection" >
-            <div class="col-lg-10">
+            <div class="col-sm-10">
                 <h2>THE UNION TO COME 
                     <a href="#"><span class="pdfversion">PDF version</span></a>
                 </h2>
@@ -385,9 +415,15 @@
 <div class="container">                
     <div class="row">
 
-        <div class="col-lg-2 collapse-non-md">
-            <nav  id="nav_bar">
-                <ul class='nav_links'>
+        <div class="col-sm-2 ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar" style="z-index:1000;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <nav  id="nav_bar" class="collapse-non-sm">
+                <!--<ul class='nav_links' class="collapse">-->
+                    <ul>
                     <li><a href="url">Step 1</a></li>
                     <li><a href="url">Step 2</a></li>
                     <li><a href="url">Step 3</a></li>
@@ -396,7 +432,7 @@
             </nav>
         </div>
 
-        <div class="col-lg-8">
+        <div class="col-sm-8">
             <div class="content">
                 <img   src="img/grid.svg" style="padding:0%; width:50%;height:100%;position:relative; z-index:1;display:block">
 
@@ -528,7 +564,7 @@
         </div>-->
     </div>
 
-    <div class="col-lg-2 collapse-non-md">
+    <div class="col-sm-2">
         <p>THIS DIV SHOULD BE EMPTY</p>
     </div>
 </div><!-- /.container -->
