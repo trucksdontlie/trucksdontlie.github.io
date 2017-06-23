@@ -257,9 +257,7 @@
             top:33.33%;
             position: absolute;
             font-family: 'helvetica', sans-serif;
-            /*display: inline-table;*/
             text-decoration: none;
-            /*float: right;*/
          }
 
 
@@ -327,49 +325,70 @@
             color: white;
         }
 /*---------------------------hide non sm---------------------------*/
-.collapse-non-sm {
-    /*height: 0;*/
-    display: none;
-}
-.collapse-non-sm.collapsing {
-    display: block;
-}
+        .collapse-non-sm {
+            /*height: 0;*/
+            display: none;
+        }
+        .collapse-non-sm.collapsing {
+            display: block;
+        }
 
-@media (min-width: 768px) {
-    .collapse-non-sm {
-        height: auto;
-        display: block;
-    }
-}
+        @media (min-width: 768px) {
+            .collapse-non-sm {
+                height: auto;
+                display: block;
+            }
+        }
 /*-------------------------collapsable----------------------------*/
-        .navbar-fixed{
-            /*background-color: black;*/
+        
+        #collapse{
+            background-color: yellow;
             position:fixed;
             bottom:10px;
+            left:10px
+        }
+/*-------------------------sliding div--------------------------*/
+        .navbar-fixed{
+            /*background-color: black;*/
+            /*display: none;*/
+            position:fixed;
+            bottom:10vh;
+            z-index: 10000;
             left:10px
         }
         .navbar-toggle{
             background-color:red;
+            z-index: 100222;
+
         }
         #nav_bar{
             color:blueviolet;
         }
-        /*
-        #collapse{
-            background-color: red;
-            position:fixed;
-            bottom:10px;
-            left:10px
-        }*/
-/*-------------------------sliding div--------------------------*/
 
-        .navbar-fixed {
-                bottom:10vh;
-                z-index: 10000;
-                position: fixed;
+        #nav_bar_desktop{
+            display: none;
+            /*bottom: 10vh;*/
+            /*position: fixed;*/
         }
+        #nav_bar_mobile{
+            background-color: black;
+            color:wheat;
+            position: fixed;
+            bottom:10vh;
+            z-index: 100000;
+        }
+
         @media (min-width: 768px) {
+            #nav_bar_desktop{
+                display: initial;
+            }
+            #nav_bar_mobile{
+                /*height: 0;*/
+                display: none;
+            }
+
             .navbar-fixed {
+                display: block;
                 top: 0;
                 z-index: 10000;
                 position: fixed;
@@ -381,13 +400,14 @@
 		<script type="text/javascript">
         
         $(document).ready(function() {
-            var stickyNavTop = $('#nav_bar').offset().top;
+            
+            var stickyNavTop = $('#nav_bar_desktop').offset().top;
             $(window).scroll(function () {
                 if ($(window).scrollTop() > stickyNavTop) {
-                    $('#nav_bar').addClass('navbar-fixed');
+                    $('#nav_bar_desktop').addClass('navbar-fixed');
                 }
                 if ($(window).scrollTop() < stickyNavTop) {
-                    $('#nav_bar').removeClass('navbar-fixed');
+                    $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
             });
         });
@@ -415,6 +435,7 @@
                 </p>
             </div>
         </div>
+
     </div>
 
 <!--temporary separator-->
@@ -423,12 +444,14 @@
     <div class="row">
 
         <div class="col-sm-2 ">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar" style="z-index:1000;">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
-            <nav  id="nav_bar" class="collapse-non-sm">
+
+            <nav  id="nav_bar_mobile" class="collapse">
                 <!--<ul class='nav_links' class="collapse">-->
                     <ul>
                     <li><a href="url">Step 1</a></li>
@@ -437,6 +460,17 @@
                     <li><a href="url">Step 4</a></li>
                 </ul>
             </nav>
+
+            <nav  id="nav_bar_desktop" class="collapse-non-sm">
+                <!--<ul class='nav_links' class="collapse">-->
+                    <ul>
+                    <li><a href="url">Step 1</a></li>
+                    <li><a href="url">Step 2</a></li>
+                    <li><a href="url">Step 3</a></li>
+                    <li><a href="url">Step 4</a></li>
+                </ul>
+            </nav>
+
         </div>
 
         <div class="col-sm-8">
