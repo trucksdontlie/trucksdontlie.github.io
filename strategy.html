@@ -68,7 +68,7 @@
         small, .small {
             font-size:100%;
         }
-
+/*
         .sourceleft, .source {
 	        display:none;
         }
@@ -76,7 +76,7 @@
  	    .img-source, .img-sourceleft {
 	        display: none;
         } 
-
+*/
         /*.references .sourceleft, .references .source {
             font-size: 0.5em;
             vertical-align: top;
@@ -187,9 +187,9 @@
                 font-size: 2.5vmin;
             }
             
-            .source{
+            /*.source{
                 display: none;
-            }           
+            }           */
         }
 
         @media (min-width:992px){  
@@ -340,7 +340,6 @@
             }
         }
 /*-------------------------collapsable----------------------------*/
-        
         #collapse{
             background-color: yellow;
             position:fixed;
@@ -397,6 +396,84 @@
             }
         }        
 
+/*-------------------------------------------------------*/
+
+        .sourceleft, .source {
+            display:none;
+            
+        }
+
+            .img-source, .img-sourceleft {
+            display: none;
+
+        } 
+
+        .references .sourceleft, .references .source {
+            
+            font-size: 0.5em;
+            vertical-align: top;
+                font-weight: 400;
+                display: block;
+                margin-bottom: 1em;
+                font-family: "OCR", sans-serif;
+            font-size: 0.5em;
+            text-indent: 0px;
+        }
+
+        .references { margin-top: 2em;}	
+        
+        @media(min-width: 768px){
+            .source {
+                font-family: "OCR", sans-serif;
+                font-size: 10px;
+                text-indent: 0px;
+                line-height: 11px;
+                position: absolute;
+                right: 7vw;
+                width: 15vw;
+                margin-top: 1vh;
+                display: inline;
+
+
+            }
+
+            .sourceleft {
+                font-family: "OCR", sans-serif;
+                font-size: 10px;
+                text-indent: 0px;
+                line-height: 11px;
+                position: absolute;
+                left: 7vw;
+                width: 15vw;
+                margin-top: 1vh;
+                display: inline;
+            }
+                
+                        .img-source {
+                position: absolute;
+                right: 10vw;
+                width: 10vw;
+                height: auto;
+                margin-top: 5px;
+                z-index: -5;
+
+            }
+
+            .img-sourceleft {
+                position: absolute;
+                left: 10vw;
+                width: 10vw;
+                height:auto;
+                margin-top: 5px;
+                z-index: -5;
+
+            } 
+
+            .references {
+            display:none;	
+
+            }
+        }
 
 </style>
 		<script type="text/javascript">
