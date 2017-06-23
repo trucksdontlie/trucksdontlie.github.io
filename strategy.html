@@ -357,7 +357,6 @@
         .navbar-toggle{
             background-color:red;
             z-index: 12;
-
         }
         #nav_bar{
             color:blueviolet;
@@ -390,6 +389,7 @@
             }
 
             .navbar-fixed {
+                width: 16.667vw ;
                 display: block;
                 top: 0;
                 z-index: 10000;
@@ -448,14 +448,13 @@
 
         <div class="col-sm-2 ">
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
 
             <nav  id="nav_bar_mobile" class="collapse">
-                <!--<ul class='nav_links' class="collapse">-->
                     <ul>
                     <li><a href="url">Step 1</a></li>
                     <li><a href="url">Step 2</a></li>
@@ -465,7 +464,6 @@
             </nav>
 
             <nav  id="nav_bar_desktop" class="collapse-non-sm">
-                <!--<ul class='nav_links' class="collapse">-->
                     <ul>
                     <li><a href="url">Step 1</a></li>
                     <li><a href="url">Step 2</a></li>
