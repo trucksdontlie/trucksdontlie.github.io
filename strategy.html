@@ -363,9 +363,10 @@
 /*-------------------------sliding div--------------------------*/
         .navbar-fixed{
             position:fixed;
-            bottom:10vh;
+            /*bottom:10vh;*/
             z-index: 10000;
-            left:10px
+            /*left:10px*/
+            
         }
         .navbar-toggle{
             background-color:red;
@@ -397,17 +398,24 @@
             #nav_bar_desktop{
                 display: initial;
                 margin-top:3em;
+
+                width:14.505%;
+                margin-left: inherit;
             }
             #nav_bar_mobile{
                 display: none;
             }
 
             .navbar-fixed {
-                width: 16.667vw ;
-                display: block;
+                /*width:14.66667%;*/
+                /*display: block;*/
                 top: 0;
                 z-index: 10000;
                 position: fixed;
+
+                /*margin-left: inherit;*/
+                /*padding-left: inherit;*/
+
             }
         }        
 
@@ -494,13 +502,14 @@
 		<script type="text/javascript">
         
         $(document).ready(function() {
-            
+            var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
+
             $(window).scroll(function () {
-                if ($(window).scrollTop() > stickyNavTop) {
+                if ($(window).scrollTop() > stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').addClass('navbar-fixed');
                 }
-                if ($(window).scrollTop() < stickyNavTop) {
+                if ($(window).scrollTop() < stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
             });
