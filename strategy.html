@@ -504,7 +504,9 @@
         $(document).ready(function() {
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
-
+            // var marginNavbar = $('#nav_bar_desktop').outerHeight(true) - $('#nav_bar_desktop').innerHeight();
+            
+            //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
             $(window).scroll(function () {
                 if ($(window).scrollTop() > stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').addClass('navbar-fixed');
