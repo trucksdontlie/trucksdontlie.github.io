@@ -140,7 +140,7 @@
         h2 {
             text-align: center;
             margin-top: 1.5em;
-            margin-bottom: 1.5em;
+            margin-bottom: 0.5em;
             font-family: 'helvetica', helvetica, sans-serif;
         }
 
@@ -266,10 +266,12 @@
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
             font-size: 14px;
-            float: right;
-            right:0;
-            top:33.33%;
-            position: absolute;
+            /*margin-bottom: 1.2em;*/
+            /*float: right;*/
+            /*right:0;*/
+            /*top:33.33%;*/
+            /*position: absolute;*/
+            position: inherit;
             font-family: 'helvetica', sans-serif;
             text-decoration: none;
          }
@@ -478,10 +480,15 @@
             }
         }
         #side-footer{
+            display: block;
             bottom: 2vh;
         }
         #side-header{
+            display: block;
             top:2vh;
+        }
+        #readonmedium{
+            margin-bottom: 1em;
         }
 </style>
 		<script type="text/javascript">
@@ -518,13 +525,18 @@
         <div class="row header-subsection" >
             <div class="col-sm-10">
                 <h2 class="big">THE UNION TO COME 
-                    <a href="#"><span class="button_text">PDF version</span></a>
-                     <a href="#"><span class="button_text">Read on Medium</span></a>
                 </h2>
+            </div>
+            <div class="col-sm-10" id="readonmedium">
+                <a href="#"><span class="button_text">PDF version</span></a>
+                <a href="#"><span class="button_text">Read on Medium</span></a>
+            </div>
+            <div class="col-sm-10" >
                 <p>
                     Proposed harnessing of network effects through technological means
                 </p>
             </div>
+            <!--</div>-->
         </div>
 
     </div>
