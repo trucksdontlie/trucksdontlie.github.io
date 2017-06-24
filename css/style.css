@@ -362,3 +362,7 @@ left:10px;
 	}
 
 }
+
+div > a > span.button_text{
+	font-size: 110%;
+}

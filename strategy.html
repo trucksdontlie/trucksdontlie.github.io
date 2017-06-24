@@ -172,8 +172,10 @@
         .navbar-toggle{
             background-color: black;
             position:fixed;
-            bottom:10px;
-            left:10px;
+            /*bottom:10px;*/
+            /*left:10px;*/
+            top:10px;
+            right:10px;
         }
 
         .container-fluid{
@@ -395,7 +397,8 @@
             
             z-index: 10;
 
-            bottom:0; /*pop-up from the bottom*/
+            /*bottom:0; pop-up from the bottom*/
+            top:0;
             left: 0;
         }
 
@@ -506,6 +509,9 @@
         background-color:white;
         width:100%;
     }
+    #header > h1 > a > span{
+        /*left:0;*/
+    }
     
     @media(min-width: 768px){
         #header > h1 {
@@ -545,10 +551,10 @@
 
 <body>    
     <div id="header">
-        <h1><a href="index.html">Shift</a> 
-            <a href="#" style="text-decoration: none;"><span class="button_text">About</span></a>
-            <a href="#" style="text-decoration: none;"><span class="button_text">Contact</span></a>
-
+        <h1>
+            <a href="index.html">Shift</a> 
+            <a href="#" style="position:fixed; top:21px; right:150px;text-decoration: none;"><span class="button_text">About</span></a>
+            <a href="#" style="position:fixed; top:21px; right:240px; text-decoration: none;"><span class="button_text">Contact</span></a>
         </h1>
 
         <!--<div class="row">
