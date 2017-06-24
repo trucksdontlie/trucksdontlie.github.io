@@ -541,7 +541,12 @@
     }
 </style>
 		<script type="text/javascript">
-        
+        function sigmoid(t) {
+           return 1/(1+t*t);
+        }
+
+
+
         $(document).ready(function() {
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
@@ -555,6 +560,22 @@
                 if ($(window).scrollTop() < stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
+
+                value = $(window).scrollTop();
+
+                totalheight = $(document).height();
+                font_weight_1 = sigmoid(value/totalheight-0.5);
+                font_weight_2 = sigmoid(value/totalheight);
+                font_weight_3 = sigmoid(value/totalheight+0.5);
+
+                sum =font_weight_1+font_weight_2+font_weight_3;
+                font_weight_1 =1000*font_weight_1/sum
+                font_weight_2 =1000*font_weight_2/sum
+                font_weight_3 =1000*font_weight_3/sum
+
+                $('#side-header > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1)').css("font-weight:"+font_weight_1);
+                $('#side-header > ul:nth-child(5) > li:nth-child(3) > a:nth-child(1)').css("font-weight:"+font_weight_2);
+                $('#side-header > ul:nth-child(5) > li:nth-child(5) > a:nth-child(1)').css("font-weight:"+font_weight_3);
             });
         });
             
@@ -639,11 +660,12 @@
                     Current article:<br />
                     <span style="font-weight:400;">Our Strategic Roadmap</span><br /><br />
                     <ul>
-                        <li><a href="url"><span style="font-weight:400;">New organization</span></a></li><br />
-
-                        <li><a href="url">Union Freight &amp; Data</a></li><br />
-
-                        <li><a href="url">Decentralized Automation</a></li><hr />
+                        <li><a href="url">New organization</a></li>
+                        <br />
+                        <li><a href="url">Union Freight &amp; Data</a></li>
+                        <br />
+                        <li><a href="url">Decentralized Automation</a></li>
+                        <hr />
                     </ul>
                 </div>
 
