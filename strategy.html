@@ -170,7 +170,7 @@
         }
 
         .navbar-toggle{
-            background-color: black;
+            /*background-color: black;*/
             position:fixed;
             /*bottom:10px;*/
             /*left:10px;*/
@@ -321,12 +321,10 @@
         .header-subsection > .h2{
             display: inline-block;
         }
-
-        h2
-        {
-                font-size: 215%;
-    font-weight: 200;
-       line-height: 1.2;
+        h2{
+            font-size: 215%;
+            font-weight: 200;
+            line-height: 1.2;
         }
         hr { border:1px solid #000; }
 
@@ -376,9 +374,18 @@
             
         }
         .navbar-toggle{
-            background-color:red;
+            /*background-color:white;*/
+            /*background: url(img/burger.png) 50% 50% repeat;*/
+            /*background: url(img/burger.png) 50% 50% no-repeat;*/
+            /*border: 1px solid #979797;*/
+            border-radius: 6px;
+
+            height: 30px;
+            width: 30px;
+            /*opacity: 0;*/
             z-index: 12;
         }
+
         #nav_bar{
             color:blueviolet;
         }
@@ -524,6 +531,11 @@
             display: none;
         }
     }
+    .navbar-toggle{
+        padding:0;
+        height: 30px;
+        width: 30px;
+    }
     #nav_bar_mobile {
         height: 100%;
     }
@@ -589,10 +601,12 @@
 
         <div class="col-sm-2 ">
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;font-size:50%;">
+                <!--+-->
+                <center><img src="img/bars.svg" style="height:30px;width:30px;display:block;position:initial;background-color:white;"></center>
+                <!--<span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
+                <span class="icon-bar"></span>                        -->
             </button>
 
             <nav  id="nav_bar_mobile" class="collapse">
