@@ -170,7 +170,7 @@
         }
 
         .navbar-toggle{
-            background-color: black;
+            /*background-color: black;*/
             position:fixed;
             /*bottom:10px;*/
             /*left:10px;*/
@@ -270,7 +270,7 @@
             /*position: absolute;*/
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
-            font-size: 14px;
+            /*font-size: 14px;*/
             /*margin-bottom: 1.2em;*/
             /*float: right;*/
             /*right:0;*/
@@ -321,12 +321,10 @@
         .header-subsection > .h2{
             display: inline-block;
         }
-
-        h2
-        {
-                font-size: 215%;
-    font-weight: 200;
-       line-height: 1.2;
+        h2{
+            font-size: 215%;
+            font-weight: 200;
+            line-height: 1.2;
         }
         hr { border:1px solid #000; }
 
@@ -376,9 +374,18 @@
             
         }
         .navbar-toggle{
-            background-color:red;
+            /*background-color:white;*/
+            /*background: url(img/burger.png) 50% 50% repeat;*/
+            /*background: url(img/burger.png) 50% 50% no-repeat;*/
+            /*border: 1px solid #979797;*/
+            border-radius: 6px;
+
+            height: 30px;
+            width: 30px;
+            /*opacity: 0;*/
             z-index: 12;
         }
+
         #nav_bar{
             color:blueviolet;
         }
@@ -511,6 +518,7 @@
     }
     #header > h1 > a > span{
         /*left:0;*/
+        font-size: 14px;
     }
     
     @media(min-width: 768px){
@@ -522,11 +530,23 @@
         #header > h1 > a > span{
             display: none;
         }
-        
+    }
+    .navbar-toggle{
+        padding:0;
+        height: 30px;
+        width: 30px;
+    }
+    #nav_bar_mobile {
+        height: 100%;
     }
 </style>
 		<script type="text/javascript">
-        
+        function sigmoid(t) {
+           return 1/(1+t*t);
+        }
+
+
+
         $(document).ready(function() {
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
@@ -540,6 +560,22 @@
                 if ($(window).scrollTop() < stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
+
+                value = $(window).scrollTop();
+
+                totalheight = $(document).height();
+                font_weight_1 = sigmoid(value/totalheight-0.5);
+                font_weight_2 = sigmoid(value/totalheight);
+                font_weight_3 = sigmoid(value/totalheight+0.5);
+
+                sum =font_weight_1+font_weight_2+font_weight_3;
+                font_weight_1 =1000*font_weight_1/sum
+                font_weight_2 =1000*font_weight_2/sum
+                font_weight_3 =1000*font_weight_3/sum
+
+                $('#side-header > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1)').css("font-weight:"+font_weight_1);
+                $('#side-header > ul:nth-child(5) > li:nth-child(3) > a:nth-child(1)').css("font-weight:"+font_weight_2);
+                $('#side-header > ul:nth-child(5) > li:nth-child(5) > a:nth-child(1)').css("font-weight:"+font_weight_3);
             });
         });
             
@@ -586,10 +622,12 @@
 
         <div class="col-sm-2 ">
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;font-size:50%;">
+                <!--+-->
+                <center><img src="img/bars.svg" style="height:30px;width:30px;display:block;position:initial;background-color:white;"></center>
+                <!--<span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
+                <span class="icon-bar"></span>                        -->
             </button>
 
             <nav  id="nav_bar_mobile" class="collapse">
@@ -608,6 +646,11 @@
 
                     <a href="url">About</a>
                     <a href="url">Contact</a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </ul>
             </nav>
 
@@ -617,15 +660,16 @@
                     Current article:<br />
                     <span style="font-weight:400;">Our Strategic Roadmap</span><br /><br />
                     <ul>
-                        <li><a href="url"><span style="font-weight:400;">New organization</span></a></li><br />
-
-                        <li><a href="url">Union Freight &amp; Data</a></li><br />
-
-                        <li><a href="url">Decentralized Automation</a></li><hr />
+                        <li><a href="url">New organization</a></li>
+                        <br />
+                        <li><a href="url">Union Freight &amp; Data</a></li>
+                        <br />
+                        <li><a href="url">Decentralized Automation</a></li>
+                        <hr />
                     </ul>
                 </div>
 
-                <div id="spacer-10" style="display:block; position:relative; margin:13vw;">
+                <div id="spacer-30" style="height:20vh">
                 </div>
                 
                 <div id="side-footer">
