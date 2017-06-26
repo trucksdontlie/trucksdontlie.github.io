@@ -411,9 +411,9 @@
         $(document).ready(function() {
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
-            // var offset1 = $('#section1').offset().top;
-            // var offset2 = $('#section2').offset().top;
-            // var offset3 = $('#section3').offset().top;
+            var offset1 = $('#section1').offset().top;
+            var offset2 = $('#section2').offset().top;
+            var offset3 = $('#section3').offset().top;
             
             //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
             $(window).scroll(function () {
@@ -423,11 +423,33 @@
                 if ($(window).scrollTop() < stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
-
+                var elem1 = document.getElementById("font1");
+                var elem2 = document.getElementById("font2");
+                var elem3 = document.getElementById("font3");
+                
+                if ($(window).scrollTop() > offset3){
+                    elem1.style.fontWeight = "100"; 
+                    elem2.style.fontWeight = "100"; 
+                    elem3.style.fontWeight = "800"; 
+                }
+                else{
+                    if ($(window).scrollTop() > offset2){
+                        elem1.style.fontWeight = "100"; 
+                        elem2.style.fontWeight = "800"; 
+                        elem3.style.fontWeight = "100"; 
+                    }
+                    else{
+                        if ($(window).scrollTop() > offset1){
+                            elem1.style.fontWeight = "800"; 
+                            elem2.style.fontWeight = "100"; 
+                            elem3.style.fontWeight = "100"; 
+                        }
+                    }
+                }
+                
+                
             });
         });
-            
-
         </script>
 
 </head>
@@ -498,11 +520,11 @@
                     Current article:<br />
                     <span style="font-weight:400;">Our Strategic Roadmap</span><br /><br />
                     <ul>
-                        <li><a href="url">New organization</a></li>
+                        <li><a href="url" id="font1">New organization</a></li>
                         <br />
-                        <li><a href="url">Union Freight &amp; Data</a></li>
+                        <li><a href="url" id="font2">Union Freight &amp; Data</a></li>
                         <br />
-                        <li><a href="url">Decentralized Automation</a></li>
+                        <li><a href="url" id="font3">Decentralized Automation</a></li>
                         <hr />
                     </ul>
                 </div>
@@ -533,7 +555,7 @@
         
 </p>
 
-<h2><span>1 UNION AS PLATFORM</span></h2>
+<h2 id="section1"><span>1 UNION AS PLATFORM</span></h2>
     <img src="img/nodes.png">    
 <p>
     <br />
@@ -579,7 +601,7 @@
 
 </p>   
 
-<h2><span>2 COLLECTIVE ASSETS</span></h2>
+<h2 id="section2"><span>2 COLLECTIVE ASSETS</span></h2>
 <p>     
         <h3>2.1 App expansion</h3>
         70% of the market, other competition. Protocol for transactions. 
@@ -607,7 +629,7 @@
         If done correctly this would create a spread network of workers, that would be at the same time owners. Preserving a position of control of their means of production. The union would operate as a fusion between syndicate and company. The difference lies in the composition of the governance system and the redistribution of its income. Simultaneously working bottom up and top down. By having each member continue to do his regular job and having a centralized entity helping organize the operation, the procedure of data collection and the maintenance of the structural aspects of the organization as a whole
 </p>
 
-<h2><span>3. DECENTRALIZED AUTOMATION</span></h2>    
+<h2 id="section3"><span>3. DECENTRALIZED AUTOMATION</span></h2>    
 <p>
     
         <h3>3.1 Dash cams & other input sources</h3>
