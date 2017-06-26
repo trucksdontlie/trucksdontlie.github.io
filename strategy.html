@@ -408,12 +408,14 @@
            return 1/(1+t*t);
         }
 
+            
+
         $(document).ready(function() {
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
-            var offset1 = $('#section1').offset().top;
-            var offset2 = $('#section2').offset().top;
-            var offset3 = $('#section3').offset().top;
+            var offset1 = $('#section1').offset().top-200;
+            var offset2 = $('#section2').offset().top-200;
+            var offset3 = $('#section3').offset().top-200;
             
             //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
             $(window).scroll(function () {
@@ -426,7 +428,7 @@
                 var elem1 = document.getElementById("font1");
                 var elem2 = document.getElementById("font2");
                 var elem3 = document.getElementById("font3");
-                
+
                 if ($(window).scrollTop() > offset3){
                     elem1.style.fontWeight = "100"; 
                     elem2.style.fontWeight = "100"; 
@@ -447,9 +449,13 @@
                     }
                 }
                 
-                
             });
         });
+
+        $('img').load(function(){
+           stickyNavTop = $('#nav_bar_desktop').offset().top;
+        });
+
         </script>
 
 </head>
