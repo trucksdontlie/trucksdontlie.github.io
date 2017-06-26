@@ -240,11 +240,6 @@
             font-weight: 200;
         }
 
-        .navbar-fixed{
-            position:fixed;
-            z-index: 10000;    
-        }
-
         #nav_bar_desktop{
             display: none;
         }
@@ -266,19 +261,20 @@
             #nav_bar_desktop{
                 display: initial;
                 margin-top:3em;
-                width:14.505%;
+                width:14.57%;
                 margin-left: inherit;
             }
             #nav_bar_mobile{
                 display: none;
             }
             .navbar-fixed {
-                top: 0;
+                
                 z-index: 10000;
                 position: fixed;
+                top: 0;
             }
         }        
-
+        
 /*-------------------------------------------------------*/
 
         .sourceleft, .source {
@@ -348,6 +344,7 @@
         }
 
         #side-header{
+            padding-right: 30px;
             display: block;
             top:2vh;
         }
@@ -402,62 +399,81 @@
         padding-bottom: 20px;
         padding-top: 30px;
     }
+    
+    #font1, #font2, #font3{
+        /*width:auto;*/
+        display: block;
+    }
 </style>
 		<script type="text/javascript">
         function sigmoid(t) {
-           return 1/(1+t*t);
+           return 100+800/(1+t*t);
         }
 
-            
+
 
         $(document).ready(function() {
+            var totalheight = 0.25*$(document).height();
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
             var offset1 = $('#section1').offset().top-200;
             var offset2 = $('#section2').offset().top-200;
             var offset3 = $('#section3').offset().top-200;
             
+
+            var elem1 = document.getElementById("font1");
+            var elem2 = document.getElementById("font2");
+            var elem3 = document.getElementById("font3");
+
+            var bold = "600"
+            var thin = "100"
+
+            var white = "#fff"
+            var black = "#000"
+
             //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
             $(window).scroll(function () {
-                if ($(window).scrollTop() > stickyNavTop-SHIFTheight-40) {
+                var position = $(window).scrollTop();
+                if (position > stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').addClass('navbar-fixed');
                 }
-                if ($(window).scrollTop() < stickyNavTop-SHIFTheight-40) {
+                if (position < stickyNavTop-SHIFTheight-40) {
                     $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
-                var elem1 = document.getElementById("font1");
-                var elem2 = document.getElementById("font2");
-                var elem3 = document.getElementById("font3");
-
-                if ($(window).scrollTop() > offset3){
-                    elem1.style.fontWeight = "100"; 
-                    elem2.style.fontWeight = "100"; 
-                    elem3.style.fontWeight = "800"; 
+                                
+                if (position > offset3){
+                    // elem1.style.backgroundColor = white;
+                    // elem2.style.backgroundColor = white;
+                    // elem3.style.backgroundColor = black;
+                    elem1.style.fontWeight = thin; 
+                    elem2.style.fontWeight = thin; 
+                    elem3.style.fontWeight = bold; 
                 }
                 else{
-                    if ($(window).scrollTop() > offset2){
-                        elem1.style.fontWeight = "100"; 
-                        elem2.style.fontWeight = "800"; 
-                        elem3.style.fontWeight = "100"; 
+                    if (position > offset2){
+                        // elem1.style.backgroundColor = white;
+                        // elem2.style.backgroundColor = black;
+                        // elem3.style.backgroundColor = white;
+
+                        elem1.style.fontWeight = thin; 
+                        elem2.style.fontWeight = bold; 
+                        elem3.style.fontWeight = thin; 
                     }
                     else{
-                        if ($(window).scrollTop() > offset1){
-                            elem1.style.fontWeight = "800"; 
-                            elem2.style.fontWeight = "100"; 
-                            elem3.style.fontWeight = "100"; 
+                        if (position > offset1){
+                            // elem1.style.backgroundColor = black;
+                            // elem2.style.backgroundColor = white;
+                            // elem3.style.backgroundColor = white;
+                            elem1.style.fontWeight = bold; 
+                            elem2.style.fontWeight = thin; 
+                            elem3.style.fontWeight = thin; 
                         }
                     }
                 }
                 
             });
         });
-
-        $('img').load(function(){
-           stickyNavTop = $('#nav_bar_desktop').offset().top;
-        });
-
         </script>
-
 </head>
 
 
@@ -521,8 +537,9 @@
             </nav>
 
             <nav  id="nav_bar_desktop">
-              <hr />
+                
                 <div id="side-header">
+                    <hr />
                     Current article:<br />
                     <span style="font-weight:400;">Our Strategic Roadmap</span><br /><br />
                     <ul>
@@ -531,11 +548,12 @@
                         <li><a href="url" id="font2">Union Freight &amp; Data</a></li>
                         <br />
                         <li><a href="url" id="font3">Decentralized Automation</a></li>
-                        <hr />
                     </ul>
+                    <hr />
                 </div>
+                
 
-                <div id="spacer-30" style="height:15vh">
+                <div id="spacer-30" style="height:18vh">
                 </div>
                 
                 <div id="side-footer">
