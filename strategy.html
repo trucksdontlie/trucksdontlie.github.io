@@ -409,38 +409,37 @@
         function sigmoid(t) {
            return 100+800/(1+t*t);
         }
+        
+        var totalheight;
+        var SHIFTheight;
+        var stickyNavTop;
+        var offset1,offset2,offset3;
 
+        var bold = "600";
+        var thin = "100";
+        var white = "#fff";
+        var black = "#000";
+
+        var elem1, elem2, elem3; 
         
-        // $(document).on("load",function() {
-        //     stickyNavTop = $('#nav_bar_desktop').offset().top;
-        //     offset1 = $('#section1').offset().top-200;
-        //     offset2 = $('#section2').offset().top-200;
-        //     offset3 = $('#section3').offset().top-200;
-        // });
-        
+        $("img").one("load",function(){
+            stickyNavTop = $('#nav_bar_desktop').offset().top;   
+            totalheight = 0.25*$(document).height();
+        });
+
         $(document).ready(function() {
-            var totalheight = 0.25*$(document).height();
-            var SHIFTheight = $('#header > h1').height();    
-            var stickyNavTop = $('#nav_bar_desktop').offset().top;
-            var offset1 = $('#section1').offset().top-200;
-            var offset2 = $('#section2').offset().top-200;
-            var offset3 = $('#section3').offset().top-200;
+            totalheight = 0.25*$(document).height();
+            SHIFTheight = $('#header > h1').height();    
+            stickyNavTop = $('#nav_bar_desktop').offset().top;
+            offset1 = $('#section1').offset().top-200;
+            offset2 = $('#section2').offset().top-200;
+            offset3 = $('#section3').offset().top-200;
 
-            $(window).on("load",function(){
-                stickyNavTop = $('#nav_bar_desktop').offset().top;   
-                totalheight = 0.25*$(document).height();
-            });
 
-            var elem1 = document.getElementById("font1");
-            var elem2 = document.getElementById("font2");
-            var elem3 = document.getElementById("font3");
-
-            var bold = "600"
-            var thin = "100"
-
-            var white = "#fff"
-            var black = "#000"
-
+            elem1 = document.getElementById("font1");
+            elem2 = document.getElementById("font2");
+            elem3 = document.getElementById("font3");
+            
             //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
             $(window).scroll(function () {
                 var position = $(window).scrollTop();
@@ -452,29 +451,18 @@
                 }
                                 
                 if (position > offset3){
-                    // elem1.style.backgroundColor = white;
-                    // elem2.style.backgroundColor = white;
-                    // elem3.style.backgroundColor = black;
                     elem1.style.fontWeight = thin; 
                     elem2.style.fontWeight = thin; 
                     elem3.style.fontWeight = bold; 
                 }
                 else{
                     if (position > offset2){
-                        // elem1.style.backgroundColor = white;
-                        // elem2.style.backgroundColor = black;
-                        // elem3.style.backgroundColor = white;
-
                         elem1.style.fontWeight = thin; 
                         elem2.style.fontWeight = bold; 
                         elem3.style.fontWeight = thin; 
                     }
                     else{
                         if (position > offset1){
-                            // elem1.style.backgroundColor = black;
-                            // elem2.style.backgroundColor = white;
-                            // elem3.style.backgroundColor = white;
-
                             elem1.style.fontWeight = bold; 
                             elem2.style.fontWeight = thin; 
                             elem3.style.fontWeight = thin; 
@@ -669,7 +657,8 @@
     
         <h3>3.1 Dash cams & other input sources</h3>
         
-        Comma reference
+        <span class="source">Comma reference</span>
+        
         
         Reference legal situation in russia, possibility for the OPR as most truck drivers already use dashcam.
         Direct applications are slam mapping for location and driving material for training neural nets.
