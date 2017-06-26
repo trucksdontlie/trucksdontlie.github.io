@@ -33,14 +33,6 @@
             margin: 0 auto;
             background-color: #fefefe;
         }
-      
-        .back {
-            position:static;
-            text-decoration: none;
-            float: right;
-        }
-     
-
 
     h1 {
     margin:0;
@@ -160,11 +152,6 @@
                 display: none;
         }
         
-
-        .back {
-            position:static;
-            text-decoration: none;
-        }
         .container{
             width: 100%;
         }
@@ -219,15 +206,7 @@
                 display: block;
             }
             .superscript{ display: inline;}
-          
-
-            a .back,  .back {
-                position:absolute;
-                right:2.2vw;
-                /*margin-top: -9.6vh;*/
-                color: #111;
-            }
-          
+                    
             .references {display:none;}
         }
    
@@ -245,7 +224,7 @@
 
         .player {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
             padding-top: 25px;
             height: 0;
         }
@@ -267,7 +246,6 @@
             padding:5px 10px;
             border: 1px solid #979797;
             border-radius: 6px;
-            /*position: absolute;*/
             z-index: 100;
             background-color:rgba(255, 255, 255, 0.8);
             position: inherit;
@@ -330,18 +308,15 @@
             color: white;
         }
 /*---------------------------hide non sm---------------------------*/
-        .collapse-non-sm {
-            /*height: 0;*/
+        /*.collapse-non-sm {
             display: none;
-        }
+        }*/
         .collapse-non-sm.collapsing {
             display: block;
         }
 
         @media (min-width: 768px) {
             .collapse-non-sm {
-                height: auto;
-                display: block;
             }
         }
 /*-------------------------collapsable----------------------------*/
@@ -393,9 +368,13 @@
             #nav_bar_desktop{
                 display: initial;
                 margin-top:3em;
-
                 width:14.505%;
                 margin-left: inherit;
+
+/*collapse-non-sm*/
+                height: auto;
+                display: block;
+
             }
             #nav_bar_mobile{
                 display: none;
@@ -577,7 +556,7 @@
     <div id="header">
         <h1>
             <a href="index.html">Shift</a> 
-            <a href="#" style="position:fixed; top:21px; right:150px;text-decoration: none;"><span class="button_text">About/Contact</span></a>
+            <a href="#" style="position:fixed; top:21px; right:200px;text-decoration: none;"><span class="button_text">About/Contact</span></a>
         </h1>
 
         <!--<div class="row">
@@ -628,7 +607,11 @@
                     <a href="url">&rarr; Logistics and Automation</a><br />
 
                     <a href="url">About/Contact</a>
-
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </ul>
             </nav>
 
@@ -674,9 +657,9 @@
         The function of a union has consistently been one of guaranteeing economic income and stability to its members in the face of uncertainty. In order to secure economic income in coming automation and not be pushed out, unions will have to adapt and start thinking long term in order to compete. This strategic roadmap formulates such a long term strategy for truck unions generally and the russian trucker union, the OPR specifically. 
         
 </p>
-    <h2><span>1 UNION AS PLATFORM</span></h2>
-    <img src="img/nodes.png">
-    
+
+<h2><span>1 UNION AS PLATFORM</span></h2>
+    <img src="img/nodes.png">    
 <p>
     <br />
         
@@ -720,6 +703,7 @@
         If they don’t proceed with the next step, by already creating a stronger network and collecting massive amounts of data, they are already in a more robust position to deal with the contingencies to come.
 
 </p>   
+
 <h2><span>2 COLLECTIVE ASSETS</span></h2>
 <p>     
         <h3>2.1 App expansion</h3>
@@ -780,8 +764,7 @@
         Using trucks as a distributed sensory system united through a new network – the union – is able to assemble a massive number of drivers dispersed across Russia to constantly scan and inform on the condition of road infrastructure and surroundings.  
 
 </p>
-
-        </div>
+</div>
         <!--<div class="references">
             <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
             <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>  
