@@ -16,10 +16,9 @@
 
 
         /*a.no {color: black}*/
-
-        .content {
-        	top:5.1em !important;
-		}
+        .container{
+            width: 100%;
+        }
 
         body {
             color: #111;
@@ -122,9 +121,7 @@
                 display: none;
         }
         
-        .container{
-            width: 100%;
-        }
+        
         /* mobile button placement*/
         .navbar-toggle{
             position:fixed;
@@ -147,8 +144,8 @@
             height: 30%;
             display: block;
             position: relative;
-
         }
+
         .collapse{
             bottom:0;
         }
@@ -234,6 +231,7 @@
         .header-subsection > .h2{
             display: inline-block;
         }
+
         hr { border:1px solid #000; }
 
         .header-subsection p {
@@ -241,17 +239,6 @@
             width:75%;
             font-weight: 200;
         }
-
-        .button:hover, .button_left:hover {
-            padding:5px 10px;
-            border: 1px solid black;
-            border-radius: 6;
-            z-index: 100;
-            background-color: black;
-            font-size: 14px;
-            color: white;
-        }
-
 
         .navbar-fixed{
             position:fixed;
@@ -317,6 +304,7 @@
         .sourceleft{
             display: none;
         }
+
         .references { margin-top: 2em;}	
         .content{
             width: 100%;
@@ -391,6 +379,12 @@
             display: none;
         }
     }
+
+    /*content*/
+    .content {
+        top:5.1em !important;
+    }
+
     .content > h2{
         font-size: 130%;
         font-weight: 130;
