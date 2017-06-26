@@ -559,7 +559,9 @@
         $(document).ready(function() {
             var SHIFTheight = $('#header > h1').height();    
             var stickyNavTop = $('#nav_bar_desktop').offset().top;
-            // var marginNavbar = $('#nav_bar_desktop').outerHeight(true) - $('#nav_bar_desktop').innerHeight();
+            var offset1 = $('#section1').offset().top;
+            var offset2 = $('#section2').offset().top;
+            var offset3 = $('#section3').offset().top;
             
             //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
             $(window).scroll(function () {
@@ -570,21 +572,22 @@
                     $('#nav_bar_desktop').removeClass('navbar-fixed');
                 }
 
-                value = $(window).scrollTop();
 
-                totalheight = $(document).height();
-                font_weight_1 = sigmoid(value/totalheight-0.5);
-                font_weight_2 = sigmoid(value/totalheight);
-                font_weight_3 = sigmoid(value/totalheight+0.5);
+                // value = $(window).scrollTop();
 
-                sum =font_weight_1+font_weight_2+font_weight_3;
-                font_weight_1 =1000*font_weight_1/sum
-                font_weight_2 =1000*font_weight_2/sum
-                font_weight_3 =1000*font_weight_3/sum
+                // totalheight = $(document).height();
+                // font_weight_1 = sigmoid(value/totalheight-0.5);
+                // font_weight_2 = sigmoid(value/totalheight);
+                // font_weight_3 = sigmoid(value/totalheight+0.5);
 
-                $('#side-header > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1)').css("font-weight:"+font_weight_1);
-                $('#side-header > ul:nth-child(5) > li:nth-child(3) > a:nth-child(1)').css("font-weight:"+font_weight_2);
-                $('#side-header > ul:nth-child(5) > li:nth-child(5) > a:nth-child(1)').css("font-weight:"+font_weight_3);
+                // sum =font_weight_1+font_weight_2+font_weight_3;
+                // font_weight_1 =1000*font_weight_1/sum
+                // font_weight_2 =1000*font_weight_2/sum
+                // font_weight_3 =1000*font_weight_3/sum
+
+                // $('#side-header > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1)').css("font-weight:"+font_weight_1);
+                // $('#side-header > ul:nth-child(5) > li:nth-child(3) > a:nth-child(1)').css("font-weight:"+font_weight_2);
+                // $('#side-header > ul:nth-child(5) > li:nth-child(5) > a:nth-child(1)').css("font-weight:"+font_weight_3);
             });
         });
             
