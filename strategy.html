@@ -90,7 +90,6 @@
             <a href="index.html">Shift</a> 
             <a href="#" style="position:fixed; top:21px; right:200px;text-decoration: none;"><span class="button_text">About/Contact</span></a>
         </h1>
-
         <div class="row header-subsection" >
             <div class="col-sm-10">
                 <h2 class="big">THE UNION TO COME 
@@ -106,33 +105,27 @@
                 </p>
             </div>
         </div>
-
     </div>
 
 <img src="img/temp_full_screen.jpg"/ class="divider" id="first-image">
+
 <div class="container">                
     <div class="row">
-
         <div class="col-sm-2" id="sidepanel">
-
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;font-size:50%;">
                 <center><img src="img/bars.svg" style="height:30px;width:30px;display:block;position:initial;background-color:white;"></center>
             </button>
-
             <nav  id="nav_bar_mobile" class="collapse">
                 <ul>
                     <span style="font-weight:400;">Our Strategic Roadmap</span>
-                    <li><a href="url">New organization</a></li>
-                    <li><a href="url">Union Freight &amp; Data</a></li>
-                    <li><a href="url">Decentralized Automation</a></li>
-
+                    <li><a href="#section1">New organization</a></li>
+                    <li><a href="#section2">Union Freight &amp; Data</a></li>
+                    <li><a href="#section3">Decentralized Automation</a></li>
                     <hr />
                     Next article:<br />
                     <a href="url">&rarr; The Union to Come</a><br />
-
                     Previous article:<br />
                     <a href="url">&rarr; Logistics and Automation</a><br />
-
                     <a href="url">About/Contact</a>
                     <br />
                     <br />
@@ -149,17 +142,16 @@
             </nav>
 
             <nav  id="nav_bar_desktop">
-                
                 <div id="side-header">
                     <hr />
                     Current article:<br />
                     <span style="font-weight:400;">Our Strategic Roadmap</span><br /><br />
                     <ul>
-                        <li><a href="url" id="font1">New organization</a></li>
+                        <li><a href="#section1" id="font1">New organization</a></li>
                         <br />
-                        <li><a href="url" id="font2">Union Freight &amp; Data</a></li>
+                        <li><a href="#section2" id="font2">Union Freight &amp; Data</a></li>
                         <br />
-                        <li><a href="url" id="font3">Decentralized Automation</a></li>
+                        <li><a href="#section3" id="font3">Decentralized Automation</a></li>
                     </ul>
                     <hr />
                 </div>
@@ -312,113 +304,121 @@
 </div>
 </body>
 
-	<script type="text/javascript">
-                
-        function getOffset (el) {
-            const box = el.getBoundingClientRect();
-            return {
-                top: box.top + window.pageYOffset - document.documentElement.clientTop,
-                left: box.left + window.pageXOffset - document.documentElement.clientLeft
-            };
+<script type="text/javascript">
+        
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+
+function getOffset (el) {
+    const box = el.getBoundingClientRect();
+    return {
+        top: box.top + window.pageYOffset - document.documentElement.clientTop,
+        left: box.left + window.pageXOffset - document.documentElement.clientLeft
+    };
+}
+
+var totalheight;
+var SHIFTheight;
+var stickyNavTop;
+var offset1,offset2,offset3;
+
+var bold = "600";
+var thin = "100";
+var white = "#fff";
+var black = "#000";
+
+var elem1, elem2, elem3; 
+
+document.getElementById('first-image').addEventListener("load", function(){
+    stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max(
+        body.offsetHeight,
+        body.scrollHeight,
+        html.clientHeight,
+        html.offsetHeight,
+        html.scrollHeight
+    );
+    totalheight = 0.25*height;
+});
+
+
+docHandler = function() {
+    // totalheight = 0.25*height;
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max(
+        body.offsetHeight,
+        body.scrollHeight,
+        html.clientHeight,
+        html.offsetHeight,
+        html.scrollHeight
+    );
+    totalheight = 0.25*height;
+
+    // totalheight = 0.25*document.height();
+    SHIFTheight = document.getElementById('shiftlogo').clientHeight;
+    stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
+    
+
+    offset1 = getOffset(document.getElementById('section1')).top-200;
+    offset2 = getOffset(document.getElementById('section2')).top-200;
+    offset3 = getOffset(document.getElementById('section3')).top-200;
+
+
+
+    elem1 = document.getElementById("font1");
+    elem2 = document.getElementById("font2");
+    elem3 = document.getElementById("font3");
+
+    navbardesk =  document.getElementById('nav_bar_desktop');
+    
+    //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
+    
+    // $(window).scroll(function () {
+    // window.scroll(function(){
+    window.addEventListener("scroll",function(){
+        var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        if (position > stickyNavTop-SHIFTheight+10) {
+            navbardesk.classList.add('navbar-fixed');
+        }else{
+            navbardesk.classList.remove('navbar-fixed');
         }
-
-        var totalheight;
-        var SHIFTheight;
-        var stickyNavTop;
-        var offset1,offset2,offset3;
-
-        var bold = "600";
-        var thin = "100";
-        var white = "#fff";
-        var black = "#000";
-
-        var elem1, elem2, elem3; 
-
-        document.getElementById('first-image').addEventListener("load", function(){
-            stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
-            const body = document.body;
-            const html = document.documentElement;
-            const height = Math.max(
-                body.offsetHeight,
-                body.scrollHeight,
-                html.clientHeight,
-                html.offsetHeight,
-                html.scrollHeight
-            );
-            totalheight = 0.25*height;
-        });
-
-
-        docHandler = function() {
-            // totalheight = 0.25*height;
-            const body = document.body;
-            const html = document.documentElement;
-            const height = Math.max(
-                body.offsetHeight,
-                body.scrollHeight,
-                html.clientHeight,
-                html.offsetHeight,
-                html.scrollHeight
-            );
-            totalheight = 0.25*height;
-
-            // totalheight = 0.25*document.height();
-            SHIFTheight = document.getElementById('shiftlogo').clientHeight;
-            stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
-            
-
-            offset1 = getOffset(document.getElementById('section1')).top-200;
-            offset2 = getOffset(document.getElementById('section2')).top-200;
-            offset3 = getOffset(document.getElementById('section3')).top-200;
-
-
-
-            elem1 = document.getElementById("font1");
-            elem2 = document.getElementById("font2");
-            elem3 = document.getElementById("font3");
-
-            navbardesk =  document.getElementById('nav_bar_desktop');
-            
-            //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
-            
-            // $(window).scroll(function () {
-            // window.scroll(function(){
-            window.addEventListener("scroll",function(){
-                var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-                if (position > stickyNavTop-SHIFTheight+10) {
-                    navbardesk.classList.add('navbar-fixed');
-                }else{
-                    navbardesk.classList.remove('navbar-fixed');
-                }
-                                
-                if (position > offset3){
-                    elem1.style.fontWeight = thin; 
+                        
+        if (position > offset3){
+            elem1.style.fontWeight = thin; 
+            elem2.style.fontWeight = thin; 
+            elem3.style.fontWeight = bold; 
+        }
+        else{
+            if (position > offset2){
+                elem1.style.fontWeight = thin; 
+                elem2.style.fontWeight = bold; 
+                elem3.style.fontWeight = thin; 
+            }
+            else{
+                if (position > offset1){
+                    elem1.style.fontWeight = bold; 
                     elem2.style.fontWeight = thin; 
-                    elem3.style.fontWeight = bold; 
+                    elem3.style.fontWeight = thin; 
                 }
-                else{
-                    if (position > offset2){
-                        elem1.style.fontWeight = thin; 
-                        elem2.style.fontWeight = bold; 
-                        elem3.style.fontWeight = thin; 
-                    }
-                    else{
-                        if (position > offset1){
-                            elem1.style.fontWeight = bold; 
-                            elem2.style.fontWeight = thin; 
-                            elem3.style.fontWeight = thin; 
-                        }
-                    }
-                }
-                
-            });
-        };
-
-        if (document.readyState === 'complete' || document.readyState !== 'loading') {
-            docHandler();
-        } else {
-            document.addEventListener('DOMContentLoaded', docHandler);
+            }
         }
+        
+    });
+};
 
-        </script>
+if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    docHandler();
+} else {
+    document.addEventListener('DOMContentLoaded', docHandler);
+}
+
+</script>
 </html>
