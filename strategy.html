@@ -239,14 +239,13 @@
 </body>
 
 <script type="text/javascript">
-        
-$(document).on('click', 'a', function(event){
-    event.preventDefault();
+    $(document).on('click', 'ul > li > a', function(event){
+        event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+    });
 
 function getOffset (el) {
     const box = el.getBoundingClientRect();
