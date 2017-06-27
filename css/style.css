@@ -518,7 +518,7 @@ video{
 	height: 95%;
 }
 #leftbottom{
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 0;
 }
 #side-footer{
