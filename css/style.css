@@ -148,6 +148,7 @@ p {
 }
 
 #left-column{
+	position: relative;
 	color: black;
 	background-color: white;
 	border-bottom: 2px solid rgba(0, 0, 0, 1);
@@ -276,7 +277,11 @@ div > a > span.button_text{
 #side-footer > a > span.button_text{
 	font-size:100%;
 }
+
+
 #leftbottom{
+	/*position: absolute;
+	bottom: 0;*/
 	margin-left: 1.6vh;
 }
 #leftbottom > a > span.button_text{
@@ -465,8 +470,14 @@ video{
 	font-weight: 200;
 }
 
+#sidepanel{
+	padding-left: 20px;
+	position: relative;
+}
 #nav_bar_desktop{
 	display: none;
+	height: 100%;
+	/*position: relative;*/
 }
 
 #nav_bar_mobile{
@@ -497,10 +508,20 @@ video{
 	.navbar-fixed { 
 		z-index: 10000;
 		position: fixed;
+		/*position: relative;*/
 		top: 0;
 	}
 }        
-        
+
+#side-wrapper{
+	position: relative;
+	height: 95%;
+}
+#side-footer{
+	bottom: 0;
+    left: 0;
+    position: absolute;
+}
 /*-------------------------------------------------------*/
 
         .sourceleft, .source {
@@ -597,11 +618,13 @@ video{
 }
 #side-header{
 	width: 14.667vw;
+	/*width: 140px;*/
 	padding-right: 20px;
 	/*display: block;*/
 	top:2vh;
 	/*font-size: 70%;*/
 }
+
 #side-footer > a>span{
 	float: left;
 }
