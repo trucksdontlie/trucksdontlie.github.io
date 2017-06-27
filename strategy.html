@@ -385,7 +385,7 @@
             // window.scroll(function(){
             window.addEventListener("scroll",function(){
                 var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-                if (position > stickyNavTop-SHIFTheight-24) {
+                if (position > stickyNavTop-SHIFTheight+10) {
                     navbardesk.classList.add('navbar-fixed');
                 }else{
                     navbardesk.classList.remove('navbar-fixed');
