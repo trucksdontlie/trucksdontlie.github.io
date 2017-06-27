@@ -653,6 +653,11 @@ video{
 .content > p{
 	padding: 1.6vh;
 }
+#sidepanel > button> img{
+	height: 100%;
+	width: 100%;
+	background-color:white;
+}
 /*
 #alginwrap{
 	position: relative;
