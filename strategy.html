@@ -9,12 +9,14 @@
     <title>Shift Strategy</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
+    
   
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.js" type="text/javascript"></script>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="scroll.js"></script>	
 </head>
 
 
@@ -287,6 +289,10 @@
 </body>
 
 <script type="text/javascript">
+
+$('html,body').animate({
+  scrollTop: $(window.location.hash).offset().top
+});
 
     $(document).on('click', 'ul > li > a', function(event){
         event.preventDefault();
