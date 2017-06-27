@@ -606,6 +606,9 @@ video{
 	position: fixed;
 	top:0;
 }
+#shiftlogo > a{
+	text-decoration: none;
+}
 #sidepanel{
 	/*margin-right: 5px;*/
 	/*padding-right: 10px;*/
