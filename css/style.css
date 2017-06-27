@@ -75,9 +75,9 @@ p {
 }
 
 .video-full {
-	/*min-height: 400px;*/
+	min-height: 500px;
 	width: 70%;
-	height: 70%;
+	/*height: 70%;*/
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -503,13 +503,21 @@ video{
 		display: none;
 	}
 	.navbar-fixed { 
-		z-index: 10000;
+		z-index: 13;
 		position: fixed;
 		/*position: relative;*/
 		top: 0;
 	}
 }        
+.imgModal{
+	z-index: 150;
+	position: relative;
+}
 
+.imgModal > img{
+	height: 70%;
+	width:70%;
+}
 
 #side-wrapper{
 	position: relative;

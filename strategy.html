@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 </head>
 
 
-<body>    
+<body >    
     <div id="header">
         <h1 id="shiftlogo">
             <a href="index.html">Shift</a> 
@@ -120,7 +120,17 @@
 </p>
 
 <h2 id="section1"><span>1 UNION AS PLATFORM</span></h2>
+
+
+<a href="#nodesmodal" data-toggle="modal" >
     <img src="img/nodes.jpg">    
+</a>
+
+    <!-- video modal -->
+    <div class="modal fade" id="nodesmodal"  tabindex="-1">
+            <img class= "video-full" src="img/nodes.jpg">    
+	</div>
+
 <p>
     <br />
         
@@ -270,6 +280,39 @@ var black = "#000";
 
 var elem1, elem2, elem3; 
 
+
+redrawsidebar =function(){
+        var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        if (position > stickyNavTop-SHIFTheight+10) {
+            navbardesk.classList.add('navbar-fixed');
+            // $('side-footer').css('position') = "absolute";
+        }else{
+            navbardesk.classList.remove('navbar-fixed');
+            // $('side-footer').css('position') = "static";
+        }
+                        
+        if (position > offset3){
+            elem1.style.fontWeight = thin; 
+            elem2.style.fontWeight = thin; 
+            elem3.style.fontWeight = bold; 
+        }
+        else{
+            if (position > offset2){
+                elem1.style.fontWeight = thin; 
+                elem2.style.fontWeight = bold; 
+                elem3.style.fontWeight = thin; 
+            }
+            else{
+                if (position > offset1){
+                    elem1.style.fontWeight = bold; 
+                    elem2.style.fontWeight = thin; 
+                    elem3.style.fontWeight = thin; 
+                }
+            }
+        };
+    }
+
+
 document.getElementById('first-image').addEventListener("load", function(){
     stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
     const body = document.body;
@@ -284,9 +327,8 @@ document.getElementById('first-image').addEventListener("load", function(){
     totalheight = 0.25*height;
 });
 
-
-
 docHandler = function() {
+    
     $('.pull-down').each(function() {
     var $this=$(this);
     $this.css('margin-top',$(this).parent().height()- 2*$('#shiftlogo').height() - 10 - $this.height())
@@ -329,37 +371,10 @@ docHandler = function() {
     
     // $(window).scroll(function () {
     // window.scroll(function(){
-    window.addEventListener("scroll",function(){
-        var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (position > stickyNavTop-SHIFTheight+10) {
-            navbardesk.classList.add('navbar-fixed');
-            // $('side-footer').css('position') = "absolute";
-        }else{
-            navbardesk.classList.remove('navbar-fixed');
-            // $('side-footer').css('position') = "static";
-        }
-                        
-        if (position > offset3){
-            elem1.style.fontWeight = thin; 
-            elem2.style.fontWeight = thin; 
-            elem3.style.fontWeight = bold; 
-        }
-        else{
-            if (position > offset2){
-                elem1.style.fontWeight = thin; 
-                elem2.style.fontWeight = bold; 
-                elem3.style.fontWeight = thin; 
-            }
-            else{
-                if (position > offset1){
-                    elem1.style.fontWeight = bold; 
-                    elem2.style.fontWeight = thin; 
-                    elem3.style.fontWeight = thin; 
-                }
-            }
-        }
-        
-    });
+    
+    window.addEventListener("scroll", redrawsidebar);
+
+    
 };
 
 if (document.readyState === 'complete' || document.readyState !== 'loading') {
