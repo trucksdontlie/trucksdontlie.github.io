@@ -39,7 +39,6 @@ hr {
 	border:1px solid #000; 
 }
 
-
 a {
     color: inherit;
     opacity: 1;
@@ -49,20 +48,12 @@ p a{
 	text-decoration: underline;
 }
 p a:hover{
-	/*text-decoration: none;*/
 	color: black;
 	opacity: 0.9;
 }
 
-p { 
+p {
 	z-index: -100;
-}
-
-.row-eq-height {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:  flex;
 }
 
 .video-preview {
@@ -100,9 +91,11 @@ p {
 	padding: 0;
 	font-weight: 200;
 }
+
 .road{
 	font-size: 90%;
 }
+
 .big {
 	font-size: 220%;
 	font-weight: 200;
@@ -347,9 +340,8 @@ footer p {
 	margin-bottom: 4em;
 	font-size: 0.6em;
 }
-        
-    
-        /* mobile button placement*/
+            
+/* mobile button placement*/
 .navbar-toggle{
 	position:fixed;
 	top:10px;
@@ -361,6 +353,9 @@ footer p {
 	padding:0;
 	height: 30px;
 	width: 30px;
+}
+.navbar-toggle:focus{
+	outline: none;
 }
 
 		.container-fluid{
@@ -561,10 +556,6 @@ footer p {
             }
         }
 /*------------------------------------------------------*/
-
-/*.content {
-	top:5.1em !important;
-}*/
 
 .content > h2{
 	font-size: 130%;
