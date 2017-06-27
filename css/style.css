@@ -148,6 +148,8 @@ p {
 }
 
 #left-column{
+	overflow:visible;
+	/*height: 100%;*/
 	position: relative;
 	color: black;
 	background-color: white;
@@ -280,12 +282,7 @@ div > a > span.button_text{
 
 
 #leftbottom{
-	/*position: absolute;
-	bottom: 0;*/
 	margin-left: 1.6vh;
-}
-#leftbottom > a > span.button_text{
-	/*margin-left: 1.6vh;*/
 }
 .white > p {
 	padding: 1.6vh;
@@ -513,13 +510,10 @@ video{
 	}
 }        
 
+
 #side-wrapper{
 	position: relative;
 	height: 95%;
-}
-#leftbottom{
-	/*position: absolute;*/
-	bottom: 0;
 }
 #side-footer{
 	bottom: 0;
@@ -651,3 +645,12 @@ video{
 		display: none;
 	}
 }
+/*
+#alginwrap{
+	position: relative;
+	height: 100%;
+}
+#botalign{
+	bottom: 0;
+	position: absolute;
+}*/
