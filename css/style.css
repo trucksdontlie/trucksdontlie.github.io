@@ -3,30 +3,22 @@ html {
 	margin: 0;
 	box-sizing: border-box;
 }
-/*@font-face{
-	font-family: HelveticaNeue-Light; 
-    src: url(fonts/HelveticaNeueLTStd-Md.otf); 
-}*/
+
 @font-face{
-	font-family: Helvetica; /* Имя шрифта */
-    src: url(fonts/HelveticaNeueLTStd-Hv.otf); /* Путь к файлу со шрифтом */
+	font-family: Helvetica; 
+    src: url(fonts/HelveticaNeueLTStd-Hv.otf);
 }
 
 body {
 	padding: 0;
 	margin: 0;
-	/*font-family: Helvetica, Arial, sans-serif;*/
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	line-height: 1.35;
-	/*color: white;*/
 	letter-spacing: .65px;
 	font-weight: 200;
-	/*font-size: 9.6vmin;*/
 	font-size: 5.5vmin ;
 	margin: 0 auto;
 }
-
-
 
 div {
 	margin: 0;
@@ -83,13 +75,14 @@ p {
 	overflow: hidden;
     outline: none;
 	display: inline-block;
-
 	text-align: left;
 	vertical-align: middle;
 	border-radius: 0;
 	margin: 0;
 	padding: 0;
-
+}
+.content > a  {
+	outline: none;
 }
 
 .left_big {
@@ -169,7 +162,6 @@ p {
 	color: white;
 }
 
-
 @media (min-width:768px){  
 	body {
 		font-size: 2.5vmin;
@@ -240,6 +232,7 @@ p {
 .button_text > a{
 	text-decoration: none;
 }
+
 .button_text {
 	padding:5px 10px;
 	border: 1px solid #979797;
@@ -273,22 +266,20 @@ p {
 
 div > a > span.button_text{
 	font-size: 70%;
-	/*font-size: 20px;*/
 }
 
 #side-footer > a > span.button_text{
 	font-size:100%;
 }
 
-
 #leftbottom{
 	margin-left: 1.6vh;
 }
+
 .white > p {
 	padding: 1.6vh;
 }
 
-/*------------------strategy css-------------------*/
 .container{
 	width: 100%;
 }
@@ -305,13 +296,16 @@ h2, .h2 {
 	font-weight: 200;
 	line-height: 1.2;
 }
+
 h3, .h3 {
 	font-size:100%;
 }
+
 p, .p, ul, ol {
 	font-size:100%;
 	opacity: 0.6s;
 }
+
 ul {
 	margin:0;
 	padding: 0;
@@ -354,7 +348,6 @@ footer p {
 	font-size: 0.6em;
 }
             
-/* mobile button placement*/
 .navbar-toggle{
 	position:fixed;
 	top:10px;
@@ -441,7 +434,6 @@ video{
 
 .player {margin-top: 2em}
 
-/* On using dropdown menu (To right shift popuped) */
 #navbar.fixed{
 	background-color: #FFFFFF;
 	left: 0;
@@ -532,65 +524,65 @@ video{
 }
 /*-------------------------------------------------------*/
 
-        .sourceleft, .source {
-            display:none;
-        }
+.sourceleft, .source {
+	display:none;
+}
 
-        .source img, .content img {
-            max-width: 100%;
-        }
-        .img-source, .img-sourceleft {
-            display: none;
-        } 
+.source img, .content img {
+	max-width: 100%;
+}
+.img-source, .img-sourceleft {
+	display: none;
+} 
 
-        .references .sourceleft, .references .source {
-            font-size: 0.5em;
-            font-weight: 400;
-            display: block;
-            margin-bottom: 1em;
-            /*font-family: "OCR", sans-serif;*/
-            font-size: 0.5em;
-            text-indent: 0px;
-        }
-        .sourceleft{
-            display: none;
-        }
+.references .sourceleft, .references .source {
+	font-size: 0.5em;
+	font-weight: 400;
+	display: block;
+	margin-bottom: 1em;
+	/*font-family: "OCR", sans-serif;*/
+	font-size: 0.5em;
+	text-indent: 0px;
+}
+.sourceleft{
+	display: none;
+}
 
-        .references { margin-top: 2em;}	
-        .content{
-            width: 100%;
-        }
+.references { margin-top: 2em;}	
+.content{
+	width: 100%;
+}
 
-        @media(min-width: 768px){
-            .content{
-               width: 70%;
-            }
+@media(min-width: 768px){
+	.content{
+		width: 70%;
+	}
 
-            .source {
-                /*font-family: "OCR", sans-serif;*/
-                font-size: 10px;
-                text-indent: 0px;
-                line-height: 11px;
-                position: absolute;
-                right: 7vw;
-                width: 15vw;
-                margin-top: 1vh;
-                display: inline;
-            }
-                
-            .img-source {
-                position: absolute;
-                right: 10vw;
-                width: 10vw;
-                height: auto;
-                margin-top: 5px;
-                z-index: -5;
-            }
+	.source {
+		/*font-family: "OCR", sans-serif;*/
+		font-size: 10px;
+		text-indent: 0px;
+		line-height: 11px;
+		position: absolute;
+		right: 7vw;
+		width: 15vw;
+		margin-top: 1vh;
+		display: inline;
+	}
+		
+	.img-source {
+		position: absolute;
+		right: 10vw;
+		width: 10vw;
+		height: auto;
+		margin-top: 5px;
+		z-index: -5;
+	}
 
-            .references {
-                display:none;
-            }
-        }
+	.references {
+		display:none;
+	}
+}
 /*------------------------------------------------------*/
 
 .content > h2{
@@ -657,6 +649,9 @@ video{
 	#header > h1 > a > span{
 		display: none;
 	}
+}
+.content > p{
+	padding: 1.6vh;
 }
 /*
 #alginwrap{
