@@ -476,11 +476,12 @@ video{
 	background-color: black;
 	color:wheat;
 	position: fixed;
+	/*position: relative;*/
 	z-index: 10;
 	top:0; /*popup from top*/
 	left: 0;
 }
-#nav_bar_mobile > ul{
+#wrapper > ul{
 	font-size:110%;
 	margin: 1.6vh;
 }
@@ -638,7 +639,9 @@ video{
 
 #wrapper{
 	position: relative;
+	height: 100vh;
 }
+
 #leftbottom{
 	margin-left: 1.6vh;
 	position: absolute;
