@@ -221,16 +221,16 @@ p {
 	left: 0;
 	top: 0;
 	position: absolute;
-	-ms-display: flex;
+	/*-ms-display: flex;*/
 	-webkit-display: flex;
 	display: flex;
-	-ms-justify-content: center;
+	/*-ms-justify-content: center;*/
 	-webkit-justify-content: center;
-	justify-content: center;
+	/*justify-content: center;*/
 	-ms-align-items: center;
-	-webkit-align-items: center;
+	/*-webkit-align-items: center;*/
 	align-items: center;
-	z-index: 4000;
+	z-index: 20;
 }
 
 .logo {
