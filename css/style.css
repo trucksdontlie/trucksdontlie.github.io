@@ -4,15 +4,25 @@ html {
 	box-sizing: border-box;
 }
 
-@font-face{
-	font-family: Helvetica; 
-    src: url(../fonts/HelveticaNeueLTStd-Hv.otf);
+@font-face {
+    font-family: "Helvetica-Roman";
+    src: url(../fonts/hlv/HelveticaNeueCyr-Roman.otf);
 }
+@font-face{
+	font-family: "Helvetica-Bold"; 
+    src: url(../fonts/hlv/HelveticaNeueCyr-Bold.otf);
+}
+
+@font-face{
+	font-family: "Helvetica-Medium"; 
+    src: url(../fonts/hlv/HelveticaNeueCyr-Medium.otf);
+}
+
 
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica-Roman", "Helvetica-Medium", "Helvetica-Roman", Helvetica, Arial, "Lucida Grande", sans-serif;
 	line-height: 1.35;
 	letter-spacing: .65px;
 	font-weight: 200;
