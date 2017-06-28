@@ -498,6 +498,9 @@ video{
 	bottom:0;
 }
 
+#leftbot{
+	padding:1.6vh;
+}
 
 @media (min-width: 768px) {
 	#nav_bar_desktop{
