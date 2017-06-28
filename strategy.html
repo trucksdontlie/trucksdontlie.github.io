@@ -75,7 +75,7 @@
             </nav>
 
             <nav  id="nav_bar_desktop">
-                <div id="side-wrapper">
+                <div id="side-wrapper" class="alignwrapper">
                     <div id="side-header">
                         <hr />
                         Current article:<br />
@@ -94,7 +94,7 @@
 
             
                 
-                <div id="side-footer" class="pull-down">
+                <div id="side-footer" class="alignbot">
                     
                     Next article:<br />
                     <span style="font-weight:400;">
@@ -344,12 +344,6 @@ document.getElementById('first-image').addEventListener("load", function(){
 
 docHandler = function() {
     
-    $('.pull-down').each(function() {
-    var $this=$(this);
-    $this.css('margin-top',$(this).parent().height()- 2*$('#shiftlogo').height() - 10 - $this.height())
-    // $this.css('margin-top',window.innerHeight - $this.height() - $('#shiftlogo').height())
-    
-});
 
     // totalheight = 0.25*height;
     const body = document.body;

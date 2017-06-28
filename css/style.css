@@ -471,7 +471,7 @@ video{
 	margin: 0;
 	padding: 0;
 	background-color: black;
-	color:wheat;
+	color:white;
 	position: fixed;
 	font-size:110%;
 	/*position: relative;*/
@@ -484,10 +484,6 @@ video{
 }
 #nav_bar_mobile>.alignwrapper>.alignbot>ul{
 	margin:1.6vh;
-}
-.wrapper > ul{
-	font-size:110%;
-	margin: 1.6vh;
 }
 
 .alignwrapper{
