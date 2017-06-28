@@ -49,8 +49,8 @@
 <div class="container">                
     <div class="row">
         <div class="col-sm-2" id="sidepanel">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;font-size:50%;">
-                <img src="img/bars.svg">
+            <button type="button" class="navbar-toggle" onclick="changePic()" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;font-size:50%;">
+                <img src="img/bars.svg" id="buttonimg">
             </button>
             <nav  id="nav_bar_mobile" class="collapse">
                 <div class="alignwrapper" style="height:100vh">
@@ -263,6 +263,16 @@
 </body>
 
 <script type="text/javascript">
+var img_array = ['img/bars.svg', 'img/x.svg'];
+i = 0;
+
+function changePic() {
+    i++;
+    document.getElementById("buttonimg").src = img_array[i];
+    if (i == img_array.length - 1) {
+        i = -1;
+    }
+}
 
 $('html,body').animate({
   scrollTop: $(window.location.hash).offset().top
