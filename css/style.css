@@ -141,8 +141,10 @@ p {
 }
 
 #left-column{
+
 	overflow:visible;
-	/*height: 100%;*/
+	/*min-height: 100vh;*/
+	height: 100vh;
 	position: relative;
 	color: black;
 	background-color: white;
@@ -272,9 +274,6 @@ div > a > span.button_text{
 	font-size:100%;
 }
 
-#leftbottom{
-	margin-left: 1.6vh;
-}
 
 .white > p {
 	padding: 1.6vh;
@@ -481,6 +480,11 @@ video{
 	top:0; /*popup from top*/
 	left: 0;
 }
+#nav_bar_mobile > ul{
+	font-size:110%;
+	margin: 1.6vh;
+}
+
 
 @media (min-width: 768px) {
 	#nav_bar_desktop{
@@ -631,6 +635,16 @@ video{
 #side-footer > a>span{
 	float: left;
 }
+
+#wrapper{
+	position: relative;
+}
+#leftbottom{
+	margin-left: 1.6vh;
+	position: absolute;
+	bottom: 0;
+}
+
 
 /*-----------------mobile stuff--------------------*/
 #header > h1 {
