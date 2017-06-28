@@ -640,7 +640,7 @@ video{
 }
 #sidepanel{
 	/*margin-right: 5px;*/
-	/*padding-right: 10px;*/
+	padding-right: 10px;
 	padding-left: 10px;
 	font-size: 70%;
 	display: block;
@@ -648,12 +648,12 @@ video{
 }
 #side-header{
 	width: 14.667vw;
-	/*width: 140px;*/
-	padding-right: 20px;
+	
+	/*padding-right: 30px;*/
 	/*display: block;*/
 	top:2vh;
-	/*font-size: 70%;*/
 }
+
 
 #side-footer > a>span{
 	float: left;
@@ -706,3 +706,15 @@ video{
 	bottom: 0;
 	position: absolute;
 }*/
+
+#side-header > ul > li > a{
+	/*padding-right: 50px;*/
+}
+#font1, #font2, #font3{
+	/*margin-right: 50px;*/
+	/*padding-right: 30px;*/
+	/*margin:1.6vh;*/
+}
+#side-header > ul{
+	/*padding-right: 20px;*/
+}
