@@ -29,7 +29,7 @@
         </h1>
         <div class="row header-subsection" >
             <div class="col-sm-10">
-                <h2 class="big">THE UNION TO COME 
+                <h2 class="big" id="beggining">THE UNION TO COME 
                 </h2>
             </div>
             <div class="col-sm-10">
@@ -55,7 +55,7 @@
             <nav  id="nav_bar_mobile" class="collapse">
                 <div class="alignwrapper" style="height:100vh">
                     <ul>
-                        <span style="font-weight:400;">Our Strategic Roadmap</span>
+                        <span style="font-weight:400;"><a href="#beggining" onclick="$('.collapse').collapse('hide')">Our Strategic Roadmap</a></span>
                         <li><a href="#section1" onclick="$('.collapse').collapse('hide')">1. New organization</a></li>
                         <li><a href="#section2" onclick="$('.collapse').collapse('hide')">2. Union Freight &amp; Data</a></li>
                         <li><a href="#section3" onclick="$('.collapse').collapse('hide')">3. Decentralized Automation</a></li>
@@ -79,7 +79,7 @@
                     <div id="side-header">
                         <hr />
                         Current article:<br />
-                        <span style="font-weight:400;">Our Strategic Roadmap</span><br /><br />
+                        <span style="font-weight:400;"><a href="#beggining">Our Strategic Roadmap</a></span><br /><br />
                         <ul>
                             <li><a href="#section1" id="font1">1.New organization</a></li>
                             <br />
@@ -284,6 +284,14 @@ $(document).on('click', 'ul > li > a', function(event){
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
 });
+
+$(document).on('click', 'span > a', function(event){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+
 
 function getOffset (el) {
     const box = el.getBoundingClientRect();
