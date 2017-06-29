@@ -4,6 +4,13 @@ html {
 	box-sizing: border-box;
 }
 
+@font-face{
+	font-family: "Helvetica"; 
+    src: url(../fonts/hlv/HelveticaNeueCyr-Light.otf);
+	font-weight: 100;
+	font-style: normal;
+}
+
 @font-face {
     font-family: "Helvetica";
     src: url(../fonts/hlv/HelveticaNeueCyr-Roman.otf);
@@ -12,7 +19,7 @@ html {
 }
 
 @font-face{
-	font-family: "Helvetica-Bold"; 
+	font-family: "Helvetica"; 
     src: url(../fonts/hlv/HelveticaNeueCyr-Bold.otf);
 	font-weight: 600;
 	font-style: normal;
@@ -746,3 +753,7 @@ video{
 	}	
 }
 
+
+.content > p{
+	font-weight: 100;
+}
