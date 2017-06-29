@@ -463,6 +463,8 @@ video{
 	position: inherit;
 	font-family: 'helvetica', sans-serif;
 	text-decoration: none;
+	/*display: block;*/
+	text-align: center;
 	/*font-size: 70%;*/
 }
 
@@ -534,6 +536,14 @@ video{
 }
 #nav_bar_mobile>.alignwrapper>.alignbot>ul>a:hover{
 	color:#aaa;
+}
+#nav_bar_mobile>.alignwrapper>.alignbot > ul > a > .button_text {
+	background-color: white;
+	color: black;
+	/*"background-color:#111;"*/
+}
+#nav_bar_mobile>.alignwrapper>.alignbot > ul > a >.button_text :hover{
+	background-color: black;
 }
 
 .alignwrapper{
