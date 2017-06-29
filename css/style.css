@@ -290,7 +290,7 @@ p {
 	display: inline-block;
 }
 
-.button_text a:hover {
+a > .button_text:hover {
 	background-color: black;
 	text-decoration: none;
 	color: white;
