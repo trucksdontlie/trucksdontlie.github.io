@@ -690,7 +690,6 @@ video{
 	padding-top: 30px;
 }
 
-/*------------side panel things------------*/
 #shiftlogo{
 	position: fixed;
 	top:0;
@@ -730,7 +729,6 @@ video{
 }
 
 
-/*-----------------mobile stuff--------------------*/
 #header > h1 {
 	background-color:white;
 	width:100%;
@@ -748,35 +746,15 @@ video{
 		display: none;
 	}
 }
-.content > p{
-}
+
 #sidepanel > button> img{
 	height: 100%;
 	width: 100%;
 	background-color:white;
 }
-/*
-#alginwrap{
-	position: relative;
-	height: 100%;
-}
-#botalign{
-	bottom: 0;
-	position: absolute;
-}*/
 
 #side-header > ul > li > a{
-	/*padding-right: 20px;*/
 	margin-right: 1.6vh;
-}
-#font1, #font2, #font3{
-	/*margin-right: 50px;*/
-	/*padding-right: 30px;*/
-	/*margin:1.6vh;*/
-}
-#side-header > ul{
-	/*padding-right: 30px;*/
-	/*margin-right: 30px;*/
 }
 
 #leftbot{
@@ -797,4 +775,8 @@ video{
 }
 #side-footer > span > a:hover {
 	text-decoration: none;
+}
+
+#font1,#font2,#font3{
+	font-size: 140%;
 }
