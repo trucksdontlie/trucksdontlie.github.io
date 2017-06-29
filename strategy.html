@@ -235,7 +235,17 @@
 </p>    
 <p>
         One of the most difficult parts of vehicle automation is how to prepare the vehicle to react towards other vehicles, predicting behavioral patterns of others in relation to it. Truck automation is relatively easier than car automation because it is easier to predict how other vehicle will behave towards trucks. Also, because trucks mostly operate on highways and in the periphery of cities, the degree of uncertainty of other units is further reduced.
+
+
+<span class="source"><a href="#sidemodal" data-toggle="modal" >
+                        <img src="img/nodes.jpg">
+                        </a>
+</span>
 </p>
+
+<div class="modal fade" id="sidemodal"  tabindex="-1">
+        <img class= "modal-full" src="img/nodes.jpg">    
+</div>
 
 <p> 
         With retrofitting an array of possibilities emerge. Once the technology will be developeds further a set of communication tools of v2v (vehicle to vehicle) will be established where situations as platooning will be quite common. 
@@ -286,12 +296,12 @@ $(document).on('click', 'ul > li > a', function(event){
     }, 500);
 });
 
-$(document).on('click', 'span > a', function(event){
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
+// $(document).on('click', 'span > a', function(event){
+//     event.preventDefault();
+//     $('html, body').animate({
+//         scrollTop: $( $.attr(this, 'href') ).offset().top
+//     }, 500);
+// });
 
 
 function getOffset (el) {
