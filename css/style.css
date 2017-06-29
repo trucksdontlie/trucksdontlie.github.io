@@ -769,14 +769,10 @@ video{
 	}	
 }
 
-
 .content > p{
 	font-weight: 100;
 }
+
 #side-footer > span > a:hover {
 	text-decoration: none;
-}
-
-#font1,#font2,#font3{
-	font-size: 140%;
 }
