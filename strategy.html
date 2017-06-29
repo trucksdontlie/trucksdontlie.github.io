@@ -296,12 +296,12 @@ $(document).on('click', 'ul > li > a', function(event){
     }, 500);
 });
 
-// $(document).on('click', 'span > a', function(event){
-//     event.preventDefault();
-//     $('html, body').animate({
-//         scrollTop: $( $.attr(this, 'href') ).offset().top
-//     }, 500);
-// });
+$(document).on('click', '#side-header > span > a', function(event){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
 
 
 function getOffset (el) {
