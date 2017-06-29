@@ -6,8 +6,15 @@ html {
 
 @font-face {
     font-family: "Helvetica";
-    src: url(../fonts/hlv/HelveticaNeueCyr-Roman.otf);
+    src: url(../fonts/hlv/HelveticaNeueCyr-Light.otf);
 	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(../fonts/hlv/HelveticaNeueCyr-Roman.otf);
+	font-weight: 300;
 	font-style: normal;
 }
 
@@ -72,7 +79,7 @@ p a{
 }
 p a:hover{
 	color: black;
-	opacity: 0.9;
+	text-decoration: none;
 }
 
 p {
@@ -146,7 +153,7 @@ p {
     display: none;
 }
 
-.button:hover, .button_left:hover {
+.button_text a:hover, .button_left a:hover {
 	padding:5px 10px;
   	border: 1px solid black;
     border-radius: 6;
@@ -626,13 +633,14 @@ video{
 /*------------------------------------------------------*/
 
 .content > h2{
-	font-size: 130%;
 	font-weight: 130;
 	line-height: 0.8;
 	display: block;
 	margin: auto;
 	padding-bottom: 20px;
-	padding-top: 40px;
+	padding-top: 2.5em;
+	padding-bottom: 2em;
+
 }
 .content > h3{
 	display: block;
