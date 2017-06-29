@@ -25,7 +25,7 @@
     <div id="header">
         <h1 id="shiftlogo">
             <a href="index.html">Shift</a> 
-            <a href="#" style="position:fixed; top:21px; right:200px;text-decoration: none;"><span class="button_text">About/Contact</span></a>
+            <!--<a href="#" style="position:fixed; top:21px; right:200px;text-decoration: none;"><span class="button_text">About/Contact</span></a>-->
         </h1>
         <div class="row header-subsection" >
             <div class="col-sm-10">
@@ -68,7 +68,8 @@
                             <a href="url">&rarr; The Union to Come</a><br />
                             Previous article:<br />
                             <a href="url">&rarr; Logistics and Automation</a><br />
-                            <a href="url">About/Contact</a>
+                            <!--<a href="url">About/Contact</a>-->
+                            <a href="#" style="text-decoration: none;"><span class="button_text">About/Contact</span></a>
                         </ul>
                     </div>
                 </div>
@@ -126,7 +127,7 @@
 
     <!-- video modal -->
     <div class="modal fade" id="nodesmodal"  tabindex="-1">
-            <img class= "video-full" src="img/nodes.jpg">    
+            <img class= "modal-full" src="img/nodes.jpg">    
 	</div>
 
 <p>
@@ -234,6 +235,14 @@
 </p>    
 <p>
         One of the most difficult parts of vehicle automation is how to prepare the vehicle to react towards other vehicles, predicting behavioral patterns of others in relation to it. Truck automation is relatively easier than car automation because it is easier to predict how other vehicle will behave towards trucks. Also, because trucks mostly operate on highways and in the periphery of cities, the degree of uncertainty of other units is further reduced.
+
+            <div class="modal fade" id="sidemodal"  tabindex="-1">
+                    <img class= "modal-full" src="img/nodes.jpg">    
+            </div>
+            <span class="img-source"><a href="#sidemodal" data-toggle="modal" >
+                    <img src="img/nodes.jpg">
+                    </a>        
+            </span>
 </p>
 
 <p> 
@@ -285,7 +294,7 @@ $(document).on('click', 'ul > li > a', function(event){
     }, 500);
 });
 
-$(document).on('click', 'span > a', function(event){
+$(document).on('click', '#side-header > span > a', function(event){
     event.preventDefault();
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top

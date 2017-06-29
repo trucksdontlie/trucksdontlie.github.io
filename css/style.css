@@ -4,6 +4,13 @@ html {
 	box-sizing: border-box;
 }
 
+@font-face{
+	font-family: "Helvetica"; 
+    src: url(../fonts/hlv/HelveticaNeueCyr-Light.otf);
+	font-weight: 100;
+	font-style: normal;
+}
+
 @font-face {
     font-family: "Helvetica";
     src: url(../fonts/hlv/HelveticaNeueCyr-Light.otf);
@@ -19,7 +26,7 @@ html {
 }
 
 @font-face{
-	font-family: "Helvetica-Bold"; 
+	font-family: "Helvetica"; 
     src: url(../fonts/hlv/HelveticaNeueCyr-Bold.otf);
 	font-weight: 600;
 	font-style: normal;
@@ -96,21 +103,31 @@ p {
 	object-fit: cover;
 }
 
-.video-full {
+#video-full{
 	min-height: 500px;
-	width: 70%;
-	/*height: 70%;*/
+}
+.modal-full {
+	width: 90vw;
+	/*height: 70vh;*/
 	padding: 0;
 	margin: 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow: visible;
     outline: none;
-	display: inline-block;
-	text-align: left;
+	/*display: inline-block;*/
+	/*display: block;*/
+	/*text-align: left;*/
 	vertical-align: middle;
 	border-radius: 0;
 	margin: 0;
 	padding: 0;
 }
+@media (min-width:768px){ 
+	.modal-full{
+		width: 80vw;
+	}
+}
+
 .content > a  {
 	outline: none;
 }
@@ -280,7 +297,7 @@ p {
 	display: inline-block;
 }
 
-.button_text a:hover {
+a > .button_text:hover {
 	background-color: black;
 	text-decoration: none;
 	color: white;
@@ -453,6 +470,8 @@ video{
 	position: inherit;
 	font-family: 'helvetica', sans-serif;
 	text-decoration: none;
+	/*display: block;*/
+	text-align: center;
 	/*font-size: 70%;*/
 }
 
@@ -519,6 +538,20 @@ video{
 #nav_bar_mobile>.alignwrapper>.alignbot>ul{
 	margin:1.6vh;
 }
+#nav_bar_mobile>.alignwrapper>ul>li>a:hover{
+	color:#aaa;
+}
+#nav_bar_mobile>.alignwrapper>.alignbot>ul>a:hover{
+	color:#aaa;
+}
+#nav_bar_mobile>.alignwrapper>.alignbot > ul > a > .button_text {
+	background-color: white;
+	color: black;
+	/*"background-color:#111;"*/
+}
+#nav_bar_mobile>.alignwrapper>.alignbot > ul > a >.button_text :hover{
+	background-color: black;
+}
 
 .alignwrapper{
 	position: relative;
@@ -579,7 +612,7 @@ video{
 	max-width: 100%;
 }
 .img-source, .img-sourceleft {
-	display: none;
+	/*display: none;*/
 } 
 
 .references .sourceleft, .references .source {
@@ -623,7 +656,7 @@ video{
 		width: 10vw;
 		height: auto;
 		margin-top: 5px;
-		z-index: -5;
+		z-index: 5;
 	}
 
 	.references {
@@ -669,8 +702,7 @@ video{
 }
 #side-header{
 	width: 14.667vw;
-	
-	/*padding-right: 30px;*/
+	padding-right: 10px;
 	/*display: block;*/
 	top:2vh;
 }
@@ -754,3 +786,7 @@ video{
 	}	
 }
 
+
+.content > p{
+	font-weight: 100;
+}
