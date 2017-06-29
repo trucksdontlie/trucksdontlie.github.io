@@ -678,7 +678,7 @@ video{
 .content > h3{
 	display: block;
 	margin: auto;
-	font-weight: 130;
+	font-weight: 400;
 	font-size: 120%;
 	padding-bottom: 20px;
 	padding-top: 30px;
@@ -743,7 +743,6 @@ video{
 	}
 }
 .content > p{
-	padding: 1.6vh;
 }
 #sidepanel > button> img{
 	height: 100%;
