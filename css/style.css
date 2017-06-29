@@ -668,8 +668,7 @@ video{
 }
 #side-header{
 	width: 14.667vw;
-	
-	/*padding-right: 30px;*/
+	padding-right: 10px;
 	/*display: block;*/
 	top:2vh;
 }
