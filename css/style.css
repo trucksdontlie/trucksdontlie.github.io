@@ -529,7 +529,7 @@ video{
 #nav_bar_mobile>.alignwrapper>.alignbot>ul{
 	margin:1.6vh;
 }
-#nav_bar_mobile>.alignwrapper>ul>a:hover{
+#nav_bar_mobile>.alignwrapper>ul>li>a:hover{
 	color:#aaa;
 }
 #nav_bar_mobile>.alignwrapper>.alignbot>ul>a:hover{
