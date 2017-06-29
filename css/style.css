@@ -605,7 +605,7 @@ video{
 	max-width: 100%;
 }
 .img-source, .img-sourceleft {
-	display: none;
+	/*display: none;*/
 } 
 
 .references .sourceleft, .references .source {
@@ -649,7 +649,7 @@ video{
 		width: 10vw;
 		height: auto;
 		margin-top: 5px;
-		z-index: -5;
+		z-index: 5;
 	}
 
 	.references {
