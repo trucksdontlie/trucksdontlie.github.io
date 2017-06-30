@@ -729,11 +729,14 @@ video{
 	font-size: 0.5em;
 	margin-left: 1.6vh;
 	margin-top: 1.6vh;
+	opacity: 0.6;
 }
 .caption-content{
 	font-size: 0.5em;
-	margin-left: 1.6vh;
+	/*margin-left: 1.6vh;*/
 	margin-top: 1.6vh;
+	opacity: 0.6;
+
 }
 @media(min-width: 768px){
 	.caption-source{
@@ -746,9 +749,8 @@ video{
 		/*text-align: center;*/
 		display: block;
 		width: 100%;
-		margin-left: 1.6vh;
+		/*margin-left: 1.6vh;*/
 		margin-top: 1.6vh;
-		opacity: 0.8;
 	}
 }
 
