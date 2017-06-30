@@ -797,3 +797,12 @@ video{
 		width: 80vw;
 	}
 }
+
+.team{
+	margin: 1.6vh 1.6vh 0 1.6vh;
+	font-weight: 200;
+	font-size: 80%;
+}
+.team > a{
+	font-weight: 400;
+}
