@@ -118,10 +118,14 @@
 
 <h2 id="section1" class="big" ><span>Union As Platform</span></h2>
 
+<span class="img-content">
+    <a href="#noscroll" class="pop">
+        <img src="img/tests/1.jpg">    
+    </a>
+    <span class="caption-content">
 
-<a href="#" class="pop">
-    <img src="img/tests/1.jpg">    
-</a>
+    </span>
+<span>
 
 <p>
     <br />
@@ -132,9 +136,11 @@
             
 
         <span class="img-source">
-            <a href="#" class="pop">
+            <a href="#noscroll" class="pop">
                 <img src="img/tests/2.jpg">
             </a>
+             <span class="caption-source">
+             </span>
         </span>
 
        <h3>Union consolidation through new tools</h3> 
@@ -239,7 +245,7 @@
         One of the most difficult parts of vehicle automation is how to prepare the vehicle to react towards other vehicles, predicting behavioral patterns of others in relation to it. Truck automation is relatively easier than car automation because it is easier to predict how other vehicle will behave towards trucks. Also, because trucks mostly operate on highways and in the periphery of cities, the degree of uncertainty of other units is further reduced.
 
         <span class="img-source">
-            <a href="#" class="pop" >
+            <a href="#noscroll" class="pop" >
                 <img src="img/nodes.jpg">
             </a>
             <span class="caption-source">arb can't write text in here </span>
@@ -290,6 +296,9 @@ function changePic() {
         i = -1;
     }
 }
+$('#noscroll').click(function(e) {
+     return false;
+});
 
 $('html,body').animate({
   scrollTop: $(window.location.hash).offset().top
@@ -428,8 +437,7 @@ if (document.readyState === 'complete' || document.readyState !== 'loading') {
 $(function() {
     $('.pop').on('click', function() {
         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-
-        // $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+        $('.imagemodal > .caption').html( $(this).parent().find('span').html() );
         $('#imagemodal').modal('show');   
     });		
 });
