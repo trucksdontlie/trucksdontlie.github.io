@@ -743,7 +743,7 @@ video{
 
 	.caption-content{
 		font-size: initial;
-		text-align: center;
+		/*text-align: center;*/
 		display: block;
 		width: 100%;
 		margin-left: 1.6vh;
@@ -780,6 +780,6 @@ video{
 	/*max-height: 80%;*/
 }
 .caption {
-	margin-left:1.6vh;
+	margin:1.6vh 1.6vh 1.6vh 1.6vh;
     text-align: left;
 }
