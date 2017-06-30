@@ -283,39 +283,11 @@ p {
 	opacity: 0.4;
 }
 
-.button_text > a{
-	text-decoration: none;
-}
-
-.button_text {
-	padding:5px 10px;
-	border: 1px solid #979797;
-	border-radius: 6px;
-	/*position: absolute;*/
-	z-index: 100;
-	background-color:rgba(255, 255, 255, 0.8);
-	/*margin-left: 1.6vh;*/
-	margin-bottom: 1.6vh;
-	font-family: 'helvetica', sans-serif;
-	font-size: 70%;
-	display: inline-block;
-}
 
 a > .button_text:hover {
 	background-color: black;
 	text-decoration: none;
 	color: white;
-}
-
-@media (min-width:768px){  
-
-	.button_text  {
-		/*position: absolute;*/
-		top:0;
-		right:0;
-		/*font-size: 70%;*/
-	}
-
 }
 
 div > a > span.button_text{
@@ -325,7 +297,6 @@ div > a > span.button_text{
 #side-footer > a > span.button_text{
 	font-size:100%;
 }
-
 
 .white > p {
 	padding: 1.6vh;
@@ -466,7 +437,7 @@ video{
 }
 
 .button_text {
-	padding:5px 10px;
+	padding:6px 10px 5px 10px;
 	border: 1px solid #979797;
 	border-radius: 6px;
 	z-index: 100;
@@ -474,10 +445,13 @@ video{
 	position: inherit;
 	font-family: 'helvetica', sans-serif;
 	text-decoration: none;
-	/*display: block;*/
 	text-align: center;
-	/*font-size: 70%;*/
+
+	margin-bottom: 1.6vh;	
+	font-size: 70%;
+	display: inline-block;
 }
+
 
 .button_text a:hover {
 	background-color: black;
@@ -696,6 +670,13 @@ video{
 }
 
 #shiftlogo{
+	/*#header > h1*/
+	background-color:white;
+	width:100%;
+
+	/*original*/
+	margin:0;
+	padding:1.6vh 0 1.6vh 1.6vh;
 	position: fixed;
 	top:0;
 }
@@ -734,10 +715,6 @@ video{
 }
 
 
-#header > h1 {
-	background-color:white;
-	width:100%;
-}
 #header > h1 > a > span{
 	font-size: 14px;
 }
