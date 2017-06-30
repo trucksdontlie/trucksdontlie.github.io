@@ -10,7 +10,6 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
     
-  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.js" type="text/javascript"></script>
 
@@ -279,8 +278,14 @@
 
 
 <div class="modal fade" id="imagemodal"  tabindex="-1">
-        <img class= "imagepreview" src="">    
-        <div class="caption">Sample Caption Text</div>
+    <!--<div class="modal-dialog" data-dismiss="modal">-->
+        <div class="modal-content"  data-dismiss="modal">              
+            <!--<div class="modal-body">-->
+                <img class= "imagepreview" src="">    
+                <div class="caption"></div>
+            <!--</div>-->
+        </div>
+    <!--</div>-->
 </div>
 
 </body>
@@ -437,7 +442,7 @@ if (document.readyState === 'complete' || document.readyState !== 'loading') {
 $(function() {
     $('.pop').on('click', function() {
         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-        $('.modal > .caption').text( $(this).parent().find('span').text());
+        $('.modal-content > .caption').text( $(this).parent().find('span').text());
         console.log($(this).parent().find('span').text());
         $('#imagemodal').modal('show');   
     });		
