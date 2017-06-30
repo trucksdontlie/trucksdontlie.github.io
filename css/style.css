@@ -777,3 +777,16 @@ video{
 #side-footer > span > a:hover {
 	text-decoration: none;
 }
+.img-source > p{
+	font-size: 0.5em;
+	margin-left: 1.6vh;
+	margin-top: 1.6vh;
+}
+@media(min-width: 768px){
+	.img-source > p{
+		font-size: 10px;
+		margin-left: 0;
+	}
+}
+
+
