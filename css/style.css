@@ -772,3 +772,6 @@ video{
 	margin:1.6vh 1.6vh 1.6vh 1.6vh;
     text-align: left;
 }
+#nav_bar_mobile > div > ul > li{
+	margin: 1.6vh 1.6vh 0vh 0vh;
+}
