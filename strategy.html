@@ -74,7 +74,7 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav><!--nav_bar_mobile-->
 
             <nav  id="nav_bar_desktop">
                 <div id="side-wrapper" class="alignwrapper">
@@ -106,26 +106,25 @@
                         <a href="#" style="text-decoration: none;"><span class="button_text">About/Contact</span></a>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </nav><!--nav_bar_desktop-->
+        </div><!--sidepanel-->
 
         <div class="col-sm-10">
             <div class="content">
-<p>
-        The function of a union has consistently been one of guaranteeing economic income and stability to its members in the face of uncertainty. In order to secure economic income in coming automation and not be pushed out, unions will have to adapt and start thinking long term in order to compete. This strategic roadmap formulates such a long term strategy for truck unions generally and the russian trucker union, the OPR specifically. 
-        
-</p>
+                <p>
+                        The function of a union has consistently been one of guaranteeing economic income and stability to its members in the face of uncertainty. In order to secure economic income in coming automation and not be pushed out, unions will have to adapt and start thinking long term in order to compete. This strategic roadmap formulates such a long term strategy for truck unions generally and the russian trucker union, the OPR specifically. 
+                        
+                </p>
 
-<h2 id="section1" class="big" ><span>Union As Platform</span></h2>
+                <h2 id="section1" class="big" ><span>Union As Platform</span></h2>
 
-<span class="img-content">
-    <a href="#noscroll" class="pop">
-        <img src="img/tests/1.jpg">    
-    </a>
-    <span class="caption-content">
-
-    </span>
-<span>
+                <span class="img-content">
+                    <a href="#noscroll" class="pop">
+                        <img src="img/tests/1.jpg">    
+                    </a>
+                    <span class="caption-content">
+                    </span>
+                </span>
 
 <p>
     <br />
@@ -437,7 +436,7 @@ if (document.readyState === 'complete' || document.readyState !== 'loading') {
 $(function() {
     $('.pop').on('click', function() {
         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-        $('.imagemodal > .caption').html( $(this).parent().find('span').html() );
+        $('.imagemodal > .caption').text($(this).parent().find('span').text());
         $('#imagemodal').modal('show');   
     });		
 });
