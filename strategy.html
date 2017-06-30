@@ -91,23 +91,20 @@
                         </ul>
                         <hr />
                     </div>
-                <div id="spacer" style="width:20vh;">
-                </div>
-
-            
                 
-                <div id="side-footer" class="alignbot">
-                    
-                    Next article:<br />
-                    <span style="font-weight:400;">
-                    <a href="url">&rarr; The Union to Come</a></span><br /><br />
-                    Previous article:<br />
-                    <span style="font-weight:400;">
-                    <a href="url">&rarr; Logistics and Automation</a></span><br />
-                    <br /><br />
+                    <div id="spacer" style="width:20vh;">
+                    </div>
 
-                    <a href="#" style="text-decoration: none;"><span class="button_text">About/Contact</span></a>
-
+                    <div id="side-footer" class="alignbot">
+                        Next article:<br />
+                        <span style="font-weight:400;">
+                        <a href="url">&rarr; The Union to Come</a></span><br /><br />
+                        Previous article:<br />
+                        <span style="font-weight:400;">
+                        <a href="url">&rarr; Logistics and Automation</a></span><br />
+                        <br /><br />
+                        <a href="#" style="text-decoration: none;"><span class="button_text">About/Contact</span></a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -122,14 +119,9 @@
 <h2 id="section1" class="big" ><span>Union As Platform</span></h2>
 
 
-<a href="#nodesmodal" data-toggle="modal" >
+<a href="#" class="pop">
     <img src="img/tests/1.jpg">    
 </a>
-
-    <!-- video modal -->
-    <div class="modal fade" id="nodesmodal"  tabindex="-1">
-            <img class= "modal-full" src="img/tests/1.jpg">    
-	</div>
 
 <p>
     <br />
@@ -137,15 +129,14 @@
         The first step of our strategy is one of consolidation. Most truck markets worldwide are composed of a majority of independent truck drivers, operating as single entities. In these markets, which we refer to as possible implementation markets (see more in call for change) not only are most drivers not bound to logistical companies; they also own their own trucks. Through driver consolidation a wide spectrum of organisational forms and possibilities to leverage this majority open up.
 </p>
 
-            <div class="modal fade" id="sidemodal"  tabindex="-1">
-                    <img class= "modal-full" src="img/tests/2.jpg">
-                    How does this work exactly  
-            </div>
-            <span class="img-source"><a href="#sidemodal" data-toggle="modal" >
-                    <img src="img/tests/2.jpg">
+            
 
-                    </a>        
-            </span>
+        <span class="img-source">
+            <a href="#" class="pop">
+                <img src="img/tests/2.jpg">
+            </a>
+        </span>
+
        <h3>Union consolidation through new tools</h3> 
 <p>
         We see Unions as in the best position to become these new entities of leverage. To further solidify its means of communication and making its processes as transparent as possible new tools have to be put in place. With the ubiquity of mobile devices among drivers, a creation of an integrated multifunctional specific app would be best way to do this.
@@ -241,18 +232,18 @@
         The main aspect is to achieve a truck retrofitting 
         <span class="source"> what the fuck is retroffiting </span>
         that could relieve the driver from his main task at his own will. Trucks that were manufactured after 2008 (???) have the ability to be retrofitted. After 2008 most vehicles operate on the basis of a mainframe computer that handles most of the activity electronically. Retrofitting entails to rewire the components through hardware and software to have the vehicle become autonomous. The hardware is based mostly on diverse sensorial apparatus, cameras and sonar devices to allow the vehicle to locate itself in relation to its physical environment. Software is currently being developed to command the vehicle in diverse situation in relation to what the different sensors are capturing.
+  
+
 </p>    
 <p>
         One of the most difficult parts of vehicle automation is how to prepare the vehicle to react towards other vehicles, predicting behavioral patterns of others in relation to it. Truck automation is relatively easier than car automation because it is easier to predict how other vehicle will behave towards trucks. Also, because trucks mostly operate on highways and in the periphery of cities, the degree of uncertainty of other units is further reduced.
 
-            <div class="modal fade" id="sidemodal"  tabindex="-1">
-                    <img class= "modal-full" src="img/nodes.jpg">    
-            </div>
-            <span class="img-source"><a href="#sidemodal" data-toggle="modal" >
-                    <img src="img/nodes.jpg">
-                    </a>     
-                    <p>arb can't write text in here   </p>
-            </span>
+        <span class="img-source">
+            <a href="#" class="pop" >
+                <img src="img/nodes.jpg">
+            </a>
+            <span class="caption-source">arb can't write text in here </span>
+        </span>
 </p>
 
 <p> 
@@ -279,6 +270,13 @@
     </div>
 </div><!-- /.container -->
 </div>
+
+
+<div class="modal fade" id="imagemodal"  tabindex="-1">
+        <img class= "imagepreview" src="">    
+        <div class="caption">Sample Caption Text</div>
+</div>
+
 </body>
 
 <script type="text/javascript">
@@ -427,5 +425,13 @@ if (document.readyState === 'complete' || document.readyState !== 'loading') {
     document.addEventListener('DOMContentLoaded', docHandler);
 }
 
+$(function() {
+    $('.pop').on('click', function() {
+        $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+
+        // $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+        $('#imagemodal').modal('show');   
+    });		
+});
 </script>
-</html>
+

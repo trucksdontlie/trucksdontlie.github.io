@@ -215,6 +215,7 @@ p {
 .modal {
   text-align: center;
   padding: 0!important;
+  overflow: hidden;
 }
 
 .modal:before {
@@ -572,9 +573,6 @@ video{
 .source img, .content img {
 	max-width: 100%;
 }
-.img-source, .img-sourceleft {
-	/*display: none;*/
-} 
 
 .references .sourceleft, .references .source {
 	font-size: 0.5em;
@@ -737,25 +735,16 @@ video{
 #side-footer > span > a:hover {
 	text-decoration: none;
 }
-.img-source > p{
-	font-size: 0.5em;
-	margin-left: 1.6vh;
-	margin-top: 1.6vh;
-}
-@media(min-width: 768px){
-	.img-source > p{
-		font-size: 10px;
-		margin-left: 0;
-	}
-}
 
 .modal-full {
-	width: 90vw;
+	width: 80vw;
 	/*height: 70vh;*/
 	padding: 0;
 	margin: 0;
-	/*overflow: hidden;*/
-	overflow: visible;
+	    /*margin: auto;*/
+
+	overflow: hidden;
+	/*overflow: visible;*/
     outline: none;
 	/*display: inline-block;*/
 	/*display: block;*/
@@ -772,21 +761,60 @@ video{
 }
 
 
+
 .modal-content {
     margin: auto;
     display: block;
-    width: 70%;
+    /*width: 70%;*/
     max-width: 600px;
 }
 
 .caption {
+	overflow: hidden;
     margin: auto;
+	margin-top: -7%;
     display: block;
-    width: 80%;
-    max-width: 700px;
+	/*width: 80vw;*/
+    /*max-width: 700px;*/
     text-align: center;
     color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+	text-shadow: 1px 1px #000;
+	/*background-color: #fff;*/
+    /*padding: -10px 0;*/
+    /*height: 150px;*/
 }
 
+.imagepreview{
+	max-width: 90%;
+	max-height: 90%;
+}
+.imagemodal{
+	width: 80vw;
+	padding: 0;
+	margin: 0;
+	    /*margin: auto;*/
+
+	overflow: hidden;
+	/*overflow: visible;*/
+    outline: none;
+	/*display: inline-block;*/
+	/*display: block;*/
+	/*text-align: left;*/
+	vertical-align: middle;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+.caption-source{
+	font-size: 0.5em;
+	margin-left: 1.6vh;
+	margin-top: 1.6vh;
+}
+@media(min-width: 768px){
+	.caption-source{
+		font-size: 10px;
+		margin-left: 0;
+	}
+}
