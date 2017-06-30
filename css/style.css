@@ -104,6 +104,7 @@ p {
 }
 
 #video-full{
+	margin-top:7vh;
 	min-height: 500px;
 }
 
