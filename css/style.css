@@ -384,8 +384,9 @@ video{
 	position: relative;
 	width: 100%;
 	margin: 2em 0 2em 0;
-	z-index: 10;
+	z-index: 7;
 }
+
 
 .player {
 	position: relative;
@@ -518,6 +519,9 @@ video{
 		z-index: 13;
 		position: fixed;
 		top: 0;
+	}
+	.divider{
+		z-index: 10;
 	}
 }        
 .imgModal{
@@ -705,7 +709,7 @@ video{
 	text-decoration: none;
 }
 
-.modal-full {
+/*.modal-full {
 	width: 80vw;
 	padding: 0;
 	margin: 0;
@@ -720,9 +724,7 @@ video{
 	.modal-full{
 		width: 80vw;
 	}
-}
-
-
+}*/
 
 
 .caption-source{
@@ -776,4 +778,22 @@ video{
 }
 #nav_bar_mobile > div > ul > li{
 	margin: 1.6vh 1.6vh 0vh 0vh;
+}
+
+
+.modal-full {
+	width: 90vw;
+	padding: 0;
+	/*margin: 0;*/
+	margin: auto;
+	display: block;
+	/*overflow: visible;*/
+    outline: none;
+	vertical-align: middle;
+	border-radius: 0;
+}
+@media (min-width:768px){ 
+	.modal-full{
+		width: 80vw;
+	}
 }
