@@ -133,7 +133,6 @@ p {
 }
 
 .left_big {
-	font-family: 'helvetica' sans-serif;
 	line-height: 1.2;
 	display: inline;
 	padding: 0;
@@ -685,7 +684,7 @@ video{
 .content > h3{
 	display: block;
 	margin: auto;
-	font-weight: 400;
+	font-weight: 150;
 	font-size: 100%;
 	padding-bottom: 20px;
 	padding-top: 30px;
