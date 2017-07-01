@@ -807,3 +807,9 @@ video{
 .team > a{
 	font-weight: 400;
 } 
+.source{
+	font-family: monospace;
+}
+.caption-source{
+	font-family: monospace;
+}
