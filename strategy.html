@@ -55,10 +55,10 @@
             <nav  id="nav_bar_mobile" class="collapse">
                 <div class="alignwrapper" style="height:100vh">
                     <ul>
-                        <span style="font-weight:400;"><a href="#" onclick="$('.collapse').collapse('hide')">Our Strategic Roadmap</a></span>
-                        <li><a href="#section1" onclick="$('.collapse').collapse('hide')">1. New organization</a></li>
-                        <li><a href="#section2" onclick="$('.collapse').collapse('hide')">2. Union Freight &amp; Data</a></li>
-                        <li><a href="#section3" onclick="$('.collapse').collapse('hide')">3. Automation Through Retrofitting</a></li>
+                        <span style="font-weight:400;"><a href="#" onclick="$('.collapse').collapse('hide'); changePic();">Our Strategic Roadmap</a></span>
+                        <li><a href="#section1" onclick="$('.collapse').collapse('hide'); changePic();">1. New organization</a></li>
+                        <li><a href="#section2" onclick="$('.collapse').collapse('hide'); changePic();">2. Union Freight &amp; Data</a></li>
+                        <li><a href="#section3" onclick="$('.collapse').collapse('hide'); changePic();">3. Automation Through Retrofitting</a></li>
                         <hr />
                     </ul>
                     
@@ -360,7 +360,7 @@ var black = "#000";
 var elem1, elem2, elem3; 
 
 
-redrawsidebar =function(){
+redrawsidebar = function(){
         var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
         if (position > stickyNavTop-SHIFTheight+10) {
             navbardesk.classList.add('navbar-fixed');
@@ -407,8 +407,6 @@ document.getElementById('first-image').addEventListener("load", function(){
 });
 
 docHandler = function() {
-    
-
     // totalheight = 0.25*height;
     const body = document.body;
     const html = document.documentElement;
