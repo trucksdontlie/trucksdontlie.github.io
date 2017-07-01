@@ -818,3 +818,12 @@ video{
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+
+.pop{
+	 pointer-events: none;
+}
+@media (min-width:768px){ 
+	.pop{
+		 pointer-events:auto;
+	}
+}
