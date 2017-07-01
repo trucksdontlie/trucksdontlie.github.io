@@ -104,8 +104,8 @@ p {
 }
 
 #video-full{
-	margin-top:7vh;
-	min-height: 500px;
+	margin-top:6vh;
+	/*min-height: 500px;*/
 }
 
 .content > a  {
@@ -783,6 +783,7 @@ video{
 
 .modal-full {
 	width: 90vw;
+	min-height: 90vh;
 	padding: 0;
 	/*margin: 0;*/
 	margin: auto;
@@ -805,4 +806,4 @@ video{
 }
 .team > a{
 	font-weight: 400;
-}
+} 
