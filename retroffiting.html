@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shift Strategy</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--file scoll.js doesn't exist but without this include scrolling not working, no idea why-->
+    <script src="scroll.js"></script>	
+</head>
+
+
+<body >    
+    <div id="beggining"></div>
+    <div id="header">
+        <h1 id="shiftlogo">
+            <a href="index.html">Shift</a> 
+            <!--<a href="#" style="position:fixed; top:21px; right:200px;text-decoration: none;"><span class="button_text">About/Contact</span></a>-->
+        </h1>
+        <div class="row header-subsection" >
+            <div class="col-sm-10">
+                <h2 class="big" >RETROFITTING
+                </h2>
+            </div>
+            <div class="col-sm-10">
+                <a href="#"><span class="button_text">PDF version</span></a>
+                <a href="#"><span class="button_text">Read on Medium</span></a>
+            </div>
+            <div class="col-sm-10" >
+                <p>
+                    Everything that you see has at one point or another been on a truck
+                </p>
+            </div>
+        </div>
+    </div>
+
+<img src="img/placeholder-union.jpg" class="divider" id="first-image">
+
+<div class="container">                
+    <div class="row">
+        <div class="col-sm-2" id="sidepanel">
+            <button type="button" class="navbar-toggle" onclick="changePic()" data-toggle="collapse" data-target="#nav_bar_mobile" style="z-index:13;font-size:50%;">
+                <img src="img/bars.svg" id="buttonimg">
+            </button>
+            <nav  id="nav_bar_mobile" class="collapse">
+                <div class="alignwrapper" style="height:100vh">
+                    <ul>
+                        <span style="font-weight:400;"><a href="#" onclick="$('.collapse').collapse('hide')">Automation &amp; Logistics</a></span>
+                        <li><a href="#section1" onclick="$('.collapse').collapse('hide')">1.Section1</a></li>
+                        <li><a href="#section2" onclick="$('.collapse').collapse('hide')">2.Section2</a></li>
+                        <li><a href="#section3" onclick="$('.collapse').collapse('hide')">3.Section3</a></li>
+                        <hr />
+                    </ul>
+                    
+                    <div class='alignbot'>
+                        <ul>
+                            Next article:<br />
+                            <a href="url">&rarr; placeholder</a><br />
+                            Previous article:<br />
+                            <a href="url">&rarr; placeholder</a><br />
+                            <!--<a href="url">About/Contact</a>-->
+                            <a href="about.html" style="text-decoration: none;"><span class="button_text">About/Contact</span></a>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!--nav_bar_mobile-->
+
+            <nav  id="nav_bar_desktop">
+                <div id="side-wrapper" class="alignwrapper">
+                    <div id="side-header">
+                        <hr />
+                        Current article:<br />
+                        <span style="font-weight:400;"><a href="#beggining">Retrofitting</a></span><br /><br />
+                        <ul>
+                            <li><a href="#section1" id="font1">1.Section1</a></li>
+                            <br />
+                            <li><a href="#section2" id="font2">2.Section2</a></li>
+                            <br />
+                            <li><a href="#section3" id="font3">3.Section3</a></li>
+                        </ul>
+                        <hr />
+                    </div>
+                
+                    <div id="spacer" style="width:20vh;">
+                    </div>
+
+                    <div id="side-footer" class="alignbot">
+                        Next article:<br />
+                        <span style="font-weight:400;">
+                        <a href="url">&rarr; placeholder</a></span><br /><br />
+                        Previous article:<br />
+                        <span style="font-weight:400;">
+                        <a href="url">&rarr; placeholder</a></span><br />
+                        <br /><br />
+                        <a href="about.html" style="text-decoration: none;"><span class="button_text">About/Contact</span></a>
+                    </div>
+                </div>
+            </nav><!--nav_bar_desktop-->
+        </div><!--sidepanel-->
+
+        <div class="col-sm-10">
+            <div class="content">
+                <p>
+                    blablabla                        
+                </p>
+
+<h2 id="section1" class="big" ><span>Section1</span></h2>
+<p> 
+    The main aspect is to achieve a truck retrofitting that could relieve the driver from his main task at his own will. Trucks that were manufactured after 2008 (???) have the ability to be retrofitted. After 2008 most vehicles operate on the basis of a mainframe computer that handles most of the activity electronically. Retrofitting entails to rewire the components through hardware and software to have the vehicle become autonomous. The hardware is based mostly on diverse sensorial apparatus, cameras and sonar devices to allow the vehicle to locate itself in relation to its physical environment. Software is currently being developed to command the vehicle in diverse situation in relation to what the different sensors are capturing. 
+</p>
+
+<h2 id="section2" class="big" ><span>Section2</span></h2>
+<p>
+    One of the most difficult parts of vehicle automation is how to prepare the vehicle to react towards other vehicles, predicting behavioral patterns of others in relation to it. Truck automation is relatively easier than car automation because it is easier to predict how other vehicle will behave towards trucks. Also, because trucks mostly operate on highways and in the periphery of cities, the degree of uncertainty of other units is further reduced.
+</p>
+
+<h2 id="section3" class="big" ><span>Section3</span></h2>
+<p>
+    With v2v in place the Union could become the entity to constantly survey the state of the road infrastructure across the whole territory. Repeatedly informing its central body of where the road infrastructure could be repaired, creating a distributed perpetual sensory apparatus.
+</p>
+
+<p>
+    With this strategy in place the union could achieve a decentralized future of automation. Positioning the majority of independent truck drivers as a consolidated network that would become the most optimal and biggest logistical player in the market. Morphing their role and pivoting their organization to embrace innovation and no to maintain the status quo.
+</p>
+
+<p>
+    The OPR in the Russian context could become an example to follow in the same way that the longshoremen have done before. In light of automation, with these specific technologies and the way the markets of truck ownership are composed globally, the strategy can be replicated worldwide.
+</p>
+
+
+</div>
+        <!--<div class="references">
+            <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
+            <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>  
+            <span class="superscript">3</span><span class="source">3 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
+        </div>-->
+    </div>
+</div><!-- /.container -->
+</div>
+
+
+<div class="modal fade" id="imagemodal"  tabindex="-1">
+        <div class="modal-content"  data-dismiss="modal">
+                <img class= "imagepreview" src="">
+                <div class="caption"></div>
+        </div>
+</div>
+
+<script type="text/javascript">
+
+// $('html,body').animate({
+//     scrollTop: $(window.location.hash).offset().top
+// });
+
+var img_array = ['img/bars.svg', 'img/x.svg'];
+i = 0;
+
+function changePic() {
+    i++;
+    document.getElementById("buttonimg").src = img_array[i];
+    if (i == img_array.length - 1) {
+        i = -1;
+    }
+}
+
+$(document).on('click', '.pop', function(event){
+         return false;
+});
+
+$(document).on('click', 'ul > li > a', function(event){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+
+$(document).on('click', '#side-header > span > a', function(event){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+
+
+// function getOffset (el) {
+//     const box = el.getBoundingClientRect();
+//     return {
+//         top: box.top + window.pageYOffset - document.documentElement.clientTop,
+//         left: box.left + window.pageXOffset - document.documentElement.clientLeft
+//     };
+// }
+
+var totalheight;
+var SHIFTheight;
+var stickyNavTop;
+var offset1,offset2,offset3;
+
+var bold = "600";
+var thin = "100";
+var white = "#fff";
+var black = "#000";
+
+var elem1, elem2, elem3; 
+
+
+redrawsidebar =function(){
+        var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        if (position > stickyNavTop-SHIFTheight+10) {
+            navbardesk.classList.add('navbar-fixed');
+            // $('side-footer').css('position') = "absolute";
+        }else{
+            navbardesk.classList.remove('navbar-fixed');
+            // $('side-footer').css('position') = "static";
+        }
+                        
+        if (position > offset3){
+            elem1.style.fontWeight = thin; 
+            elem2.style.fontWeight = thin; 
+            elem3.style.fontWeight = bold; 
+        }
+        else{
+            if (position > offset2){
+                elem1.style.fontWeight = thin; 
+                elem2.style.fontWeight = bold; 
+                elem3.style.fontWeight = thin; 
+            }
+            else{
+                if (position > offset1){
+                    elem1.style.fontWeight = bold; 
+                    elem2.style.fontWeight = thin; 
+                    elem3.style.fontWeight = thin; 
+                }
+            }
+        };
+    }
+
+
+document.getElementById('first-image').addEventListener("load", function(){
+    // stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
+    stickyNavTop = $('#nav_bar_desktop').offset().top;
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max(
+        body.offsetHeight,
+        body.scrollHeight,
+        html.clientHeight,
+        html.offsetHeight,
+        html.scrollHeight
+    );
+    totalheight = 0.25*height;
+});
+
+docHandler = function() {
+    
+
+    // totalheight = 0.25*height;
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max(
+        body.offsetHeight,
+        body.scrollHeight,
+        html.clientHeight,
+        html.offsetHeight,
+        html.scrollHeight
+    );
+    totalheight = 0.25*height;
+
+    // totalheight = 0.25*document.height();
+    SHIFTheight = document.getElementById('shiftlogo').clientHeight;
+    stickyNavTop = $('#nav_bar_desktop').offset().top;
+    
+    offset1 = $("#section1").offset().top-200;
+    offset2 = $("#section2").offset().top-200;
+    offset3 = $("#section3").offset().top-200;
+
+    elem1 = document.getElementById("font1");
+    elem2 = document.getElementById("font2");
+    elem3 = document.getElementById("font3");
+    
+    
+    
+
+    navbardesk =  document.getElementById('nav_bar_desktop');
+    
+    //TODO change 40 to whatever top margin of the sidebar (3em, no idea how to convert it to px on the fly)
+    
+    // $(window).scroll(function () {
+    // window.scroll(function(){
+    
+    window.addEventListener("scroll", redrawsidebar);
+
+    
+};
+
+if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    docHandler();
+} else {
+    document.addEventListener('DOMContentLoaded', docHandler);
+}
+
+$(function() {
+    $('.pop').on('click', function() {
+        $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+        $('.modal-content > .caption').text( $(this).parent().find('span').text());
+        console.log($(this).parent().find('span').text());
+        $('#imagemodal').modal('show');   
+    });		
+});
+</script>
+
+
+</body>
+
