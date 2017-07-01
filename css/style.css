@@ -818,6 +818,9 @@ video{
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+.img-content > video{
+	margin-bottom: 0vh;
+}
 
 .pop{
 	 pointer-events: none;
