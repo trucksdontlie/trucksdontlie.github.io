@@ -703,6 +703,7 @@ video{
 
 .content > p{
 	font-weight: 100;
+	margin-bottom: 1em;
 }
 
 #side-footer > span > a:hover {
