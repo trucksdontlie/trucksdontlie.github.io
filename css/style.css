@@ -740,10 +740,12 @@ video{
 	opacity: 0.6;
 }
 .caption-source{
-	font-family: monospace;
+	/*font-family: "Helvetica";*/
+	
 	font-size: 0.5em;
-	margin-left: 1.6vh;
+	/*margin-left: 1.6vh;*/
 	margin-top: 1.6vh;
+	/*margin-bottom: 1.6vh;*/
 	opacity: 0.6;
 }
 
@@ -761,8 +763,10 @@ video{
 		margin-top: 1.6vh;
 	}
 	.caption-source{
+		font-family: monospace;
 		font-size: 10px;
-		margin-left: 0;
+		/*margin-left: 0;*/
+		/*margin-left: 1.6vh;*/
 	}
 }
 
