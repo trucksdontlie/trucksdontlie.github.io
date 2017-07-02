@@ -760,7 +760,7 @@ video{
 .modal-content {
 	display: block;
 	margin: auto;
-    margin-top:5vw;
+    margin-top:0.5em;
     max-width: 70vw;
     background-position: center center;
     background-size: contain;
