@@ -145,7 +145,8 @@ docHandler = function() {
 if (window.readyState === 'complete' || window.readyState !== 'loading') {
     docHandler();
 } else {
-    window.addEventListener('DOMContentLoaded', docHandler);
+    // window.addEventListener('DOMContentLoaded', docHandler);
+    window.addEventListener('load', docHandler);
 }
 
 
