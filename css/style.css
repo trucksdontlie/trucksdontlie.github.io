@@ -866,3 +866,6 @@ video{
 {	
     opacity:0.9 !important;
 }
+.header > h1 > a{
+	text-decoration: none;
+}
