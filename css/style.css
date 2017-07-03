@@ -481,7 +481,11 @@ video{
 	margin-top:0.7em;
 }
 #nav_bar_mobile>.alignwrapper>ul{
-	margin:1.6vh;
+	margin-left:1.6vh;
+	margin-top:2em;
+	margin-bottom: 1em;
+	font-size:120%;
+
 }
 #nav_bar_mobile>.alignwrapper>.alignbot>ul{
 	margin:1.6vh;
