@@ -1,6 +1,12 @@
-$('html,body').animate({
-  scrollTop: $(window.location.hash).offset().top
-});
+
+
+if(window.location.hash) {
+    $('html,body').animate({
+        scrollTop: $(window.location.hash).offset().top
+    });
+}
+
+
 
 var img_array = ['img/bars.svg', 'img/x.svg'];
 i = 0;
