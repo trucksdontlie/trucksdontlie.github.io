@@ -112,6 +112,7 @@ p {
 	outline: none;
 }
 
+
 .left_big {
 	line-height: 1.2;
 	display: inline;
@@ -837,4 +838,11 @@ video{
 	.pop{
 		 pointer-events:auto;
 	}
+}
+
+.img-content > video{
+	outline: none;
+}
+.img-source > video {
+	outline: none;
 }
