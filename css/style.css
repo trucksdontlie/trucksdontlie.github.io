@@ -849,3 +849,6 @@ video{
 .img-source >iframe{
 	height: 100%;
 }
+.modal-backdrop {
+   background-color: white;
+}
