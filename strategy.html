@@ -57,8 +57,8 @@
                 <div class="alignwrapper" style="height:100vh">
                     <ul>
                         <span style="font-weight:400;"><a href="#" onclick="$('.collapse').collapse('hide'); changePic();">Our Strategic Roadmap</a></span>
-                        <li><a href="#section1" onclick="$('.collapse').collapse('hide'); changePic();">1. New organization</a></li>
-                        <li><a href="#section2" onclick="$('.collapse').collapse('hide'); changePic();">2. Union Freight &amp; Data</a></li>
+                        <li><a href="#section1" onclick="$('.collapse').collapse('hide'); changePic();">1. Union consolidation through new tools</a></li>
+                        <li><a href="#section2" onclick="$('.collapse').collapse('hide'); changePic();">2.Union As Freight Company</a></li>
                         <li><a href="#section3" onclick="$('.collapse').collapse('hide'); changePic();">3. Automation Through Retrofitting</a></li>
                         <hr />
                     </ul>
@@ -82,7 +82,7 @@
                         Current article:<br />
                         <span style="font-weight:400;"><a href="#beggining">Our Strategic Roadmap</a></span><br /><br />
                         <ul>
-                            <li><a href="#section1" id="font1">1&nbsp;Union As Platform</a></li>
+                            <li><a href="#section1" id="font1">1.Union Consolidation Through New Tools</a></li>
                             <br />
                             <li><a href="#section2" id="font2">2.Union As Freight Company</a></li>
                             <br />
@@ -330,7 +330,7 @@
 
 
     <!--<span class="source">
-        <a href="https://www.youtube.com/watch?v=IxuU5L2MEII"> </a>*INPUT COMMA AI TO THE RIGHT*</span>-->
+    <a href="https://www.youtube.com/watch?v=IxuU5L2MEII"> </a>*INPUT COMMA AI TO THE RIGHT*</span>-->
 </p>
 
 <div class="img-content">
@@ -383,9 +383,8 @@
 
 </div>
         <!--<div class="references">
-            <span class="source">1 Nicolas Bourriaud, <i>Relational Aesthetics</i> (Les Presse Du Reel, 1998)</span>
-            <span class="superscript">2</span><span class="sourceleft">2 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>  
-            <span class="superscript">3</span><span class="source">3 Andrew Blauvelt,  <a href="http://observatory.designobserver.com/entry.html?entry=7557">“Towards relational Design”</a> (2008)</span>
+            <span class="source"> </span>
+            <span class="superscript">2</span><span class="sourceleft">2 some text</span>  
         </div>-->
     </div>
 </div><!-- /.container -->
@@ -399,162 +398,6 @@
         </div>
 </div>
 
-<!--<script type="text/javascript">
-
-$('html,body').animate({
-  scrollTop: $(window.location.hash).offset().top
-});
-
-var img_array = ['img/bars.svg', 'img/x.svg'];
-i = 0;
-
-
-function changePic() {
-    i++;
-    document.getElementById("buttonimg").src = img_array[i];
-    if (i == img_array.length - 1) {
-        i = -1;
-    }
-}
-
-$(document).on('click', '.pop', function(event){
-         return false;
-});
-
-
-$(document).on('click', 'ul > li > a', function(event){
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
-
-$(document).on('click', '#side-header > span > a', function(event){
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
-
-
-function getOffset (el) {
-    const box = el.getBoundingClientRect();
-    return {
-        top: box.top + window.pageYOffset - document.documentElement.clientTop,
-        left: box.left + window.pageXOffset - document.documentElement.clientLeft
-    };
-}
-
-var totalheight;
-var SHIFTheight;
-var stickyNavTop;
-var offset1,offset2,offset3;
-
-var bold = "600";
-var thin = "100";
-var white = "#fff";
-var black = "#000";
-
-var elem1, elem2, elem3; 
-
-
-redrawsidebar = function(){
-        var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (position > stickyNavTop-SHIFTheight+10) {
-            navbardesk.classList.add('navbar-fixed');
-            // $('side-footer').css('position') = "absolute";
-        }else{
-            navbardesk.classList.remove('navbar-fixed');
-            // $('side-footer').css('position') = "static";
-        }
-                        
-        if (position > offset3){
-            elem1.style.fontWeight = thin; 
-            elem2.style.fontWeight = thin; 
-            elem3.style.fontWeight = bold; 
-        }
-        else{
-            if (position > offset2){
-                elem1.style.fontWeight = thin; 
-                elem2.style.fontWeight = bold; 
-                elem3.style.fontWeight = thin; 
-            }
-            else{
-                if (position > offset1){
-                    elem1.style.fontWeight = bold; 
-                    elem2.style.fontWeight = thin; 
-                    elem3.style.fontWeight = thin; 
-                }
-            }
-        };
-    }
-
-
-document.getElementById('first-image').addEventListener("load", function(){
-    stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
-    const body = document.body;
-    const html = document.documentElement;
-    const height = Math.max(
-        body.offsetHeight,
-        body.scrollHeight,
-        html.clientHeight,
-        html.offsetHeight,
-        html.scrollHeight
-    );
-    totalheight = 0.25*height;
-});
-
-docHandler = function() {
-    const body = document.body;
-    const html = document.documentElement;
-    const height = Math.max(
-        body.offsetHeight,
-        body.scrollHeight,
-        html.clientHeight,
-        html.offsetHeight,
-        html.scrollHeight
-    );
-    totalheight = 0.25*height;
-
-    SHIFTheight = document.getElementById('shiftlogo').clientHeight;
-    stickyNavTop = getOffset(document.getElementById('nav_bar_desktop')).top
-    
-
-    offset1 = getOffset(document.getElementById('section1')).top-200;
-    offset2 = getOffset(document.getElementById('section2')).top-200;
-    offset3 = getOffset(document.getElementById('section3')).top-200;
-
-    elem1 = document.getElementById("font1");
-    elem2 = document.getElementById("font2");
-    elem3 = document.getElementById("font3");
-
-    navbardesk =  document.getElementById('nav_bar_desktop');
-    window.addEventListener("scroll", redrawsidebar);    
-};
-
-
-// if (document.readyState === 'complete' || document.readyState !== 'loading') {
-//     docHandler();
-// } else {
-//     document.addEventListener('DOMContentLoaded', docHandler);
-// }
-
-if (window.readyState === 'complete' || window.readyState !== 'loading') {
-    docHandler();
-} else {
-    window.addEventListener('DOMContentLoaded', docHandler);
-}
-
-
-$(function() {
-    $('.pop').on('click', function() {
-        $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-        $('.modal-content > .caption').text( $(this).parent().find('span').text());
-        console.log($(this).parent().find('span').text());
-        $('#imagemodal').modal('show');   
-    });		
-});
-</script>-->
 <script src="js/strategy.js" type="text/javascript"></script>
 </body>
 
